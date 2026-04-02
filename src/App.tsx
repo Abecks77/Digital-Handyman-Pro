@@ -5,11 +5,11 @@ import {
   CheckCircle2, XCircle, ArrowRight, Calendar, Zap, Shield, Star, Heart,
   UserPlus, PhoneCall, Filter, Flame, MessageSquare, Check, User, Timer,
   Frown, AlertCircle, TrendingUp, ClipboardCheck, BrainCircuit,
-  Wrench, Send, Hammer, Mic, Target, RefreshCw, Handshake, Brain, ChevronDown
+  Wrench, Send, Hammer, Mic, Target, RefreshCw, Handshake, Brain, ChevronDown, Facebook, Youtube
 } from 'lucide-react';
 
 const GradientText = ({ children, className = "" }: { children: ReactNode, className?: string }) => (
-  <span className={`bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 ${className}`}>
+  <span className={`bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-slate-400 ${className}`}>
     {children}
   </span>
 );
@@ -32,7 +32,7 @@ const DualCTA = ({
   const ButtonContent = (
     <div className="relative bg-zinc-950/80 backdrop-blur-sm px-8 py-4 rounded-full flex items-center justify-center gap-2 transition-all duration-300 group-hover:bg-zinc-900/50">
       <span className="font-semibold text-white">{primaryText}</span>
-      <PrimaryIcon className={`w-4 h-4 text-pink-400 transition-transform ${PrimaryIcon === ChevronDown ? 'group-hover:translate-y-1' : 'group-hover:translate-x-1'}`} />
+      <PrimaryIcon className={`w-4 h-4 text-slate-400 transition-transform ${PrimaryIcon === ChevronDown ? 'group-hover:translate-y-1' : 'group-hover:translate-x-1'}`} />
     </div>
   );
 
@@ -43,7 +43,7 @@ const DualCTA = ({
           onClick={primaryAction}
           className="relative group overflow-hidden rounded-full p-[1px]"
         >
-          <span className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full opacity-70 group-hover:opacity-100 transition-opacity duration-300"></span>
+          <span className="absolute inset-0 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-70 group-hover:opacity-100 transition-opacity duration-300"></span>
           {ButtonContent}
         </button>
       ) : (
@@ -53,7 +53,7 @@ const DualCTA = ({
           rel="noopener noreferrer"
           className="relative group overflow-hidden rounded-full p-[1px] block"
         >
-          <span className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full opacity-70 group-hover:opacity-100 transition-opacity duration-300"></span>
+          <span className="absolute inset-0 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-70 group-hover:opacity-100 transition-opacity duration-300"></span>
           {ButtonContent}
         </a>
       )}
@@ -171,16 +171,16 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen text-zinc-50 font-sans selection:bg-purple-500/30 relative">
+    <div className="min-h-screen text-zinc-50 font-sans selection:bg-cyan-500/30 relative">
       
       {/* Global SaaS Background - Unified across the entire page */}
       <div className="fixed inset-0 z-0 bg-zinc-950">
         {/* Subtle Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         {/* Glowing Orbs for depth */}
-        <div className="absolute left-0 right-0 top-[-10%] -z-10 m-auto h-[400px] w-[400px] rounded-full bg-indigo-500 opacity-20 blur-[120px]"></div>
-        <div className="absolute bottom-[-10%] left-[-10%] -z-10 h-[500px] w-[500px] rounded-full bg-pink-500 opacity-10 blur-[150px]"></div>
-        <div className="absolute top-[40%] right-[-10%] -z-10 h-[400px] w-[400px] rounded-full bg-purple-500 opacity-10 blur-[120px]"></div>
+        <div className="absolute left-0 right-0 top-[-10%] -z-10 m-auto h-[400px] w-[400px] rounded-full bg-blue-500 opacity-20 blur-[120px]"></div>
+        <div className="absolute bottom-[-10%] left-[-10%] -z-10 h-[500px] w-[500px] rounded-full bg-slate-500 opacity-10 blur-[150px]"></div>
+        <div className="absolute top-[40%] right-[-10%] -z-10 h-[400px] w-[400px] rounded-full bg-cyan-500 opacity-10 blur-[120px]"></div>
       </div>
 
       {/* Main Content Wrapper */}
@@ -188,7 +188,7 @@ export default function App() {
         
         {/* Navigation */}
         <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl">
-          <div className="bg-zinc-950/40 backdrop-blur-md border border-zinc-800/50 rounded-full px-4 py-2.5 flex items-center justify-between shadow-2xl shadow-purple-500/10 group transition-all duration-500 hover:border-zinc-700/50 hover:bg-zinc-950/60">
+          <div className="bg-zinc-950/40 backdrop-blur-md border border-zinc-800/50 rounded-full px-4 py-2.5 flex items-center justify-between shadow-2xl shadow-cyan-500/10 group transition-all duration-500 hover:border-zinc-700/50 hover:bg-zinc-950/60">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-3 pl-2">
                 <a 
@@ -197,7 +197,7 @@ export default function App() {
                   className="hover:opacity-80 transition-opacity cursor-pointer"
                 >
                   <img 
-                    src="https://lh3.googleusercontent.com/d/1jQbX2YVVMITDUUY8PW3DRRKyPPBkO1jU" 
+                    src="https://lh3.googleusercontent.com/d/198nU5-hu5_saqJ6kJH2aIUSNj4Y5Ic3b" 
                     alt="Digital Handyman Logo" 
                     className="h-8 w-auto object-contain rounded-md"
                     referrerPolicy="no-referrer"
@@ -225,7 +225,7 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="relative group/btn overflow-hidden rounded-full p-[1px] block"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full opacity-70 group-hover/btn:opacity-100 transition-opacity duration-300"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-70 group-hover/btn:opacity-100 transition-opacity duration-300"></span>
                 <div className="relative bg-zinc-950 px-5 py-2 rounded-full flex items-center justify-center gap-2 transition-all duration-300 group-hover/btn:bg-transparent">
                   <span className="font-bold text-white text-xs tracking-wide">Get Started</span>
                   <ArrowRight className="w-3 h-3 text-white group-hover/btn:translate-x-1 transition-transform" />
@@ -267,13 +267,13 @@ export default function App() {
                         initial={{ width: 0 }}
                         animate={{ width: "100%" }}
                         transition={{ delay: 1, duration: 1 }}
-                        className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full opacity-50"
+                        className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-50"
                       />
                     </span>
                   </h1>
                   
                   <p className="text-xl text-zinc-400 mb-12 leading-relaxed max-w-lg font-medium">
-                    Meet <span className="text-white font-bold">ECHO</span> — your 24/7 AI employee that handles SMS, web chats, and missed calls so you can scale your local business on autopilot.
+                    Meet <span className="text-white font-bold">ECHO</span>, your 24/7 AI employee that handles SMS, web chats, and missed calls so you can scale your local business on autopilot.
                   </p>
                   
                   <div className="flex flex-col sm:flex-row items-center gap-6">
@@ -289,10 +289,10 @@ export default function App() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="relative"
               >
-                <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500 to-pink-500 rounded-3xl blur-3xl opacity-20 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-slate-500 rounded-3xl blur-3xl opacity-20 animate-pulse"></div>
                 <div className="relative bg-zinc-900/80 backdrop-blur-xl border border-zinc-800/80 rounded-3xl p-6 shadow-2xl">
                   <div className="flex items-center gap-4 mb-6 border-b border-zinc-800/80 pb-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center shadow-lg shadow-purple-500/30">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-slate-500 flex items-center justify-center shadow-lg shadow-cyan-500/30">
                       <Bot className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -313,10 +313,10 @@ export default function App() {
                       </div>
                     </motion.div>
                     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.5 }} className="flex gap-3 flex-row-reverse">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 flex-shrink-0 flex items-center justify-center shadow-md">
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-slate-500 flex-shrink-0 flex items-center justify-center shadow-md">
                         <Bot className="w-4 h-4 text-white" />
                       </div>
-                      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl rounded-tr-none p-4 text-sm text-white max-w-[85%] shadow-md">
+                      <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl rounded-tr-none p-4 text-sm text-white max-w-[85%] shadow-md">
                         Hi there! Yes, we offer 24/7 emergency plumbing. I can have a technician out to you within 45 minutes to stop the leak. What's your address?
                       </div>
                     </motion.div>
@@ -329,10 +329,10 @@ export default function App() {
                       </div>
                     </motion.div>
                     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 3.5 }} className="flex gap-3 flex-row-reverse">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 flex-shrink-0 flex items-center justify-center shadow-md">
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-slate-500 flex-shrink-0 flex items-center justify-center shadow-md">
                         <Bot className="w-4 h-4 text-white" />
                       </div>
-                      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl rounded-tr-none p-4 text-sm text-white max-w-[85%] shadow-md">
+                      <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl rounded-tr-none p-4 text-sm text-white max-w-[85%] shadow-md">
                         Our emergency dispatch fee is $99, which goes toward your repair cost. I've locked in your spot for our next available tech. They will text you when they are 10 minutes away!
                       </div>
                     </motion.div>
@@ -358,7 +358,7 @@ export default function App() {
                     whileInView={{ width: "100%" }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
-                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full opacity-50"
+                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-50"
                   />
                 </span>
               </h2>
@@ -366,7 +366,7 @@ export default function App() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-12 relative">
-              <div className="hidden md:block absolute top-12 left-[20%] right-[20%] h-[2px] bg-gradient-to-r from-indigo-500/0 via-purple-500/50 to-pink-500/0"></div>
+              <div className="hidden md:block absolute top-12 left-[20%] right-[20%] h-[2px] bg-gradient-to-r from-blue-500/0 via-cyan-500/50 to-slate-500/0"></div>
               
               {[
                 { 
@@ -377,7 +377,7 @@ export default function App() {
                 { 
                   step: "02", 
                   title: "We Deploy Echo", 
-                  desc: "We integrate Echo directly into your website, SMS routing, Google Business Profile, and social media channels. The setup is completely hands-off for you—our team handles the technical integration so you don't have to write a single line of code." 
+                  desc: "We integrate Echo directly into your website, SMS routing, Google Business Profile, and social media channels. The setup is completely hands-off for you. Our team handles the technical integration so you don't have to write a single line of code." 
                 },
                 { 
                   step: "03", 
@@ -393,8 +393,8 @@ export default function App() {
                   transition={{ delay: i * 0.2 }}
                   className="relative z-10 flex flex-col items-center text-center"
                 >
-                  <div className="w-24 h-24 rounded-full bg-zinc-900/80 backdrop-blur-sm border-2 border-purple-500/30 flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(168,85,247,0.15)]">
-                    <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-indigo-400 to-pink-400">{item.step}</span>
+                  <div className="w-24 h-24 rounded-full bg-zinc-900/80 backdrop-blur-sm border-2 border-cyan-500/30 flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(6,182,212,0.15)]">
+                    <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-blue-400 to-slate-400">{item.step}</span>
                   </div>
                   <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
                   <p className="text-zinc-400 leading-relaxed">{item.desc}</p>
@@ -418,7 +418,7 @@ export default function App() {
 
         {/* 2.5 The ECHO Lead Flow */}
         <section id="lead-flow" className="py-24 bg-zinc-900/30 border-y border-zinc-800/50 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-900/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-5xl font-bold mb-6">
@@ -429,7 +429,7 @@ export default function App() {
                     whileInView={{ width: "100%" }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
-                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full opacity-50"
+                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-50"
                   />
                 </span>
               </h2>
@@ -441,12 +441,12 @@ export default function App() {
             {/* 4-Step Process Grid */}
             <div className="grid md:grid-cols-4 gap-6 mb-16 relative">
               {/* Connecting line for desktop */}
-              <div className="hidden md:block absolute top-[88px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-indigo-500/20 via-purple-500/40 to-pink-500/20 z-0"></div>
+              <div className="hidden md:block absolute top-[88px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-blue-500/20 via-cyan-500/40 to-slate-500/20 z-0"></div>
               
               {[
                 {
                   visual: (
-                    <div className="relative w-full h-32 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-6 flex items-center justify-center overflow-hidden group-hover:border-indigo-500/30 transition-colors">
+                    <div className="relative w-full h-32 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-6 flex items-center justify-center overflow-hidden group-hover:border-blue-500/30 transition-colors">
                       <motion.div 
                         animate={{ y: [20, 0, 0, 20], opacity: [0, 1, 1, 0] }} 
                         transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }} 
@@ -454,7 +454,7 @@ export default function App() {
                       >
                         <div className="h-2 w-1/2 bg-zinc-600 rounded mb-3"></div>
                         <div className="h-2 w-3/4 bg-zinc-600 rounded mb-4"></div>
-                        <div className="h-6 w-full bg-indigo-500 rounded flex items-center justify-center">
+                        <div className="h-6 w-full bg-blue-500 rounded flex items-center justify-center">
                           <span className="text-[8px] font-bold text-white tracking-wider">SUBMIT</span>
                         </div>
                       </motion.div>
@@ -474,17 +474,17 @@ export default function App() {
                 },
                 {
                   visual: (
-                    <div className="relative w-full h-32 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-6 flex items-center justify-center overflow-hidden group-hover:border-purple-500/30 transition-colors">
+                    <div className="relative w-full h-32 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-6 flex items-center justify-center overflow-hidden group-hover:border-cyan-500/30 transition-colors">
                       <motion.div 
                         animate={{ scale: [1, 1.1, 1] }} 
                         transition={{ repeat: Infinity, duration: 2 }} 
-                        className="w-16 h-16 rounded-full bg-purple-500/20 flex items-center justify-center relative z-10 border border-purple-500/30"
+                        className="w-16 h-16 rounded-full bg-cyan-500/20 flex items-center justify-center relative z-10 border border-cyan-500/30"
                       >
-                        <Bot className="w-8 h-8 text-purple-400" />
+                        <Bot className="w-8 h-8 text-cyan-400" />
                       </motion.div>
                       {/* Ripples */}
-                      <motion.div animate={{ scale: [1, 2], opacity: [0.5, 0] }} transition={{ repeat: Infinity, duration: 2 }} className="absolute w-16 h-16 rounded-full border border-purple-500/50"></motion.div>
-                      <motion.div animate={{ scale: [1, 2.5], opacity: [0.3, 0] }} transition={{ repeat: Infinity, duration: 2, delay: 0.5 }} className="absolute w-16 h-16 rounded-full border border-purple-500/30"></motion.div>
+                      <motion.div animate={{ scale: [1, 2], opacity: [0.5, 0] }} transition={{ repeat: Infinity, duration: 2 }} className="absolute w-16 h-16 rounded-full border border-cyan-500/50"></motion.div>
+                      <motion.div animate={{ scale: [1, 2.5], opacity: [0.3, 0] }} transition={{ repeat: Infinity, duration: 2, delay: 0.5 }} className="absolute w-16 h-16 rounded-full border border-cyan-500/30"></motion.div>
                     </div>
                   ),
                   title: "2. AI Agent Calls Within 60 Seconds",
@@ -492,7 +492,7 @@ export default function App() {
                 },
                 {
                   visual: (
-                    <div className="relative w-full h-32 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-6 flex flex-col items-center justify-center overflow-hidden group-hover:border-pink-500/30 transition-colors">
+                    <div className="relative w-full h-32 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-6 flex flex-col items-center justify-center overflow-hidden group-hover:border-slate-500/30 transition-colors">
                       <div className="absolute top-4 flex gap-6 w-full justify-center">
                         <motion.div animate={{ y: [0, 30], opacity: [1, 0], scale: [1, 0.5] }} transition={{ repeat: Infinity, duration: 2 }}>
                           <XCircle className="w-5 h-5 text-red-500/80" />
@@ -501,7 +501,7 @@ export default function App() {
                           <CheckCircle2 className="w-5 h-5 text-green-500/80" />
                         </motion.div>
                       </div>
-                      <Filter className="w-10 h-10 text-pink-400 relative z-10 mt-4" />
+                      <Filter className="w-10 h-10 text-slate-400 relative z-10 mt-4" />
                       <motion.div animate={{ y: [0, 20], opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 2, delay: 1.5 }} className="absolute bottom-4">
                         <div className="w-2 h-2 rounded-full bg-green-400"></div>
                       </motion.div>
@@ -517,9 +517,9 @@ export default function App() {
                       <motion.div 
                         animate={{ y: [20, 0, 0, 20], opacity: [0, 1, 1, 0] }} 
                         transition={{ repeat: Infinity, duration: 4, delay: 0.5 }} 
-                        className="bg-zinc-800/90 backdrop-blur-sm p-3 rounded-lg border-indigo-500/50 w-3/4 relative shadow-[0_0_15px_rgba(99,102,241,0.2)]"
+                        className="bg-zinc-800/90 backdrop-blur-sm p-3 rounded-lg border-blue-500/50 w-3/4 relative shadow-[0_0_15px_rgba(59,130,246,0.2)]"
                       >
-                        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-indigo-500 to-pink-500 text-[8px] font-bold px-2 py-0.5 rounded-full text-white shadow-lg flex items-center gap-1">
+                        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-slate-500 text-[8px] font-bold px-2 py-0.5 rounded-full text-white shadow-lg flex items-center gap-1">
                           <Flame className="w-2 h-2" /> HOT LEAD
                         </div>
                         <div className="flex items-center gap-3 mb-2">
@@ -546,7 +546,7 @@ export default function App() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.15 }}
-                  className="bg-zinc-900/80 backdrop-blur-sm border border-zinc-800/80 rounded-2xl p-6 relative z-10 group hover:border-indigo-500/50 transition-colors shadow-xl"
+                  className="bg-zinc-900/80 backdrop-blur-sm border border-zinc-800/80 rounded-2xl p-6 relative z-10 group hover:border-blue-500/50 transition-colors shadow-xl"
                 >
                   {step.visual}
                   <h3 className="text-lg font-bold mb-3 text-white">{step.title}</h3>
@@ -575,7 +575,7 @@ export default function App() {
                     whileInView={{ width: "100%" }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
-                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full opacity-50"
+                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-50"
                   />
                 </span>
               </h2>
@@ -585,19 +585,19 @@ export default function App() {
               {[
                 {
                   visual: (
-                    <div className="relative w-full h-40 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-8 flex items-center justify-center overflow-hidden group-hover:border-indigo-500/30 transition-colors">
-                      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-purple-500/5 to-transparent"></div>
+                    <div className="relative w-full h-40 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-8 flex items-center justify-center overflow-hidden group-hover:border-blue-500/30 transition-colors">
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-cyan-500/5 to-transparent"></div>
                       <motion.div 
                         animate={{ rotate: 360 }} 
                         transition={{ repeat: Infinity, duration: 4, ease: "linear" }} 
-                        className="w-20 h-20 rounded-full border-4 border-indigo-500/20 border-t-pink-500 flex items-center justify-center relative z-10 shadow-[0_0_30px_rgba(236,72,153,0.2)]"
+                        className="w-20 h-20 rounded-full border-4 border-blue-500/20 border-t-slate-500 flex items-center justify-center relative z-10 shadow-[0_0_30px_rgba(100,116,139,0.2)]"
                       >
-                        <div className="w-1.5 h-8 bg-gradient-to-b from-pink-400 to-indigo-400 rounded-full origin-bottom -translate-y-4"></div>
+                        <div className="w-1.5 h-8 bg-gradient-to-b from-slate-400 to-blue-400 rounded-full origin-bottom -translate-y-4"></div>
                       </motion.div>
                       {/* Speed lines */}
-                      <motion.div animate={{ x: [-100, 200], opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }} className="absolute h-0.5 w-16 bg-indigo-400/50 rounded-full top-1/3 left-0"></motion.div>
-                      <motion.div animate={{ x: [-100, 200], opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1.2, delay: 0.4, ease: "linear" }} className="absolute h-0.5 w-24 bg-purple-400/50 rounded-full bottom-1/3 left-0"></motion.div>
-                      <motion.div animate={{ x: [-100, 200], opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1.8, delay: 0.8, ease: "linear" }} className="absolute h-0.5 w-12 bg-pink-400/50 rounded-full top-1/2 left-0"></motion.div>
+                      <motion.div animate={{ x: [-100, 200], opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }} className="absolute h-0.5 w-16 bg-blue-400/50 rounded-full top-1/3 left-0"></motion.div>
+                      <motion.div animate={{ x: [-100, 200], opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1.2, delay: 0.4, ease: "linear" }} className="absolute h-0.5 w-24 bg-cyan-400/50 rounded-full bottom-1/3 left-0"></motion.div>
+                      <motion.div animate={{ x: [-100, 200], opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1.8, delay: 0.8, ease: "linear" }} className="absolute h-0.5 w-12 bg-slate-400/50 rounded-full top-1/2 left-0"></motion.div>
                     </div>
                   ),
                   title: "Speed",
@@ -605,26 +605,26 @@ export default function App() {
                 },
                 {
                   visual: (
-                    <div className="relative w-full h-40 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-8 flex items-center justify-center overflow-hidden group-hover:border-purple-500/30 transition-colors">
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-500/5 to-transparent"></div>
+                    <div className="relative w-full h-40 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-8 flex items-center justify-center overflow-hidden group-hover:border-cyan-500/30 transition-colors">
+                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-slate-500/5 to-transparent"></div>
                       <motion.div 
                         animate={{ scale: [0.95, 1.05, 0.95] }} 
                         transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }} 
                         className="relative z-10"
                       >
-                        <div className="w-20 h-20 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center shadow-[0_0_30px_rgba(168,85,247,0.2)]">
-                          <MessageSquare className="w-10 h-10 text-purple-400/50" />
+                        <div className="w-20 h-20 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.2)]">
+                          <MessageSquare className="w-10 h-10 text-cyan-400/50" />
                         </div>
                         <motion.div 
                           animate={{ opacity: [0, 1, 0], scale: [0.5, 1.2, 0.8] }} 
                           transition={{ repeat: Infinity, duration: 3, delay: 1.5 }} 
                           className="absolute inset-0 flex items-center justify-center"
                         >
-                          <Check className="w-12 h-12 text-pink-400 drop-shadow-[0_0_10px_rgba(236,72,153,0.8)]" />
+                          <Check className="w-12 h-12 text-slate-400 drop-shadow-[0_0_10px_rgba(100,116,139,0.8)]" />
                         </motion.div>
                       </motion.div>
-                      <motion.div animate={{ y: [20, -20], opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 2 }} className="absolute right-12 top-10 w-2 h-2 rounded-full bg-purple-400/60"></motion.div>
-                      <motion.div animate={{ y: [20, -20], opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 2.5, delay: 0.5 }} className="absolute left-12 bottom-10 w-3 h-3 rounded-full bg-pink-400/40"></motion.div>
+                      <motion.div animate={{ y: [20, -20], opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 2 }} className="absolute right-12 top-10 w-2 h-2 rounded-full bg-cyan-400/60"></motion.div>
+                      <motion.div animate={{ y: [20, -20], opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 2.5, delay: 0.5 }} className="absolute left-12 bottom-10 w-3 h-3 rounded-full bg-slate-400/40"></motion.div>
                     </div>
                   ),
                   title: "Clarity",
@@ -632,8 +632,8 @@ export default function App() {
                 },
                 {
                   visual: (
-                    <div className="relative w-full h-40 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-8 flex items-center justify-center overflow-hidden group-hover:border-pink-500/30 transition-colors">
-                      <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 via-indigo-500/5 to-transparent"></div>
+                    <div className="relative w-full h-40 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-8 flex items-center justify-center overflow-hidden group-hover:border-slate-500/30 transition-colors">
+                      <div className="absolute inset-0 bg-gradient-to-br from-slate-500/10 via-blue-500/5 to-transparent"></div>
                       <div className="flex gap-3 relative z-10">
                         {[0, 1, 2].map((i) => (
                           <motion.div 
@@ -642,10 +642,10 @@ export default function App() {
                             transition={{ repeat: Infinity, duration: 2, delay: i * 0.2, ease: "easeInOut" }} 
                             className="flex flex-col items-center gap-3"
                           >
-                            <div className={`w-12 h-12 rounded-full border flex items-center justify-center shadow-[0_0_20px_rgba(236,72,153,0.15)] ${i === 1 ? 'bg-pink-500/20 border-pink-500/50 w-14 h-14' : 'bg-indigo-500/10 border-indigo-500/30'}`}>
-                              <User className={`${i === 1 ? 'text-pink-400 w-6 h-6' : 'text-indigo-400 w-5 h-5'}`} />
+                            <div className={`w-12 h-12 rounded-full border flex items-center justify-center shadow-[0_0_20px_rgba(100,116,139,0.15)] ${i === 1 ? 'bg-slate-500/20 border-slate-500/50 w-14 h-14' : 'bg-blue-500/10 border-blue-500/30'}`}>
+                              <User className={`${i === 1 ? 'text-slate-400 w-6 h-6' : 'text-blue-400 w-5 h-5'}`} />
                             </div>
-                            <div className={`h-1.5 rounded-full ${i === 1 ? 'bg-pink-500/50 w-10' : 'bg-indigo-500/50 w-8'}`}></div>
+                            <div className={`h-1.5 rounded-full ${i === 1 ? 'bg-slate-500/50 w-10' : 'bg-blue-500/50 w-8'}`}></div>
                           </motion.div>
                         ))}
                       </div>
@@ -662,7 +662,7 @@ export default function App() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.15 }}
-                  className="bg-zinc-900/40 backdrop-blur-sm border border-zinc-800/60 rounded-3xl p-8 relative z-10 group hover:border-indigo-500/40 transition-colors text-center shadow-xl"
+                  className="bg-zinc-900/40 backdrop-blur-sm border border-zinc-800/60 rounded-3xl p-8 relative z-10 group hover:border-blue-500/40 transition-colors text-center shadow-xl"
                 >
                   {feature.visual}
                   <h3 className="text-3xl font-bold mb-4 text-white">{feature.title}</h3>
@@ -681,7 +681,7 @@ export default function App() {
 
         {/* 2.7 Now vs With Echo */}
         <section className="py-24 bg-zinc-900/30 border-y border-zinc-800/50 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-900/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-5xl font-bold mb-6">
@@ -692,7 +692,7 @@ export default function App() {
                     whileInView={{ width: "100%" }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
-                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full opacity-50"
+                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-50"
                   />
                 </span>
               </h2>
@@ -704,10 +704,10 @@ export default function App() {
                 <motion.div 
                   animate={{ x: [0, 10, 0] }} 
                   transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-                  className="w-16 h-16 rounded-full bg-indigo-500/20 border border-indigo-400/50 flex items-center justify-center backdrop-blur-md shadow-[0_0_30px_rgba(236,72,153,0.3)] overflow-hidden relative"
+                  className="w-16 h-16 rounded-full bg-blue-500/20 border border-blue-400/50 flex items-center justify-center backdrop-blur-md shadow-[0_0_30px_rgba(100,116,139,0.3)] overflow-hidden relative"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-pink-500/20"></div>
-                  <ArrowRight className="w-8 h-8 text-indigo-400 relative z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-slate-500/20"></div>
+                  <ArrowRight className="w-8 h-8 text-blue-400 relative z-10" />
                 </motion.div>
               </div>
 
@@ -773,61 +773,61 @@ export default function App() {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="bg-indigo-950/20 border border-indigo-500/30 rounded-3xl p-8 md:p-12 relative overflow-hidden group shadow-[0_0_50px_rgba(99,102,241,0.1)]"
+                className="bg-blue-950/20 border border-blue-500/30 rounded-3xl p-8 md:p-12 relative overflow-hidden group shadow-[0_0_50px_rgba(59,130,246,0.1)]"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/10 via-purple-600/5 to-transparent pointer-events-none"></div>
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-indigo-400 to-transparent shadow-[0_0_20px_rgba(129,140,248,0.8)]"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-cyan-600/5 to-transparent pointer-events-none"></div>
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent shadow-[0_0_20px_rgba(96,165,250,0.8)]"></div>
                 
                 <h3 className="text-3xl font-bold text-center mb-12 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">With Echo</h3>
                 
                 <div className="grid grid-cols-2 gap-8 mb-12">
                   <div className="flex flex-col items-center text-center">
-                    <div className="w-24 h-24 rounded-2xl bg-indigo-900/30 border border-indigo-500/50 flex items-center justify-center mb-6 relative overflow-hidden group-hover:border-pink-500/50 transition-colors">
-                      <Bot className="w-12 h-12 text-indigo-400 relative z-10 group-hover:text-pink-400 transition-colors" />
-                      <motion.div animate={{ scale: [1, 1.5], opacity: [0.5, 0] }} transition={{ repeat: Infinity, duration: 1.5 }} className="absolute inset-0 border-2 border-indigo-400/50 rounded-2xl"></motion.div>
-                      <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="w-24 h-24 rounded-2xl bg-blue-900/30 border border-blue-500/50 flex items-center justify-center mb-6 relative overflow-hidden group-hover:border-slate-500/50 transition-colors">
+                      <Bot className="w-12 h-12 text-blue-400 relative z-10 group-hover:text-slate-400 transition-colors" />
+                      <motion.div animate={{ scale: [1, 1.5], opacity: [0.5, 0] }} transition={{ repeat: Infinity, duration: 1.5 }} className="absolute inset-0 border-2 border-blue-400/50 rounded-2xl"></motion.div>
+                      <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-slate-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </div>
-                    <h4 className="font-bold text-indigo-100 tracking-wider group-hover:text-pink-200 transition-colors">AI Answers</h4>
+                    <h4 className="font-bold text-blue-100 tracking-wider group-hover:text-slate-200 transition-colors">AI Answers</h4>
                   </div>
                   
                   <div className="flex flex-col items-center text-center">
-                    <div className="w-24 h-24 rounded-2xl bg-indigo-900/30 border border-indigo-500/50 flex items-center justify-center mb-6 relative group-hover:border-purple-500/50 transition-colors">
-                      <ClipboardCheck className="w-12 h-12 text-indigo-400 group-hover:text-purple-400 transition-colors" />
-                      <motion.div animate={{ y: [-5, 5, -5] }} transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }} className="absolute -bottom-3 -right-3 bg-zinc-900 rounded-full p-1 border border-indigo-500/30 group-hover:border-purple-500/50">
-                        <Filter className="w-6 h-6 text-indigo-400 group-hover:text-purple-400" />
+                    <div className="w-24 h-24 rounded-2xl bg-blue-900/30 border border-blue-500/50 flex items-center justify-center mb-6 relative group-hover:border-cyan-500/50 transition-colors">
+                      <ClipboardCheck className="w-12 h-12 text-blue-400 group-hover:text-cyan-400 transition-colors" />
+                      <motion.div animate={{ y: [-5, 5, -5] }} transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }} className="absolute -bottom-3 -right-3 bg-zinc-900 rounded-full p-1 border border-blue-500/30 group-hover:border-cyan-500/50">
+                        <Filter className="w-6 h-6 text-blue-400 group-hover:text-cyan-400" />
                       </motion.div>
                     </div>
-                    <h4 className="font-bold text-indigo-100 tracking-wider group-hover:text-purple-200 transition-colors">Qualified Leads</h4>
+                    <h4 className="font-bold text-blue-100 tracking-wider group-hover:text-cyan-200 transition-colors">Qualified Leads</h4>
                   </div>
                   
                   <div className="flex flex-col items-center text-center">
-                    <div className="w-24 h-24 rounded-2xl bg-indigo-900/30 border border-indigo-500/50 flex items-center justify-center mb-6 relative group-hover:border-indigo-400/50 transition-colors">
-                      <BrainCircuit className="w-12 h-12 text-indigo-400 group-hover:text-indigo-300 transition-colors" />
-                      <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, duration: 2 }} className="absolute -top-3 -right-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full p-1.5 shadow-lg">
+                    <div className="w-24 h-24 rounded-2xl bg-blue-900/30 border border-blue-500/50 flex items-center justify-center mb-6 relative group-hover:border-blue-400/50 transition-colors">
+                      <BrainCircuit className="w-12 h-12 text-blue-400 group-hover:text-blue-300 transition-colors" />
+                      <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, duration: 2 }} className="absolute -top-3 -right-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full p-1.5 shadow-lg">
                         <Check className="w-4 h-4 text-white" />
                       </motion.div>
                     </div>
-                    <h4 className="font-bold text-indigo-100 tracking-wider group-hover:text-indigo-200 transition-colors">Peace of Mind</h4>
+                    <h4 className="font-bold text-blue-100 tracking-wider group-hover:text-blue-200 transition-colors">Peace of Mind</h4>
                   </div>
                   
                   <div className="flex flex-col items-center text-center">
-                    <div className="w-24 h-24 rounded-2xl bg-indigo-900/30 border border-indigo-500/50 flex items-center justify-center mb-6 relative overflow-hidden group-hover:border-pink-500/50 transition-colors">
-                      <TrendingUp className="w-12 h-12 text-indigo-400 relative z-10 group-hover:text-pink-400 transition-colors" />
+                    <div className="w-24 h-24 rounded-2xl bg-blue-900/30 border border-blue-500/50 flex items-center justify-center mb-6 relative overflow-hidden group-hover:border-slate-500/50 transition-colors">
+                      <TrendingUp className="w-12 h-12 text-blue-400 relative z-10 group-hover:text-slate-400 transition-colors" />
                       <motion.div 
                         animate={{ x: [-50, 50], y: [50, -50] }} 
                         transition={{ repeat: Infinity, duration: 2, ease: "linear" }} 
-                        className="absolute w-24 h-3 bg-pink-400/20 rotate-45"
+                        className="absolute w-24 h-3 bg-slate-400/20 rotate-45"
                       ></motion.div>
-                      <DollarSign className="absolute top-2 left-2 w-5 h-5 text-pink-400" />
+                      <DollarSign className="absolute top-2 left-2 w-5 h-5 text-slate-400" />
                     </div>
-                    <h4 className="font-bold text-indigo-100 tracking-wider group-hover:text-pink-200 transition-colors">Growth</h4>
+                    <h4 className="font-bold text-blue-100 tracking-wider group-hover:text-slate-200 transition-colors">Growth</h4>
                   </div>
                 </div>
                 
-                <div className="text-center pt-8 border-t border-indigo-500/30">
-                  <p className="text-indigo-200 font-medium text-xl">
-                    Consistent leads, <span className="text-indigo-400 font-bold">smooth operation</span> <br/>
-                    & <span className="text-indigo-400 font-bold">predictable revenue</span>
+                <div className="text-center pt-8 border-t border-blue-500/30">
+                  <p className="text-blue-200 font-medium text-xl">
+                    Consistent leads, <span className="text-blue-400 font-bold">smooth operation</span> <br/>
+                    & <span className="text-blue-400 font-bold">predictable revenue</span>
                   </p>
                 </div>
               </motion.div>
@@ -869,7 +869,7 @@ export default function App() {
                     whileInView={{ width: "100%" }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
-                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full opacity-50"
+                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-50"
                   />
                 </span>
               </h2>
@@ -907,7 +907,7 @@ export default function App() {
                   transition={{ delay: i * 0.1 }}
                   className="bg-zinc-900/40 backdrop-blur-sm border border-zinc-800/80 p-8 md:p-10 rounded-3xl hover:bg-zinc-800/40 transition-colors group"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-zinc-800/80 flex items-center justify-center mb-8 text-pink-400 group-hover:scale-110 group-hover:bg-pink-500/10 transition-all duration-300 shadow-lg">
+                  <div className="w-14 h-14 rounded-2xl bg-zinc-800/80 flex items-center justify-center mb-8 text-slate-400 group-hover:scale-110 group-hover:bg-slate-500/10 transition-all duration-300 shadow-lg">
                     <item.icon className="w-7 h-7" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
@@ -946,11 +946,11 @@ export default function App() {
                     whileInView={{ width: "100%" }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
-                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full opacity-50"
+                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-50"
                   />
                 </span>
               </h2>
-              <p className="text-sm md:text-base text-purple-400 italic font-medium">
+              <p className="text-sm md:text-base text-cyan-400 italic font-medium">
                 *ECHO is not limited to the listed industries below, contact us for more info*
               </p>
             </div>
@@ -973,10 +973,10 @@ export default function App() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.05 }}
-                  className="bg-zinc-900/60 backdrop-blur-md border border-zinc-800/80 rounded-2xl p-5 flex items-center gap-4 hover:bg-zinc-800/80 hover:border-pink-500/30 transition-all duration-300 group shadow-lg"
+                  className="bg-zinc-900/60 backdrop-blur-md border border-zinc-800/80 rounded-2xl p-5 flex items-center gap-4 hover:bg-zinc-800/80 hover:border-slate-500/30 transition-all duration-300 group shadow-lg"
                 >
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500/10 to-pink-500/10 flex items-center justify-center flex-shrink-0 group-hover:from-indigo-500/20 group-hover:to-pink-500/20 transition-all">
-                    <CheckCircle2 className="w-5 h-5 text-pink-400 group-hover:text-pink-300 transition-colors" />
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500/10 to-slate-500/10 flex items-center justify-center flex-shrink-0 group-hover:from-blue-500/20 group-hover:to-slate-500/20 transition-all">
+                    <CheckCircle2 className="w-5 h-5 text-slate-400 group-hover:text-slate-300 transition-colors" />
                   </div>
                   <span className="font-bold text-zinc-100 uppercase tracking-wide text-sm">{industry}</span>
                 </motion.div>
@@ -990,7 +990,7 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="relative group overflow-hidden rounded-full p-[1px] block"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
                 <div className="relative bg-zinc-950/80 backdrop-blur-sm px-10 py-5 rounded-full flex items-center justify-center gap-2 transition-all duration-300 group-hover:bg-transparent">
                   <span className="font-bold text-white uppercase tracking-widest text-sm">Schedule a call to get started</span>
                 </div>
@@ -1011,7 +1011,7 @@ export default function App() {
                     whileInView={{ width: "100%" }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
-                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full opacity-50"
+                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-50"
                   />
                 </span>
               </h2>
@@ -1023,8 +1023,8 @@ export default function App() {
             <div className="bg-zinc-900/40 backdrop-blur-sm border border-zinc-800/80 rounded-3xl overflow-hidden shadow-2xl">
               <div className="grid grid-cols-3 border-b border-zinc-800/80 bg-zinc-900/80">
                 <div className="p-5 md:p-8 font-semibold text-zinc-400 text-sm md:text-lg">Feature</div>
-                <div className="p-5 md:p-8 font-bold text-white border-l border-zinc-800/80 bg-gradient-to-b from-indigo-500/10 to-transparent text-sm md:text-lg flex items-center gap-2">
-                  <Bot className="w-5 h-5 text-indigo-400 hidden sm:block" /> ECHO AI
+                <div className="p-5 md:p-8 font-bold text-white border-l border-zinc-800/80 bg-gradient-to-b from-blue-500/10 to-transparent text-sm md:text-lg flex items-center gap-2">
+                  <Bot className="w-5 h-5 text-blue-400 hidden sm:block" /> ECHO AI
                 </div>
                 <div className="p-5 md:p-8 font-semibold text-zinc-400 border-l border-zinc-800/80 text-sm md:text-lg">Human Hire</div>
               </div>
@@ -1039,7 +1039,7 @@ export default function App() {
               ].map((row, i) => (
                 <div key={i} className="grid grid-cols-3 border-b border-zinc-800/50 last:border-0 hover:bg-zinc-800/30 transition-colors">
                   <div className="p-5 md:p-8 text-zinc-300 flex items-center text-sm md:text-base font-medium">{row.feature}</div>
-                  <div className="p-5 md:p-8 text-white border-l border-zinc-800/80 bg-indigo-500/5 flex items-center gap-3 font-semibold text-sm md:text-base">
+                  <div className="p-5 md:p-8 text-white border-l border-zinc-800/80 bg-blue-500/5 flex items-center gap-3 font-semibold text-sm md:text-base">
                     <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
                     {row.echo}
                   </div>
@@ -1057,7 +1057,7 @@ export default function App() {
         <section className="py-24 relative border-t border-zinc-800/50 overflow-hidden">
           {/* Section-specific atmospheric glow */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-purple-600/5 blur-[150px] rounded-full"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-cyan-600/5 blur-[150px] rounded-full"></div>
           </div>
           
           <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -1070,7 +1070,7 @@ export default function App() {
                     whileInView={{ width: "100%" }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
-                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full opacity-50"
+                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-50"
                   />
                 </span>
               </h2>
@@ -1134,8 +1134,8 @@ export default function App() {
                       <Calendar className="w-5 h-5 text-zinc-400" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-white mb-1">Seamless Booking</h4>
-                      <p className="text-zinc-400 text-sm leading-relaxed">AI handles back-and-forth scheduling directly onto your calendar — no phone tag required.</p>
+                      <h4 className="font-bold text-white mb-1">Automated Scheduling</h4>
+                      <p className="text-zinc-400 text-sm leading-relaxed">AI handles back-and-forth scheduling directly onto your calendar, eliminating the need for phone tag.</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -1153,7 +1153,7 @@ export default function App() {
                     </div>
                     <div>
                       <h4 className="font-bold text-white mb-1">Reputation Rocket (Auto Reviews)</h4>
-                      <p className="text-zinc-400 text-sm leading-relaxed">ECHO triggers Google review requests via SMS the moment you finish a job — driving map rankings and organic calls on autopilot.</p>
+                      <p className="text-zinc-400 text-sm leading-relaxed">ECHO triggers Google review requests via SMS the moment you finish a job to drive map rankings and organic calls on autopilot.</p>
                     </div>
                   </div>
                 </div>
@@ -1172,74 +1172,74 @@ export default function App() {
               </div>
 
               {/* Tier 2 */}
-              <div className="bg-zinc-900/80 border-2 border-purple-500/30 rounded-3xl overflow-hidden relative shadow-[0_0_40px_-15px_rgba(168,85,247,0.2)] flex flex-col">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400"></div>
-                <div className="p-8 border-b border-zinc-800/80 bg-purple-950/20">
+              <div className="bg-zinc-900/80 border-2 border-cyan-500/30 rounded-3xl overflow-hidden relative shadow-[0_0_40px_-15px_rgba(6,182,212,0.2)] flex flex-col">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-cyan-400 to-slate-400"></div>
+                <div className="p-8 border-b border-zinc-800/80 bg-cyan-950/20">
                   <div className="flex justify-between items-start mb-4">
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center border border-purple-500/30">
-                        <Bot className="w-6 h-6 text-purple-400" />
+                      <div className="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center border border-cyan-500/30">
+                        <Bot className="w-6 h-6 text-cyan-400" />
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-white">Digital Handyman Pro</h3>
-                        <p className="text-purple-200/70 text-sm mt-1">Everything in the Toolkit, plus a 24/7 AI employee that closes</p>
+                        <p className="text-cyan-200/70 text-sm mt-1">Everything in the Toolkit, plus a 24/7 AI employee that closes</p>
                       </div>
                     </div>
-                    <span className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30 text-xs font-bold uppercase tracking-wider">Pro</span>
+                    <span className="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 text-xs font-bold uppercase tracking-wider">Pro</span>
                   </div>
                 </div>
                 
-                <div className="bg-purple-950/10 px-8 py-4 border-b border-zinc-800/50">
-                  <span className="text-xs font-bold text-purple-400/70 uppercase tracking-widest">Everything in the toolkit, plus...</span>
+                <div className="bg-cyan-950/10 px-8 py-4 border-b border-zinc-800/50">
+                  <span className="text-xs font-bold text-cyan-400/70 uppercase tracking-widest">Everything in the toolkit, plus...</span>
                 </div>
 
                 <div className="p-8 space-y-8 flex-grow">
                   <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0 border border-purple-500/20">
-                      <Mic className="w-5 h-5 text-purple-400" />
+                    <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center flex-shrink-0 border border-cyan-500/20">
+                      <Mic className="w-5 h-5 text-cyan-400" />
                     </div>
                     <div className="flex-grow">
                       <div className="flex justify-between items-start mb-1">
                         <h4 className="font-bold text-white">AI Voice Agent (Echo)</h4>
-                        <span className="text-[10px] font-bold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded uppercase tracking-wider border border-purple-500/20">Pro Only</span>
+                        <span className="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded uppercase tracking-wider border border-cyan-500/20">Pro Only</span>
                       </div>
-                      <p className="text-zinc-400 text-sm leading-relaxed">ECHO answers calls live, holds natural conversations, and handles inquiries — just like a real employee. Available every hour of every day.</p>
+                      <p className="text-zinc-400 text-sm leading-relaxed">ECHO answers calls live, holds natural conversations, and handles inquiries just like a real employee. It is available every hour of every day.</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0 border border-purple-500/20">
-                      <Target className="w-5 h-5 text-purple-400" />
+                    <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center flex-shrink-0 border border-cyan-500/20">
+                      <Target className="w-5 h-5 text-cyan-400" />
                     </div>
                     <div className="flex-grow">
                       <div className="flex justify-between items-start mb-1">
                         <h4 className="font-bold text-white">Real-Time Lead Qualification</h4>
-                        <span className="text-[10px] font-bold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded uppercase tracking-wider border border-purple-500/20">Pro Only</span>
+                        <span className="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded uppercase tracking-wider border border-cyan-500/20">Pro Only</span>
                       </div>
-                      <p className="text-zinc-400 text-sm leading-relaxed">ECHO asks the right questions, determines fit and intent, and filters out time-wasters — so your team only talks to serious prospects.</p>
+                      <p className="text-zinc-400 text-sm leading-relaxed">ECHO asks the right questions, determines fit and intent, and filters out time-wasters so your team only talks to serious prospects.</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0 border border-purple-500/20">
-                      <Handshake className="w-5 h-5 text-purple-400" />
+                    <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center flex-shrink-0 border border-cyan-500/20">
+                      <Handshake className="w-5 h-5 text-cyan-400" />
                     </div>
                     <div className="flex-grow">
                       <div className="flex justify-between items-start mb-1">
                         <h4 className="font-bold text-white">Warm Handoff To Your Team</h4>
-                        <span className="text-[10px] font-bold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded uppercase tracking-wider border border-purple-500/20">Pro Only</span>
+                        <span className="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded uppercase tracking-wider border border-cyan-500/20">Pro Only</span>
                       </div>
-                      <p className="text-zinc-400 text-sm leading-relaxed">When ECHO qualifies a lead, it hands off a full summary — their needs, urgency, and intent — so your team steps in ready to close.</p>
+                      <p className="text-zinc-400 text-sm leading-relaxed">When ECHO qualifies a lead, it hands off a full summary of their needs, urgency, and intent so your team steps in ready to close.</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0 border border-purple-500/20">
-                      <Brain className="w-5 h-5 text-purple-400" />
+                    <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center flex-shrink-0 border border-cyan-500/20">
+                      <Brain className="w-5 h-5 text-cyan-400" />
                     </div>
                     <div className="flex-grow">
                       <div className="flex justify-between items-start mb-1">
                         <h4 className="font-bold text-white">Trained On Your Business</h4>
-                        <span className="text-[10px] font-bold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded uppercase tracking-wider border border-purple-500/20">Pro Only</span>
+                        <span className="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded uppercase tracking-wider border border-cyan-500/20">Pro Only</span>
                       </div>
-                      <p className="text-zinc-400 text-sm leading-relaxed">ECHO is custom-trained on your services, your pricing, and the way you communicate. It sounds like a knowledgeable member of your team — not a robot.</p>
+                      <p className="text-zinc-400 text-sm leading-relaxed">ECHO is custom-trained on your services, your pricing, and the way you communicate. It sounds like a knowledgeable member of your team instead of a robot.</p>
                     </div>
                   </div>
                 </div>
@@ -1249,7 +1249,7 @@ export default function App() {
                     href="https://api.digitalhandyman.xyz/payment-link/69c4b6c5fb727d9c905d2836"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-4 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:opacity-90 text-white font-bold transition-opacity shadow-lg shadow-purple-500/25 flex items-center justify-center gap-2 group block text-center"
+                    className="w-full py-4 rounded-xl bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 hover:opacity-90 text-white font-bold transition-opacity shadow-lg shadow-cyan-500/25 flex items-center justify-center gap-2 group block text-center"
                   >
                     Get access to Digital Handyman Pro
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -1273,7 +1273,7 @@ export default function App() {
                       whileInView={{ width: "100%" }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.5, duration: 1 }}
-                      className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full opacity-50"
+                      className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-50"
                     />
                   </span>
                 </h2>
@@ -1283,7 +1283,7 @@ export default function App() {
                 
                 <div className="space-y-8 mb-12">
                   <div className="flex items-start gap-5">
-                    <div className="w-14 h-14 rounded-full bg-zinc-900/80 border border-zinc-800 flex items-center justify-center text-indigo-400 flex-shrink-0 shadow-lg">
+                    <div className="w-14 h-14 rounded-full bg-zinc-900/80 border border-zinc-800 flex items-center justify-center text-blue-400 flex-shrink-0 shadow-lg">
                       <CheckCircle2 className="w-7 h-7" />
                     </div>
                     <div>
@@ -1292,7 +1292,7 @@ export default function App() {
                     </div>
                   </div>
                   <div className="flex items-start gap-5">
-                    <div className="w-14 h-14 rounded-full bg-zinc-900/80 border border-zinc-800 flex items-center justify-center text-pink-400 flex-shrink-0 shadow-lg">
+                    <div className="w-14 h-14 rounded-full bg-zinc-900/80 border border-zinc-800 flex items-center justify-center text-slate-400 flex-shrink-0 shadow-lg">
                       <CheckCircle2 className="w-7 h-7" />
                     </div>
                     <div>
@@ -1325,7 +1325,7 @@ export default function App() {
                       whileInView={{ width: "100%" }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.5, duration: 1 }}
-                      className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full opacity-50"
+                      className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-50"
                     />
                   </span>
                 </h3>
@@ -1341,7 +1341,7 @@ export default function App() {
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                         placeholder="John Doe"
-                        className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 transition-all"
+                        className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-all"
                       />
                     </div>
                     <div>
@@ -1352,7 +1352,7 @@ export default function App() {
                         value={formData.phoneNumber}
                         onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
                         placeholder="(555) 000-0000"
-                        className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 transition-all"
+                        className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-all"
                       />
                     </div>
                   </div>
@@ -1364,7 +1364,7 @@ export default function App() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="john@company.com"
-                      className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 transition-all"
+                      className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-all"
                     />
                   </div>
                   <div>
@@ -1375,7 +1375,7 @@ export default function App() {
                       value={formData.companyName}
                       onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
                       placeholder="Acme Plumbing"
-                      className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 transition-all"
+                      className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-all"
                     />
                   </div>
                   <div>
@@ -1386,7 +1386,7 @@ export default function App() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Tell us about your biggest bottleneck (e.g., missing calls after hours, spending too much on receptionists)..."
-                      className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 transition-all resize-none"
+                      className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-all resize-none"
                     ></textarea>
                   </div>
                   
@@ -1398,7 +1398,7 @@ export default function App() {
                         required
                         checked={formData.consent}
                         onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
-                        className="w-5 h-5 rounded border-zinc-800 bg-zinc-950/50 text-purple-500 focus:ring-purple-500/50 transition-all cursor-pointer"
+                        className="w-5 h-5 rounded border-zinc-800 bg-zinc-950/50 text-cyan-500 focus:ring-cyan-500/50 transition-all cursor-pointer"
                       />
                     </div>
                     <label htmlFor="sms-consent" className="text-sm text-zinc-400 leading-relaxed cursor-pointer select-none">
@@ -1411,7 +1411,7 @@ export default function App() {
                     disabled={isSubmitting || isSubmitted}
                     className="w-full relative group overflow-hidden rounded-xl p-[1px] mt-6 block disabled:opacity-70"
                   >
-                    <span className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-xl opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-xl opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
                     <div className="relative bg-zinc-950/50 backdrop-blur-sm px-8 py-5 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 group-hover:bg-transparent">
                       <span className="font-bold text-white text-lg tracking-wide">
                         {isSubmitting ? 'Sending...' : isSubmitted ? 'Message Sent!' : 'Get Your AI Employee Today!'}
@@ -1451,7 +1451,7 @@ export default function App() {
                     className="hover:opacity-80 transition-opacity cursor-pointer"
                   >
                     <img 
-                      src="https://lh3.googleusercontent.com/d/1jQbX2YVVMITDUUY8PW3DRRKyPPBkO1jU" 
+                      src="https://lh3.googleusercontent.com/d/198nU5-hu5_saqJ6kJH2aIUSNj4Y5Ic3b" 
                       alt="Digital Handyman Logo" 
                       className="h-10 w-auto object-contain rounded-lg"
                       referrerPolicy="no-referrer"
@@ -1462,15 +1462,12 @@ export default function App() {
                   Creating and deploying AI employees into local service businesses so you can scale without the overhead. Stop missing calls, start booking jobs.
                 </p>
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
-                  </div>
-                  <div className="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd"></path></svg>
-                  </div>
-                  <div className="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 019.08 1.43 8.54 8.54 0 01-10.6 5.729z" clipRule="evenodd"></path></svg>
-                  </div>
+                  <a href="#" className="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 hover:border-zinc-700 cursor-pointer transition-all">
+                    <Youtube className="w-5 h-5" />
+                  </a>
                 </div>
               </div>
               
@@ -1490,9 +1487,9 @@ export default function App() {
                   <input 
                     type="email" 
                     placeholder="Email address" 
-                    className="bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-purple-500 w-full"
+                    className="bg-zinc-900 border border-zinc-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-cyan-500 w-full"
                   />
-                  <button className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-2 rounded-lg text-sm font-bold transition-colors">
+                  <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-3 py-2 rounded-lg text-sm font-bold transition-colors">
                     Join
                   </button>
                 </form>
