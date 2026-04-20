@@ -288,9 +288,9 @@ export default function App() {
                   </div>
                   
                   <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 leading-[0.9] text-white">
-                    <span className="block">Scale Without</span>
+                    <span className="block">Turn Missed Leads</span>
                     <span className="relative inline-block mt-2">
-                      <GradientText>Hiring Anyone</GradientText>
+                      <GradientText>Into Revenue</GradientText>
                       <motion.div 
                         initial={{ width: 0 }}
                         animate={{ width: "100%" }}
