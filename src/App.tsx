@@ -72,6 +72,34 @@ const DualCTA = ({
   );
 };
 
+const SectionBottomCTAs = () => (
+  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+    <a 
+      href="https://calendly.com/adambeckner/digitalhandyman"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="relative group overflow-hidden rounded-full p-[1px] block w-full sm:w-auto"
+    >
+      <span className="absolute inset-0 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
+      <div className="relative bg-zinc-950/80 backdrop-blur-sm px-8 py-4 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-zinc-900/50">
+        <span className="font-bold text-white whitespace-nowrap">Schedule A Demo</span>
+      </div>
+    </a>
+
+    <a 
+      href="#"
+      onClick={(e) => {
+        e.preventDefault();
+        window.scrollBy({ top: window.innerHeight * 0.8, behavior: 'smooth' });
+      }}
+      className="px-8 py-4 rounded-full font-bold text-white border border-zinc-700 hover:border-zinc-500 bg-zinc-900/50 hover:bg-zinc-800/80 transition-all flex items-center justify-center gap-2 group cursor-pointer w-full sm:w-auto whitespace-nowrap"
+    >
+      Keep Learning
+      <ChevronDown className="w-4 h-4 text-zinc-400 group-hover:text-white transition-colors group-hover:translate-y-1" />
+    </a>
+  </div>
+);
+
 const AnimatedStat: FC<{ value: string, label: string }> = ({ value, label }) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
@@ -559,6 +587,7 @@ export default function App() {
               <p className="text-lg md:text-xl text-zinc-300 leading-relaxed">
                 The AI agent engages the caller, asks the right questions, and keeps the conversation moving forward with purpose. While the lead talks, Echo determines fit, intent, and readiness without relying on guesswork. Nothing slips through. Nothing is rushed. By the time the interaction is complete, the outcome is clear. Your team receives a lead that has already been evaluated, prioritized, and prepared, allowing them to step in at the moment it actually matters.
               </p>
+              <SectionBottomCTAs />
             </div>
           </div>
         </section>
@@ -675,6 +704,7 @@ export default function App() {
               <p className="text-lg md:text-xl text-zinc-300 leading-relaxed">
                 Echo wins because it removes human dependency from the most fragile part of the sales process. It creates a system where every inbound opportunity is handled with the same discipline, precision, and follow-through. There is no variation based on mood, availability, or experience level. Decisions are made based on signals, not assumptions. As a result, sales teams stop reacting and start operating with clarity. Echo does not compete with people. It outperforms inconsistency. That is what turns inbound demand into a reliable advantage instead of an ongoing risk.
               </p>
+              <SectionBottomCTAs />
             </div>
           </div>
         </section>
@@ -837,6 +867,7 @@ export default function App() {
               <p className="text-lg md:text-xl text-zinc-300 leading-relaxed">
                 Echo replaces uncertainty with clarity, chaos with structure, and missed opportunities with momentum. For the business owner, this means no longer wondering what happened to yesterday's calls or whether opportunities are slipping through the cracks. You stop feeling chained to your phone, inbox, or sales team just to make sure leads are handled correctly. Inbound sales become something you trust instead of something you monitor. Your business runs with consistency whether you are in the office or not. Decisions get easier because the data is clear, the handoffs are clean, and the results are predictable. Echo gives you back control, confidence, and the ability to scale without being personally involved in every conversation.
               </p>
+              <SectionBottomCTAs />
             </div>
           </div>
         </section>
