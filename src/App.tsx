@@ -234,7 +234,7 @@ export default function App() {
                 <div className="h-4 w-[1px] bg-zinc-800 hidden sm:block"></div>
                 <div className="hidden sm:flex items-center gap-2 px-2 py-1 rounded-full bg-zinc-900/50 border border-zinc-800/50">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                  <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">ECHO: ACTIVE</span>
+                  <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">GHOST: ACTIVE</span>
                 </div>
               </div>
             </div>
@@ -263,7 +263,7 @@ export default function App() {
           </div>
         </nav>
 
-        {/* 1. Hero Section & ECHO Intro */}
+        {/* 1. Hero Section & GHOST Intro */}
         <section className="pt-32 pb-20 lg:pt-48 lg:pb-32">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -274,8 +274,8 @@ export default function App() {
                 className="max-w-2xl relative"
               >
                 {/* Background Decorative Text */}
-                <div className="absolute -top-24 -left-12 text-[14rem] font-black text-white/[0.03] select-none pointer-events-none uppercase tracking-tighter hidden lg:block leading-none">
-                  ECHO
+                <div className="absolute -top-20 -left-6 text-[10rem] font-black text-white/[0.03] select-none pointer-events-none uppercase tracking-tighter hidden lg:block leading-none">
+                  GHOST
                 </div>
 
                 <div className="relative z-10">
@@ -301,7 +301,7 @@ export default function App() {
                   </h1>
                   
                   <p className="text-xl text-zinc-400 mb-12 leading-relaxed max-w-lg font-medium">
-                    Meet <span className="text-white font-bold">ECHO</span>, your 24/7 AI employee that handles SMS, web chats, and missed calls so you can scale your local business on autopilot.
+                    Meet <span className="text-white font-bold">GHOST</span>, your 24/7 AI employee that handles SMS, web chats, and missed calls so you can scale your local business on autopilot.
                   </p>
                   
                   <div className="flex flex-col sm:flex-row items-center gap-6">
@@ -310,7 +310,7 @@ export default function App() {
                 </div>
               </motion.div>
 
-              {/* ECHO Intro (Mock Conversation) */}
+              {/* GHOST Intro (Mock Conversation) */}
               <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -324,7 +324,7 @@ export default function App() {
                       <Bot className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-white">Echo AI</h3>
+                      <h3 className="font-semibold text-white">Ghost AI</h3>
                       <p className="text-xs text-green-400 flex items-center gap-1">
                         <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
                         Online • Replying instantly
@@ -367,7 +367,7 @@ export default function App() {
                   </div>
                 </div>
                 <p className="text-center text-xs text-zinc-500 mt-4 italic relative z-10">
-                  *An illustrative example of ECHO's automated response capabilities.
+                  *An illustrative example of GHOST's automated response capabilities.
                 </p>
               </motion.div>
             </div>
@@ -400,17 +400,17 @@ export default function App() {
                 { 
                   step: "01", 
                   title: "We Learn Your Business", 
-                  desc: "We map out your services, pricing, service areas, and FAQs to build ECHO's knowledge base. We train your AI to speak in your brand's voice, ensuring every customer interaction feels authentic, professional, and perfectly aligned with your business values." 
+                  desc: "We map out your services, pricing, service areas, and FAQs to build GHOST's knowledge base. We train your AI to speak in your brand's voice, ensuring every customer interaction feels authentic, professional, and perfectly aligned with your business values." 
                 },
                 { 
                   step: "02", 
-                  title: "We Deploy Echo", 
-                  desc: "We integrate Echo directly into your website, SMS routing, Google Business Profile, and social media channels. The setup is completely hands-off for you. Our team handles the technical integration so you don't have to write a single line of code." 
+                  title: "We Deploy Ghost", 
+                  desc: "We integrate Ghost directly into your website, SMS routing, Google Business Profile, and social media channels. The setup is completely hands-off for you. Our team handles the technical integration so you don't have to write a single line of code." 
                 },
                 { 
                   step: "03", 
                   title: "You Watch Leads Roll In", 
-                  desc: "ECHO handles inquiries 24/7, qualifies leads based on your specific criteria, and books jobs directly onto your calendar. Wake up to new appointments, stop worrying about missed calls, and watch your revenue grow on autopilot." 
+                  desc: "GHOST handles inquiries 24/7, qualifies leads based on your specific criteria, and books jobs directly onto your calendar. Wake up to new appointments, stop worrying about missed calls, and watch your revenue grow on autopilot." 
                 }
               ].map((item, i) => (
                 <motion.div 
@@ -444,14 +444,14 @@ export default function App() {
           </div>
         </section>
 
-        {/* 2.5 The ECHO Lead Flow */}
+        {/* 2.5 The GHOST Lead Flow */}
         <section id="lead-flow" className="py-24 bg-zinc-900/30 border-y border-zinc-800/50 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-5xl font-bold mb-6">
                 <span className="relative inline-block">
-                  The <GradientText>Echo Lead Flow</GradientText>
+                  The <GradientText>Ghost Lead Flow</GradientText>
                   <motion.div 
                     initial={{ width: 0 }}
                     whileInView={{ width: "100%" }}
@@ -462,7 +462,7 @@ export default function App() {
                 </span>
               </h2>
               <p className="text-lg text-zinc-400 leading-relaxed">
-                Echo turns inbound demand into a structured process instead of a scramble. Every new inquiry is handled the same way, every time.
+                Ghost turns inbound demand into a structured process instead of a scramble. Every new inquiry is handled the same way, every time.
               </p>
             </div>
 
@@ -516,7 +516,7 @@ export default function App() {
                     </div>
                   ),
                   title: "2. AI Agent Calls Within 60 Seconds",
-                  desc: "ECHO immediately engages the caller, asking the right questions to keep the conversation moving forward."
+                  desc: "GHOST immediately engages the caller, asking the right questions to keep the conversation moving forward."
                 },
                 {
                   visual: (
@@ -536,7 +536,7 @@ export default function App() {
                     </div>
                   ),
                   title: "3. The AI Qualifies & Filters",
-                  desc: "While the lead talks, ECHO determines fit, intent, and readiness. Time-wasters are filtered out."
+                  desc: "While the lead talks, GHOST determines fit, intent, and readiness. Time-wasters are filtered out."
                 },
                 {
                   visual: (
@@ -585,20 +585,20 @@ export default function App() {
 
             <div className="w-full text-center bg-zinc-900/40 border border-zinc-800/60 rounded-2xl p-8 md:p-12 backdrop-blur-sm">
               <p className="text-lg md:text-xl text-zinc-300 leading-relaxed">
-                The AI agent engages the caller, asks the right questions, and keeps the conversation moving forward with purpose. While the lead talks, Echo determines fit, intent, and readiness without relying on guesswork. Nothing slips through. Nothing is rushed. By the time the interaction is complete, the outcome is clear. Your team receives a lead that has already been evaluated, prioritized, and prepared, allowing them to step in at the moment it actually matters.
+                The AI agent engages the caller, asks the right questions, and keeps the conversation moving forward with purpose. While the lead talks, Ghost determines fit, intent, and readiness without relying on guesswork. Nothing slips through. Nothing is rushed. By the time the interaction is complete, the outcome is clear. Your team receives a lead that has already been evaluated, prioritized, and prepared, allowing them to step in at the moment it actually matters.
               </p>
               <SectionBottomCTAs />
             </div>
           </div>
         </section>
 
-        {/* 2.6 Why ECHO Wins */}
+        {/* 2.6 Why GHOST Wins */}
         <section className="py-24 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-5xl font-bold mb-6">
                 <span className="relative inline-block">
-                  How <GradientText>Echo</GradientText> Removes The <GradientText>Biggest Sales Problems</GradientText>
+                  How <GradientText>Ghost</GradientText> Removes The <GradientText>Biggest Sales Problems</GradientText>
                   <motion.div 
                     initial={{ width: 0 }}
                     whileInView={{ width: "100%" }}
@@ -702,21 +702,21 @@ export default function App() {
 
             <div className="w-full text-center bg-zinc-900/40 border border-zinc-800/60 rounded-2xl p-8 md:p-12 backdrop-blur-sm">
               <p className="text-lg md:text-xl text-zinc-300 leading-relaxed">
-                Echo wins because it removes human dependency from the most fragile part of the sales process. It creates a system where every inbound opportunity is handled with the same discipline, precision, and follow-through. There is no variation based on mood, availability, or experience level. Decisions are made based on signals, not assumptions. As a result, sales teams stop reacting and start operating with clarity. Echo does not compete with people. It outperforms inconsistency. That is what turns inbound demand into a reliable advantage instead of an ongoing risk.
+                Ghost wins because it removes human dependency from the most fragile part of the sales process. It creates a system where every inbound opportunity is handled with the same discipline, precision, and follow-through. There is no variation based on mood, availability, or experience level. Decisions are made based on signals, not assumptions. As a result, sales teams stop reacting and start operating with clarity. Ghost does not compete with people. It outperforms inconsistency. That is what turns inbound demand into a reliable advantage instead of an ongoing risk.
               </p>
               <SectionBottomCTAs />
             </div>
           </div>
         </section>
 
-        {/* 2.7 Now vs With Echo */}
+        {/* 2.7 Now vs With Ghost */}
         <section className="py-24 bg-zinc-900/30 border-y border-zinc-800/50 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-5xl font-bold mb-6">
                 <span className="relative inline-block">
-                  Why Our Customers <GradientText>Love Echo</GradientText>
+                  Why Our Customers <GradientText>Love Ghost</GradientText>
                   <motion.div 
                     initial={{ width: 0 }}
                     whileInView={{ width: "100%" }}
@@ -798,7 +798,7 @@ export default function App() {
                 </div>
               </motion.div>
 
-              {/* WITH ECHO - The Solution */}
+              {/* WITH GHOST - The Solution */}
               <motion.div 
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -808,7 +808,7 @@ export default function App() {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-cyan-600/5 to-transparent pointer-events-none"></div>
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent shadow-[0_0_20px_rgba(96,165,250,0.8)]"></div>
                 
-                <h3 className="text-3xl font-bold text-center mb-12 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">With Echo</h3>
+                <h3 className="text-3xl font-bold text-center mb-12 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">With Ghost</h3>
                 
                 <div className="grid grid-cols-2 gap-8 mb-12">
                   <div className="flex flex-col items-center text-center">
@@ -865,7 +865,7 @@ export default function App() {
 
             <div className="w-full text-center bg-zinc-900/40 border border-zinc-800/60 rounded-2xl p-8 md:p-12 backdrop-blur-sm">
               <p className="text-lg md:text-xl text-zinc-300 leading-relaxed">
-                Echo replaces uncertainty with clarity, chaos with structure, and missed opportunities with momentum. For the business owner, this means no longer wondering what happened to yesterday's calls or whether opportunities are slipping through the cracks. You stop feeling chained to your phone, inbox, or sales team just to make sure leads are handled correctly. Inbound sales become something you trust instead of something you monitor. Your business runs with consistency whether you are in the office or not. Decisions get easier because the data is clear, the handoffs are clean, and the results are predictable. Echo gives you back control, confidence, and the ability to scale without being personally involved in every conversation.
+                Ghost replaces uncertainty with clarity, chaos with structure, and missed opportunities with momentum. For the business owner, this means no longer wondering what happened to yesterday's calls or whether opportunities are slipping through the cracks. You stop feeling chained to your phone, inbox, or sales team just to make sure leads are handled correctly. Inbound sales become something you trust instead of something you monitor. Your business runs with consistency whether you are in the office or not. Decisions get easier because the data is clear, the handoffs are clean, and the results are predictable. Ghost gives you back control, confidence, and the ability to scale without being personally involved in every conversation.
               </p>
               <SectionBottomCTAs />
             </div>
@@ -912,22 +912,22 @@ export default function App() {
                 { 
                   icon: PhoneMissed, 
                   title: "Missed Calls = Lost Revenue", 
-                  desc: "70% of callers won't leave a voicemail. If you don't answer immediately, they call the next business on Google. ECHO intercepts missed calls with an instant text back, turning a lost opportunity into a booked job." 
+                  desc: "70% of callers won't leave a voicemail. If you don't answer immediately, they call the next business on Google. GHOST intercepts missed calls with an instant text back, turning a lost opportunity into a booked job." 
                 },
                 { 
                   icon: Clock, 
                   title: "Slow Follow-up Kills Deals", 
-                  desc: "Leads go cold in exactly 5 minutes. Can your human team drop everything to respond to every single inquiry instantly? ECHO responds in under 3 seconds, every single time, guaranteeing you're always the first to reply." 
+                  desc: "Leads go cold in exactly 5 minutes. Can your human team drop everything to respond to every single inquiry instantly? GHOST responds in under 3 seconds, every single time, guaranteeing you're always the first to reply." 
                 },
                 { 
                   icon: TrendingDown, 
                   title: "Wasted Advertising Spend", 
-                  desc: "You're paying hundreds or thousands for clicks, but losing the leads because no one was available to chat when they landed on your site. ECHO maximizes your ROI by engaging every single visitor 24/7." 
+                  desc: "You're paying hundreds or thousands for clicks, but losing the leads because no one was available to chat when they landed on your site. GHOST maximizes your ROI by engaging every single visitor 24/7." 
                 },
                 { 
                   icon: DollarSign, 
                   title: "The Crushing Cost of Hiring", 
-                  desc: "Recruiting, training, payroll, benefits, and turnover. Humans are expensive, they make mistakes, they take vacations, and they sleep. ECHO works 168 hours a week for a fraction of the cost of a minimum-wage employee." 
+                  desc: "Recruiting, training, payroll, benefits, and turnover. Humans are expensive, they make mistakes, they take vacations, and they sleep. GHOST works 168 hours a week for a fraction of the cost of a minimum-wage employee." 
                 }
               ].map((item, i) => (
                 <motion.div 
@@ -982,7 +982,7 @@ export default function App() {
                 </span>
               </h2>
               <p className="text-sm md:text-base text-cyan-400 italic font-medium">
-                *ECHO is not limited to the listed industries below, contact us for more info*
+                *GHOST is not limited to the listed industries below, contact us for more info*
               </p>
             </div>
             
@@ -1055,24 +1055,24 @@ export default function App() {
               <div className="grid grid-cols-3 border-b border-zinc-800/80 bg-zinc-900/80">
                 <div className="p-5 md:p-8 font-semibold text-zinc-400 text-sm md:text-lg">Feature</div>
                 <div className="p-5 md:p-8 font-bold text-white border-l border-zinc-800/80 bg-gradient-to-b from-blue-500/10 to-transparent text-sm md:text-lg flex items-center gap-2">
-                  <Bot className="w-5 h-5 text-blue-400 hidden sm:block" /> ECHO AI
+                  <Bot className="w-5 h-5 text-blue-400 hidden sm:block" /> GHOST AI
                 </div>
                 <div className="p-5 md:p-8 font-semibold text-zinc-400 border-l border-zinc-800/80 text-sm md:text-lg">Human Hire</div>
               </div>
               
               {[
-                { feature: "Availability", echo: "24/7/365 (Never sleeps)", human: "9 to 5, Mon-Fri (40 hrs/wk)" },
-                { feature: "Response Time", echo: "Instant (< 3 seconds)", human: "Minutes to Hours" },
-                { feature: "Cost Structure", echo: "Flat, predictable monthly rate", human: "Salary, benefits, taxes, overtime" },
-                { feature: "Onboarding & Training", echo: "Ready to work in days", human: "Weeks of training & shadowing" },
-                { feature: "Multitasking Capacity", echo: "Unlimited simultaneous chats", human: "One call or chat at a time" },
-                { feature: "Sick Days & PTO", echo: "Zero", human: "15-20 days per year" }
+                { feature: "Availability", ghost: "24/7/365 (Never sleeps)", human: "9 to 5, Mon-Fri (40 hrs/wk)" },
+                { feature: "Response Time", ghost: "Instant (< 3 seconds)", human: "Minutes to Hours" },
+                { feature: "Cost Structure", ghost: "Flat, predictable monthly rate", human: "Salary, benefits, taxes, overtime" },
+                { feature: "Onboarding & Training", ghost: "Ready to work in days", human: "Weeks of training & shadowing" },
+                { feature: "Multitasking Capacity", ghost: "Unlimited simultaneous chats", human: "One call or chat at a time" },
+                { feature: "Sick Days & PTO", ghost: "Zero", human: "15-20 days per year" }
               ].map((row, i) => (
                 <div key={i} className="grid grid-cols-3 border-b border-zinc-800/50 last:border-0 hover:bg-zinc-800/30 transition-colors">
                   <div className="p-5 md:p-8 text-zinc-300 flex items-center text-sm md:text-base font-medium">{row.feature}</div>
                   <div className="p-5 md:p-8 text-white border-l border-zinc-800/80 bg-blue-500/5 flex items-center gap-3 font-semibold text-sm md:text-base">
                     <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    {row.echo}
+                    {row.ghost}
                   </div>
                   <div className="p-5 md:p-8 text-zinc-500 border-l border-zinc-800/80 flex items-center gap-3 text-sm md:text-base">
                     <XCircle className="w-5 h-5 text-red-400/50 flex-shrink-0" />
@@ -1175,7 +1175,7 @@ export default function App() {
                     </div>
                     <div>
                       <h4 className="font-bold text-white mb-1">Database Reactivation</h4>
-                      <p className="text-zinc-400 text-sm leading-relaxed">ECHO uses AI-powered SMS to re-engage dead leads and past clients, turning your existing list into booked appointments.</p>
+                      <p className="text-zinc-400 text-sm leading-relaxed">GHOST uses AI-powered SMS to re-engage dead leads and past clients, turning your existing list into booked appointments.</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -1184,7 +1184,7 @@ export default function App() {
                     </div>
                     <div>
                       <h4 className="font-bold text-white mb-1">Reputation Rocket (Auto Reviews)</h4>
-                      <p className="text-zinc-400 text-sm leading-relaxed">ECHO triggers Google review requests via SMS the moment you finish a job to drive map rankings and organic calls on autopilot.</p>
+                      <p className="text-zinc-400 text-sm leading-relaxed">GHOST triggers Google review requests via SMS the moment you finish a job to drive map rankings and organic calls on autopilot.</p>
                     </div>
                   </div>
                 </div>
@@ -1231,10 +1231,10 @@ export default function App() {
                     </div>
                     <div className="flex-grow">
                       <div className="flex justify-between items-start mb-1">
-                        <h4 className="font-bold text-white">AI Voice Agent (Echo)</h4>
+                        <h4 className="font-bold text-white">AI Voice Agent (Ghost)</h4>
                         <span className="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded uppercase tracking-wider border border-cyan-500/20">Pro Only</span>
                       </div>
-                      <p className="text-zinc-400 text-sm leading-relaxed">ECHO answers calls live, holds natural conversations, and handles inquiries just like a real employee. It is available every hour of every day.</p>
+                      <p className="text-zinc-400 text-sm leading-relaxed">GHOST answers calls live, holds natural conversations, and handles inquiries just like a real employee. It is available every hour of every day.</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -1246,7 +1246,7 @@ export default function App() {
                         <h4 className="font-bold text-white">Real-Time Lead Qualification</h4>
                         <span className="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded uppercase tracking-wider border border-cyan-500/20">Pro Only</span>
                       </div>
-                      <p className="text-zinc-400 text-sm leading-relaxed">ECHO asks the right questions, determines fit and intent, and filters out time-wasters so your team only talks to serious prospects.</p>
+                      <p className="text-zinc-400 text-sm leading-relaxed">GHOST asks the right questions, determines fit and intent, and filters out time-wasters so your team only talks to serious prospects.</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -1258,7 +1258,7 @@ export default function App() {
                         <h4 className="font-bold text-white">Warm Handoff To Your Team</h4>
                         <span className="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded uppercase tracking-wider border border-cyan-500/20">Pro Only</span>
                       </div>
-                      <p className="text-zinc-400 text-sm leading-relaxed">When ECHO qualifies a lead, it hands off a full summary of their needs, urgency, and intent so your team steps in ready to close.</p>
+                      <p className="text-zinc-400 text-sm leading-relaxed">When GHOST qualifies a lead, it hands off a full summary of their needs, urgency, and intent so your team steps in ready to close.</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -1270,7 +1270,7 @@ export default function App() {
                         <h4 className="font-bold text-white">Trained On Your Business</h4>
                         <span className="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded uppercase tracking-wider border border-cyan-500/20">Pro Only</span>
                       </div>
-                      <p className="text-zinc-400 text-sm leading-relaxed">ECHO is custom-trained on your services, your pricing, and the way you communicate. It sounds like a knowledgeable member of your team instead of a robot.</p>
+                      <p className="text-zinc-400 text-sm leading-relaxed">GHOST is custom-trained on your services, your pricing, and the way you communicate. It sounds like a knowledgeable member of your team instead of a robot.</p>
                     </div>
                   </div>
                 </div>
@@ -1410,7 +1410,7 @@ export default function App() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-zinc-300 mb-2">How can ECHO help you?</label>
+                    <label className="block text-sm font-semibold text-zinc-300 mb-2">How can GHOST help you?</label>
                     <textarea 
                       rows={4}
                       required
