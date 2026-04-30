@@ -225,7 +225,7 @@ export default function App() {
                   className="hover:opacity-80 transition-opacity cursor-pointer"
                 >
                   <img 
-                    src="https://lh3.googleusercontent.com/d/198nU5-hu5_saqJ6kJH2aIUSNj4Y5Ic3b" 
+                    src="https://lh3.googleusercontent.com/d/1544mD2hMn-HUIbIWIjKI1IARn_uqRZ-A" 
                     alt="Digital Handyman Logo" 
                     className="h-8 w-auto object-contain rounded-md"
                     referrerPolicy="no-referrer"
@@ -1482,7 +1482,7 @@ export default function App() {
                     className="hover:opacity-80 transition-opacity cursor-pointer"
                   >
                     <img 
-                      src="https://lh3.googleusercontent.com/d/198nU5-hu5_saqJ6kJH2aIUSNj4Y5Ic3b" 
+                      src="https://lh3.googleusercontent.com/d/1544mD2hMn-HUIbIWIjKI1IARn_uqRZ-A" 
                       alt="Digital Handyman Logo" 
                       className="h-10 w-auto object-contain rounded-lg"
                       referrerPolicy="no-referrer"
