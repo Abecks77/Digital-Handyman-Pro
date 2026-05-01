@@ -2,10 +2,12 @@ import { ReactNode, useEffect, useRef, useState, FC, FormEvent } from 'react';
 import { motion, useInView, animate } from 'motion/react';
 import { 
   Bot, PhoneMissed, Clock, TrendingDown, DollarSign, 
-  CheckCircle2, XCircle, ArrowRight, Calendar, Zap, Shield, Star, Heart,
+  CheckCircle2, XCircle, ArrowRight, ArrowDown, Calendar, Zap, Shield, Star, Heart,
   UserPlus, PhoneCall, Filter, Flame, MessageSquare, Check, User, Timer,
   Frown, AlertCircle, TrendingUp, ClipboardCheck, BrainCircuit,
-  Wrench, Send, Hammer, Mic, Target, RefreshCw, Handshake, Brain, ChevronDown, Facebook, Youtube
+  Wrench, Send, Hammer, Mic, Target, RefreshCw, Handshake, Brain, ChevronDown, Facebook, Youtube,
+  Users, BarChart2, Layout, ClipboardList, Mail, BookOpen, Edit3, PieChart, Bell,
+  UserCheck, CalendarCheck
 } from 'lucide-react';
 
 const GradientText = ({ children, className = "" }: { children: ReactNode, className?: string }) => (
@@ -32,7 +34,7 @@ const DualCTA = ({
   const ButtonContent = (
     <div className="relative bg-zinc-950/80 backdrop-blur-sm px-8 py-4 rounded-full flex items-center justify-center gap-2 transition-all duration-300 group-hover:bg-zinc-900/50">
       <span className="font-semibold text-white">{primaryText}</span>
-      <PrimaryIcon className={`w-4 h-4 text-slate-400 transition-transform ${PrimaryIcon === ChevronDown ? 'group-hover:translate-y-1' : 'group-hover:translate-x-1'}`} />
+      <PrimaryIcon className={`w-4 h-4 text-slate-400 transition-transform ${PrimaryIcon === ChevronDown || PrimaryIcon === ArrowDown ? 'group-hover:translate-y-1' : 'group-hover:translate-x-1'}`} />
     </div>
   );
 
@@ -138,6 +140,582 @@ const AnimatedStat: FC<{ value: string, label: string }> = ({ value, label }) =>
     <div ref={ref} className="text-center px-4">
       <div className="text-4xl md:text-5xl font-bold text-white mb-3 tracking-tight">{displayValue}</div>
       <div className="text-sm font-semibold text-zinc-400 uppercase tracking-widest">{label}</div>
+    </div>
+  );
+};
+
+const DashboardFeatureShowcase = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const features = [
+    { 
+      id: "crm",
+      title: "CRM & Pipeline Management", 
+      icon: Users,
+      desc: "Track every lead, conversation, and opportunity in one centralized dashboard so nothing falls through the cracks.",
+      visual: (
+        <div className="space-y-4">
+          <div className="flex justify-between items-center pb-4 border-b border-zinc-800">
+            <span className="font-semibold text-white">Sales Pipeline</span>
+            <span className="text-xs text-zinc-400 bg-zinc-800 px-2 py-1 rounded">32 Active Leads</span>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="bg-zinc-800/50 p-4 rounded-lg border border-zinc-700/30">
+              <div className="text-xs text-zinc-400 mb-2">New Leads</div>
+              <div className="space-y-2">
+                <div className="h-16 bg-zinc-700/30 rounded border border-zinc-600/20 p-2">
+                  <div className="h-2 w-1/2 bg-blue-400/40 rounded mb-2"></div>
+                  <div className="h-2 w-3/4 bg-zinc-600/40 rounded"></div>
+                </div>
+                <div className="h-16 bg-zinc-700/30 rounded border border-zinc-600/20 p-2">
+                  <div className="h-2 w-2/3 bg-cyan-400/40 rounded mb-2"></div>
+                  <div className="h-2 w-1/2 bg-zinc-600/40 rounded"></div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-zinc-800/50 p-4 rounded-lg border border-zinc-700/30">
+              <div className="text-xs text-zinc-400 mb-2">In Conversation</div>
+              <div className="space-y-2">
+                <div className="h-16 bg-zinc-700/30 rounded border border-zinc-600/20 p-2">
+                  <div className="h-2 w-3/4 bg-blue-400/40 rounded mb-2"></div>
+                  <div className="h-2 w-1/4 bg-zinc-600/40 rounded"></div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-zinc-800/50 p-4 rounded-lg border border-zinc-700/30">
+              <div className="text-xs text-zinc-400 mb-2">Appointments Booked</div>
+              <div className="space-y-2">
+                <div className="h-16 bg-zinc-700/30 rounded border border-zinc-600/20 p-2">
+                  <div className="h-2 w-1/2 bg-green-400/40 rounded mb-2"></div>
+                  <div className="h-2 w-full bg-zinc-600/40 rounded"></div>
+                </div>
+                <div className="h-16 bg-zinc-700/30 rounded border border-zinc-600/20 p-2">
+                  <div className="h-2 w-full bg-green-400/40 rounded mb-2"></div>
+                  <div className="h-2 w-3/4 bg-zinc-600/40 rounded"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    { 
+      id: "funnels",
+      title: "Unlimited Sales Funnels", 
+      icon: Filter,
+      desc: "Build high-converting landing pages and customized sales funnels to capture more leads effortlessly.",
+      visual: (
+        <div className="space-y-4 pt-4">
+           <div className="flex justify-between items-center pb-4 border-b border-zinc-800">
+            <span className="font-semibold text-white">Funnel Setup</span>
+            <button className="text-xs text-cyan-400 bg-cyan-950 px-2 py-1 rounded border border-cyan-800">+ New Step</button>
+          </div>
+          <div className="flex flex-col space-y-2 relative items-center pt-8">
+             <div className="w-full max-w-sm bg-zinc-800 p-3 rounded-lg border border-zinc-700 flex justify-between items-center z-10">
+                 <span className="text-sm font-medium text-white">1. Opt-in Page</span>
+                 <span className="text-xs text-green-400">42% Conv</span>
+             </div>
+             <div className="h-8 w-px bg-zinc-600 -my-2 relative z-0"></div>
+             <div className="w-full max-w-sm bg-zinc-800 p-3 rounded-lg border border-zinc-700 flex justify-between items-center z-10">
+                 <span className="text-sm font-medium text-white">2. Booking Calendar</span>
+                 <span className="text-xs text-green-400">18% Conv</span>
+             </div>
+             <div className="h-8 w-px bg-zinc-600 -my-2 relative z-0"></div>
+             <div className="w-full max-w-sm bg-zinc-800 p-3 rounded-lg border border-zinc-700 flex justify-between items-center z-10">
+                 <span className="text-sm font-medium text-white">3. Thank You Page</span>
+             </div>
+          </div>
+        </div>
+      )
+    },
+    { 
+      id: "website",
+      title: "Website Builder", 
+      icon: Layout,
+      desc: "Create lightning-fast, mobile-optimized websites from scratch with our intuitive drag-and-drop builder.",
+      visual: (
+        <div className="flex bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 h-64 mt-4">
+           <div className="w-1/4 bg-zinc-950 border-r border-zinc-800 p-4 space-y-4">
+              <div className="h-6 bg-zinc-800 rounded"></div>
+              <div className="h-20 bg-zinc-800 rounded"></div>
+              <div className="h-8 bg-zinc-800 rounded"></div>
+              <div className="h-8 bg-zinc-800 rounded"></div>
+           </div>
+           <div className="w-3/4 p-4 relative">
+              <div className="absolute top-2 right-2 flex gap-2">
+                 <div className="w-6 h-6 bg-zinc-800 rounded-full"></div>
+                 <div className="w-6 h-6 bg-zinc-800 rounded-full"></div>
+              </div>
+              <div className="w-2/3 h-8 bg-zinc-800 rounded mb-4 mt-8"></div>
+              <div className="w-full h-4 bg-zinc-800 rounded mb-2"></div>
+              <div className="w-4/5 h-4 bg-zinc-800 rounded mb-6"></div>
+              <div className="w-32 h-10 bg-cyan-600/50 rounded"></div>
+           </div>
+        </div>
+      )
+    },
+    { 
+      id: "surveys",
+      title: "Surveys & Forms", 
+      icon: ClipboardList,
+      desc: "Gather critical customer information and feedback securely with customizable forms and surveys.",
+      visual: (
+        <div className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 max-w-md mx-auto mt-4">
+          <div className="h-6 w-1/2 bg-zinc-700/50 rounded mb-6 mx-auto"></div>
+          <div className="space-y-4">
+            <div>
+              <div className="h-4 w-1/4 bg-zinc-700/50 rounded mb-2"></div>
+              <div className="h-10 w-full bg-zinc-800 rounded border border-zinc-700"></div>
+            </div>
+            <div>
+              <div className="h-4 w-1/3 bg-zinc-700/50 rounded mb-2"></div>
+              <div className="h-24 w-full bg-zinc-800 rounded border border-zinc-700"></div>
+            </div>
+            <div className="h-10 w-full bg-cyan-600/50 rounded mt-4 flex items-center justify-center text-sm font-medium text-cyan-200">Submit Form</div>
+          </div>
+        </div>
+      )
+    },
+    { 
+      id: "email",
+      title: "Email Marketing", 
+      icon: Mail,
+      desc: "Send targeted blasts or build automated email nurture sequences to engage your audience over time.",
+      visual: (
+        <div className="flex h-full min-h-[250px] bg-zinc-900 rounded-lg border border-zinc-800 mt-4 overflow-hidden">
+           <div className="w-1/3 border-r border-zinc-800 p-4 space-y-3">
+             <div className="font-medium text-xs text-zinc-400 mb-2 uppercase">Campaigns</div>
+             <div className="p-2 bg-zinc-800 rounded border-l-2 border-cyan-400"><div className="h-3 w-3/4 bg-zinc-600 rounded"></div></div>
+             <div className="p-2 hover:bg-zinc-800/50 rounded"><div className="h-3 w-full bg-zinc-700 rounded"></div></div>
+             <div className="p-2 hover:bg-zinc-800/50 rounded"><div className="h-3 w-5/6 bg-zinc-700 rounded"></div></div>
+           </div>
+           <div className="w-2/3 p-6 flex flex-col">
+             <div className="flex items-center gap-4 mb-6 border-b border-zinc-800 pb-4">
+                <div className="w-10 h-10 rounded-full bg-cyan-900 flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-cyan-400" />
+                </div>
+                <div className="flex-1">
+                  <div className="h-4 w-48 bg-zinc-700 rounded mb-2"></div>
+                  <div className="h-3 w-32 bg-zinc-800 rounded"></div>
+                </div>
+             </div>
+             <div className="flex-1 bg-zinc-950 rounded border border-zinc-800 p-6 flex items-center justify-center">
+                 <div className="text-center w-full max-w-xs">
+                     <div className="h-20 bg-zinc-800 rounded mb-4"></div>
+                     <div className="h-4 w-3/4 bg-zinc-700 rounded mx-auto mb-2"></div>
+                     <div className="h-4 w-1/2 bg-zinc-700 rounded mx-auto mb-6"></div>
+                     <div className="h-8 w-1/3 bg-cyan-600/50 rounded mx-auto"></div>
+                 </div>
+             </div>
+           </div>
+        </div>
+      )
+    },
+    { 
+      id: "sms",
+      title: "2-Way SMS Marketing", 
+      icon: MessageSquare,
+      desc: "Text clients directly from your dashboard and run bulk SMS promotions for instant engagement.",
+      visual: (
+        <div className="max-w-md mx-auto bg-zinc-900 rounded-lg flex flex-col h-[320px] border border-zinc-800 overflow-hidden mt-4">
+           <div className="bg-zinc-800 p-4 flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-cyan-800"></div>
+              <div>
+                <div className="h-4 w-24 bg-zinc-400 rounded mb-1"></div>
+                <div className="h-2 w-16 bg-zinc-600 rounded"></div>
+              </div>
+           </div>
+           <div className="flex-1 p-4 flex flex-col gap-4 overflow-y-auto">
+             <div className="self-end bg-cyan-900 p-3 rounded-2xl rounded-tr-sm max-w-[80%]">
+                <div className="h-3 w-32 bg-cyan-700 rounded mb-2"></div>
+                <div className="h-3 w-20 bg-cyan-700 rounded"></div>
+             </div>
+             <div className="self-start bg-zinc-800 p-3 rounded-2xl rounded-tl-sm max-w-[80%]">
+                <div className="h-3 w-40 bg-zinc-600 rounded mb-2"></div>
+                <div className="h-3 w-24 bg-zinc-600 rounded"></div>
+             </div>
+             <div className="self-end bg-cyan-900 p-3 rounded-2xl rounded-tr-sm max-w-[80%]">
+                <div className="h-3 w-28 bg-cyan-700 rounded"></div>
+             </div>
+           </div>
+           <div className="p-3 border-t border-zinc-800 flex gap-2">
+              <div className="h-10 flex-1 bg-zinc-800 rounded-full shrink-0"></div>
+              <div className="h-10 w-10 bg-cyan-600/50 rounded-full shrink-0 flex items-center justify-center">
+                 <Send className="w-4 h-4 text-cyan-400" />
+              </div>
+           </div>
+        </div>
+      )
+    },
+    { 
+      id: "booking",
+      title: "Booking & Appointments", 
+      icon: Calendar,
+      desc: "Let clients schedule time on your calendar autonomously without phone tag or double-booking.",
+      visual: (
+        <div className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 h-full mt-4">
+           <div className="flex justify-between items-center mb-6 border-b border-zinc-800 pb-4">
+              <span className="font-semibold text-white">Calendar</span>
+              <div className="flex gap-2">
+                 <span className="px-3 py-1 text-xs bg-zinc-800 rounded-lg text-zinc-400">Day</span>
+                 <span className="px-3 py-1 text-xs bg-cyan-900 rounded-lg text-cyan-400 border border-cyan-800">Week</span>
+              </div>
+           </div>
+           <div className="grid grid-cols-5 gap-2 h-48">
+              {[1,2,3,4,5].map(i => (
+                <div key={i} className="flex flex-col gap-2">
+                  <div className="text-center text-xs text-zinc-500 mb-2 font-medium">Mon {i+10}</div>
+                  <div className="flex-1 border-r border-zinc-800/50 relative">
+                     {i === 2 && <div className="absolute top-4 left-1 right-1 h-12 bg-blue-900/50 border-l-2 border-blue-500 rounded text-[10px] p-1 text-blue-300">Quote</div>}
+                     {i === 4 && <div className="absolute top-16 left-1 right-1 h-16 bg-green-900/50 border-l-2 border-green-500 rounded text-[10px] p-1 text-green-300">Job</div>}
+                  </div>
+                </div>
+              ))}
+           </div>
+        </div>
+      )
+    },
+    { 
+      id: "automations",
+      title: "Workflow Automations", 
+      icon: Zap,
+      desc: "Automate repetitive tasks like follow-ups, appointment reminders, and onboarding sequences.",
+      visual: (
+        <div className="flex flex-col items-center justify-center p-8 space-y-4">
+           <div className="w-full max-w-sm bg-zinc-800 p-4 rounded-lg border border-zinc-700 flex items-center gap-3">
+              <div className="bg-zinc-700 text-zinc-400 p-2 rounded-lg">
+                <PhoneCall className="w-4 h-4"/>
+              </div>
+              <span className="text-sm font-medium text-white">Trigger: Missed Call</span>
+           </div>
+           <div className="w-px h-6 bg-cyan-500/50 relative">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-cyan-900 border border-cyan-500"></div>
+           </div>
+           <div className="w-full max-w-sm bg-zinc-800 p-4 rounded-lg border border-zinc-700 flex items-center gap-3 border-l-4 border-l-blue-500">
+              <div className="bg-blue-900/50 text-blue-400 p-2 rounded-lg">
+                <MessageSquare className="w-4 h-4"/>
+              </div>
+              <span className="text-sm font-medium text-white">Action: Send SMS</span>
+           </div>
+           <div className="w-px h-6 bg-cyan-500/50 relative">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-cyan-900 border border-cyan-500"></div>
+           </div>
+           <div className="w-full max-w-sm bg-zinc-800 p-4 rounded-lg border border-zinc-700 flex items-center gap-3 border-l-4 border-l-green-500">
+              <div className="bg-green-900/50 text-green-400 p-2 rounded-lg">
+                <Bell className="w-4 h-4" />
+              </div>
+              <span className="text-sm font-medium text-white">Action: Internal Alert</span>
+           </div>
+        </div>
+      )
+    },
+    { 
+      id: "courses",
+      title: "Courses / Products", 
+      icon: BookOpen,
+      desc: "Host your own video training materials, resources, and digital products in a secure portal.",
+      visual: (
+        <div className="grid grid-cols-2 gap-4 col-span-2 md:col-span-1 mt-4">
+           <div className="bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 col-span-2">
+              <div className="h-32 bg-zinc-800 flex items-center justify-center relative">
+                 <div className="w-12 h-12 bg-cyan-600/50 rounded-full flex items-center justify-center absolute z-10">
+                    <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1"></div>
+                 </div>
+                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 to-transparent"></div>
+              </div>
+              <div className="p-4">
+                 <div className="h-4 w-3/4 bg-zinc-500 rounded mb-2"></div>
+                 <div className="h-3 w-1/2 bg-zinc-700 rounded"></div>
+              </div>
+           </div>
+           <div className="bg-zinc-900 rounded-lg p-3 border border-zinc-800 flex items-center gap-3 col-span-2">
+              <div className="h-10 w-16 bg-zinc-800 rounded flex-shrink-0"></div>
+              <div className="flex-1">
+                <div className="h-3 w-full bg-zinc-600 rounded mb-1"></div>
+                <div className="h-2 w-1/2 bg-zinc-700 rounded"></div>
+              </div>
+           </div>
+        </div>
+      )
+    },
+    { 
+      id: "call-tracking",
+      title: "Call Tracking", 
+      icon: PhoneCall,
+      desc: "Track exactly which marketing campaigns drive inbound phone calls to optimize your marketing spend.",
+      visual: (
+        <div className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 mt-4">
+           <div className="flex justify-between items-center mb-6 pb-4 border-b border-zinc-800 tracking-wide">
+              <span className="font-semibold text-white">Call Log</span>
+              <span className="text-xs font-semibold px-2 py-1 bg-green-900/30 text-green-400 rounded border border-green-800/50">Active Numbers</span>
+           </div>
+           <div className="space-y-3">
+              {[1,2,3,4].map(i => (
+                <div key={i} className="flex justify-between items-center p-3 bg-zinc-800/50 rounded border border-zinc-700/50 hover:bg-zinc-800 transition-colors">
+                   <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-blue-900/30 flex flex-shrink-0 items-center justify-center border border-blue-800/50">
+                         <PhoneCall className="w-3 h-3 text-blue-400" />
+                      </div>
+                      <div>
+                         <div className="h-3 w-24 bg-zinc-400 rounded mb-1"></div>
+                         <div className="h-2 w-16 bg-zinc-600 rounded mb-1"></div>
+                      </div>
+                   </div>
+                   <div className="text-right">
+                      <div className="h-3 w-16 bg-cyan-700/80 rounded mb-1 ml-auto"></div>
+                      <div className="h-2 w-10 bg-zinc-600 rounded ml-auto"></div>
+                   </div>
+                </div>
+              ))}
+           </div>
+        </div>
+      )
+    },
+    { 
+      id: "reputation",
+      title: "Reputation Management", 
+      icon: Star,
+      desc: "Automatically request, monitor, and instantly reply to Google and Facebook reviews to build trust.",
+      visual: (
+        <div className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 mt-4">
+           <div className="flex items-center gap-8 mb-8 pb-6 border-b border-zinc-800">
+              <div className="text-center">
+                 <div className="text-5xl font-bold text-white mb-2">4.9</div>
+                 <div className="flex gap-1 text-yellow-500 mb-1 justify-center">
+                   <Star className="w-4 h-4 fill-current"/>
+                   <Star className="w-4 h-4 fill-current"/>
+                   <Star className="w-4 h-4 fill-current"/>
+                   <Star className="w-4 h-4 fill-current"/>
+                   <Star className="w-4 h-4 fill-current"/>
+                 </div>
+                 <div className="text-sm text-zinc-400">128 Reviews</div>
+              </div>
+              <div className="flex-1 space-y-2">
+                 {[5,4,3,2,1].map((rating, i) => (
+                   <div key={rating} className="flex items-center gap-2">
+                      <span className="text-xs font-medium text-zinc-400 w-2">{rating}</span>
+                      <div className="flex-1 h-2.5 bg-zinc-800 rounded-full overflow-hidden">
+                         <div className="h-full bg-yellow-500 rounded-full" style={{width: i === 0 ? '85%' : i === 1 ? '10%' : i === 2 ? '5%' : '0%'}}></div>
+                      </div>
+                   </div>
+                 ))}
+              </div>
+           </div>
+           <div className="p-5 bg-zinc-800/30 rounded-lg border border-zinc-700/50">
+              <div className="flex justify-between mb-3">
+                <div className="flex gap-1 text-yellow-500"><Star className="w-4 h-4 fill-current"/><Star className="w-4 h-4 fill-current"/><Star className="w-4 h-4 fill-current"/><Star className="w-4 h-4 fill-current"/><Star className="w-4 h-4 fill-current"/></div>
+                <span className="text-xs text-zinc-500">2 days ago</span>
+              </div>
+              <div className="h-2 w-full bg-zinc-600 rounded mb-2"></div>
+              <div className="h-2 w-3/4 bg-zinc-600 rounded mb-4"></div>
+              <div className="h-7 w-24 bg-cyan-900/50 text-cyan-400 border border-cyan-800 rounded text-xs flex items-center justify-center font-medium">Reply instantly</div>
+           </div>
+        </div>
+      )
+    },
+    { 
+      id: "analytics",
+      title: "Tracking & Analytics", 
+      icon: TrendingUp,
+      desc: "Get detailed, easy-to-read insights into your traffic, conversion rates, and total revenue.",
+      visual: (
+        <div className="grid grid-cols-2 gap-4 mt-4">
+           <div className="bg-zinc-900 p-5 rounded-xl border border-zinc-800 shadow-sm flex flex-col justify-between">
+             <div>
+                <div className="text-sm font-medium text-zinc-400 mb-1">Total Revenue</div>
+                <div className="text-3xl font-bold text-white mb-4">$14,250</div>
+             </div>
+             <div className="h-20 w-full flex items-end gap-1.5">
+                {[4, 6, 5, 8, 7, 10, 12].map((h, i) => (
+                  <div key={i} className="flex-1 bg-gradient-to-t from-cyan-600 to-cyan-400 rounded-t-sm" style={{height: `${h * 8}%`}}></div>
+                ))}
+             </div>
+           </div>
+           <div className="bg-zinc-900 p-5 rounded-xl border border-zinc-800 shadow-sm flex flex-col items-center justify-center">
+             <div className="text-sm font-medium text-zinc-400 mb-1 w-full text-left">Lead Conversion</div>
+             <div className="text-3xl font-bold text-white mb-4 w-full text-left">24.8%</div>
+             <div className="h-20 w-full flex items-center justify-center">
+                <div className="w-20 h-20 rounded-full border-[6px] border-zinc-800 border-r-cyan-500 border-t-cyan-500 rotate-45 relative shadow-[0_0_15px_rgba(6,182,212,0.2)]"></div>
+             </div>
+           </div>
+           <div className="col-span-2 bg-zinc-900 p-5 rounded-xl border border-zinc-800 shadow-sm">
+             <div className="text-sm font-medium text-zinc-400 mb-4">Traffic Sources</div>
+             <div className="space-y-4">
+               <div className="flex items-center gap-3">
+                 <div className="text-xs font-semibold w-16 text-zinc-300">Organic</div>
+                 <div className="flex-1 h-2.5 bg-zinc-800 rounded-full overflow-hidden"><div className="h-full w-[60%] bg-blue-500 rounded-full"></div></div>
+                 <div className="text-xs font-mono text-zinc-400">60%</div>
+               </div>
+               <div className="flex items-center gap-3">
+                 <div className="text-xs font-semibold w-16 text-zinc-300">Direct</div>
+                 <div className="flex-1 h-2.5 bg-zinc-800 rounded-full overflow-hidden"><div className="h-full w-[30%] bg-cyan-500 rounded-full"></div></div>
+                 <div className="text-xs font-mono text-zinc-400">30%</div>
+               </div>
+             </div>
+           </div>
+        </div>
+      )
+    },
+    { 
+      id: "communities",
+      title: "Communities", 
+      icon: Users,
+      desc: "Build and manage private groups or memberships to foster loyalty among your best clients.",
+      visual: (
+        <div className="bg-zinc-900 rounded-xl border border-zinc-800 h-full flex overflow-hidden mt-4 shadow-sm">
+           <div className="w-16 bg-zinc-950 border-r border-zinc-800 flex flex-col items-center py-4 gap-4">
+              <div className="w-10 h-10 bg-cyan-900 rounded-xl border border-cyan-700/50 shadow-sm"></div>
+              <div className="w-10 h-10 bg-zinc-800 rounded-full opacity-50"></div>
+              <div className="w-10 h-10 bg-zinc-800 rounded-full opacity-50"></div>
+           </div>
+           <div className="flex-1 p-5 flex flex-col">
+              <div className="h-6 w-32 bg-zinc-700 rounded mb-6"></div>
+              <div className="space-y-4">
+                 <div className="bg-zinc-800/50 p-4 rounded-xl border border-zinc-700/50 flex gap-4">
+                    <div className="w-10 h-10 bg-zinc-600 rounded-full shrink-0"></div>
+                    <div className="w-full pt-1">
+                       <div className="h-3 w-24 bg-zinc-500 rounded mb-2.5"></div>
+                       <div className="h-2 w-3/4 bg-zinc-600 rounded mb-1.5"></div>
+                       <div className="h-2 w-1/2 bg-zinc-600 rounded"></div>
+                    </div>
+                 </div>
+                 <div className="bg-zinc-800/50 p-4 rounded-xl border border-zinc-700/50 flex gap-4">
+                    <div className="w-10 h-10 bg-zinc-600 rounded-full shrink-0"></div>
+                    <div className="w-full pt-1">
+                       <div className="h-3 w-32 bg-zinc-500 rounded mb-2.5"></div>
+                       <div className="h-2 w-2/3 bg-zinc-600 rounded mb-1.5"></div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+      )
+    },
+    { 
+      id: "signing",
+      title: "Document Signing", 
+      icon: Edit3,
+      desc: "Send contracts, proposals, and agreements for secure, legally binding digital signatures.",
+      visual: (
+        <div className="bg-zinc-900 p-8 rounded-xl border border-zinc-800 h-full flex flex-col items-center justify-center relative mt-4 shadow-sm overflow-hidden">
+           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+           <div className="w-56 h-64 bg-zinc-100 rounded shadow-2xl p-6 relative origin-bottom -rotate-[4deg] z-10 transition-transform hover:rotate-0 duration-500 border border-zinc-300">
+              <div className="h-2.5 w-1/2 bg-zinc-300 rounded mb-5"></div>
+              <div className="h-1.5 w-full bg-zinc-300 rounded mb-2.5"></div>
+              <div className="h-1.5 w-full bg-zinc-300 rounded mb-2.5"></div>
+              <div className="h-1.5 w-3/4 bg-zinc-300 rounded mb-8"></div>
+              
+              <div className="h-1.5 w-full bg-zinc-300 rounded mb-2.5"></div>
+              <div className="h-1.5 w-5/6 bg-zinc-300 rounded mb-10"></div>
+              
+              <div className="border hover:border-solid border-cyan-500 border-dashed rounded p-3 text-center text-[10px] font-bold tracking-wider text-cyan-600 bg-cyan-50/50 cursor-pointer transition-colors">
+                 SIGNATURE HERE
+              </div>
+           </div>
+           <div className="absolute bottom-10 right-10 bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 rounded-full p-4 shadow-lg shadow-cyan-500/30 z-20 hover:scale-110 transition-transform">
+              <Edit3 className="w-6 h-6 text-white" />
+           </div>
+        </div>
+      )
+    },
+    { 
+      id: "ghost",
+      title: "AI Voice Agent (GHOST)", 
+      icon: Bot,
+      desc: "Your 24/7 AI employee that answers live calls, texts your leads, and books jobs around the clock.",
+      visual: (
+        <div className="flex flex-col items-center justify-center h-full p-8 relative overflow-hidden bg-zinc-950 border border-zinc-800 rounded-xl mt-4 shadow-sm">
+           <div className="absolute flex items-center justify-center w-full h-full">
+               <div className="w-56 h-56 border border-cyan-500/20 rounded-full animate-ping" style={{ animationDuration: '3s' }}></div>
+               <div className="absolute w-40 h-40 border border-cyan-500/30 rounded-full animate-ping" style={{ animationDuration: '2s' }}></div>
+               <div className="absolute w-full h-full bg-cyan-900/10 blur-3xl"></div>
+           </div>
+           
+           <div className="relative z-10 w-28 h-28 bg-zinc-900 border border-cyan-500/50 rounded-full flex items-center justify-center mb-8 shadow-[0_0_40px_rgba(6,182,212,0.4)]">
+              <Bot className="w-14 h-14 text-cyan-400" />
+           </div>
+           
+           <div className="bg-zinc-800/80 backdrop-blur-md border border-zinc-700 p-5 rounded-2xl relative z-10 w-full max-w-sm space-y-4 shadow-xl">
+              <div className="flex items-center justify-center gap-2 font-semibold text-white mb-2">
+                <div className="w-2.5 h-2.5 bg-green-500 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div>
+                GHOST Agent Active
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center justify-between text-xs font-medium text-zinc-300 p-2.5 bg-zinc-900/80 rounded-lg">
+                   <span>Current Status</span>
+                   <span className="text-cyan-400">Handling Inquiries</span>
+                </div>
+                <div className="flex items-center justify-between text-xs font-medium text-zinc-300 p-2.5 bg-zinc-900/80 rounded-lg">
+                   <span>Calls Handled Today</span>
+                   <span className="text-white font-mono text-sm">24</span>
+                </div>
+                <div className="flex items-center justify-between text-xs font-medium text-zinc-300 p-2.5 bg-zinc-900/80 rounded-lg">
+                   <span>Appointments Booked</span>
+                   <span className="text-white font-mono text-sm">3</span>
+                </div>
+              </div>
+           </div>
+        </div>
+      )
+    }
+  ];
+
+  return (
+    <div className="grid lg:grid-cols-[350px_1fr] gap-6 bg-zinc-900/50 border border-zinc-800/80 rounded-3xl p-6 shadow-2xl w-full">
+      {/* Sidebar: Feature List */}
+      <div className="flex flex-col space-y-1.5 lg:h-[600px] overflow-y-auto pr-2" style={{ scrollbarWidth: 'thin', scrollbarColor: '#3f3f46 transparent' }}>
+        {features.map((feature, idx) => (
+          <button
+            key={feature.id}
+            onClick={() => setActiveIndex(idx)}
+            className={`flex items-center gap-4 w-full p-3.5 rounded-xl text-left transition-all duration-300 border ${
+              activeIndex === idx 
+                ? 'bg-cyan-950/40 border-cyan-500/40 shadow-[inset_0_0_20px_rgba(6,182,212,0.15)] ring-1 ring-cyan-500/20' 
+                : 'bg-zinc-800/20 border-transparent hover:bg-zinc-800/60 hover:border-zinc-700 text-zinc-400 hover:text-zinc-200'
+            }`}
+          >
+            <div className={`p-2 rounded-lg transition-colors ${activeIndex === idx ? 'bg-cyan-500/20 text-cyan-400' : 'bg-zinc-800/80 text-zinc-400'}`}>
+               <feature.icon className="w-5 h-5 flex-shrink-0" />
+            </div>
+            <span className={`font-semibold tracking-wide text-sm ${activeIndex === idx ? 'text-white' : ''}`}>
+              {feature.title}
+            </span>
+          </button>
+        ))}
+      </div>
+
+      {/* Main Area: Showcase Content */}
+      <div className="bg-zinc-950 rounded-2xl border border-zinc-800/80 relative overflow-hidden flex flex-col h-[500px] lg:h-[600px] shadow-inner shadow-black/50">
+        {/* Header desc */}
+        <div className="p-8 pb-0 z-20 relative">
+           <motion.div
+              key={activeIndex}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+           >
+              <h3 className="text-2xl font-bold text-white mb-2">{features[activeIndex].title}</h3>
+              <p className="text-zinc-400 leading-relaxed text-sm max-w-xl">{features[activeIndex].desc}</p>
+           </motion.div>
+        </div>
+
+        {/* Visualizer */}
+        <div className="flex-1 p-8 relative z-20 h-full flex flex-col overflow-hidden">
+           <motion.div
+              key={`visual-${activeIndex}`}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: 0.05 }}
+              className="flex-1 w-full h-full flex flex-col"
+           >
+              {features[activeIndex].visual}
+           </motion.div>
+        </div>
+        
+        {/* Decorative background glow based on feature */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-cyan-900/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-slate-500/5 blur-[80px] rounded-full pointer-events-none z-0"></div>
+      </div>
     </div>
   );
 };
@@ -305,7 +883,16 @@ export default function App() {
                   </p>
                   
                   <div className="flex flex-col sm:flex-row items-center gap-6">
-                    <DualCTA />
+                    <DualCTA 
+                      primaryText="See what Ghost can do for you"
+                      primaryIcon={ArrowDown}
+                      primaryAction={() => {
+                        const el = document.getElementById('how-it-works');
+                        if (el) {
+                          el.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
+                    />
                   </div>
                 </div>
               </motion.div>
@@ -714,7 +1301,7 @@ export default function App() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              <h2 className="text-[1.2rem] sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 whitespace-nowrap tracking-tight">
                 <span className="relative inline-block">
                   Why Our Customers <GradientText>Love Ghost</GradientText>
                   <motion.div 
@@ -948,18 +1535,144 @@ export default function App() {
             </div>
           </div>
 
-          {/* Transition Band */}
-          <div className="py-24 border-y border-zinc-800/50 relative overflow-hidden">
-            <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-              <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
-                Stop losing money to the void. <br/>
-                <GradientText>Start capturing every opportunity.</GradientText>
-              </h2>
-              <p className="text-xl text-zinc-300 mb-10 max-w-2xl mx-auto">
-                Your customers expect instant answers. Give them what they want and watch your conversion rates skyrocket.
-              </p>
-              <div className="flex justify-center">
-                <DualCTA showDemo={false} />
+          {/* Transition Band & 4 Employees in 1 */}
+          <div className="pt-24 pb-32 border-y border-zinc-800/50 relative overflow-hidden bg-zinc-950/50">
+            {/* Background elements */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+            
+            <div className="max-w-7xl mx-auto px-6 relative z-10">
+              <div className="text-center max-w-4xl mx-auto mb-16 relative">
+                <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6 tracking-tight">
+                  Here's How We <GradientText>Fix The Leak.</GradientText>
+                </h2>
+                <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+                  We don't just provide a chatbot. We build specialized AI lead nurturing automations designed to take over the specific bottlenecks in your local business, so you can focus on the work that actually pays.
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Card 1: Receptionist */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-zinc-900/40 backdrop-blur-sm border border-zinc-800/60 rounded-3xl p-8 md:p-10 relative z-10 group hover:border-blue-500/40 transition-colors shadow-xl h-full flex flex-col"
+                >
+                  <div className="relative w-full h-48 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-8 flex items-center justify-center overflow-hidden group-hover:border-blue-500/30 transition-colors">
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-cyan-500/5 to-transparent"></div>
+                      <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, duration: 3 }} className="relative z-10 flex gap-4">
+                        <div className="w-16 h-24 rounded-xl border border-blue-500/30 bg-zinc-950 flex flex-col items-center justify-center shadow-[0_0_20px_rgba(59,130,246,0.2)] overflow-hidden">
+                           <div className="w-10 h-16 bg-blue-900/20 rounded overflow-hidden p-1 flex flex-col gap-1.5 justify-center">
+                             <motion.div initial={{ opacity: 0, x: -5 }} animate={{ opacity: 1, x: 0 }} transition={{ repeat: Infinity, duration: 2 }} className="w-3/4 h-2 bg-blue-400/50 rounded self-start"></motion.div>
+                             <motion.div initial={{ opacity: 0, x: 5 }} animate={{ opacity: 1, x: 0 }} transition={{ repeat: Infinity, duration: 2, delay: 0.5 }} className="w-3/4 h-2 bg-zinc-600/50 rounded self-end"></motion.div>
+                             <motion.div initial={{ opacity: 0, x: -5 }} animate={{ opacity: 1, x: 0 }} transition={{ repeat: Infinity, duration: 2, delay: 1 }} className="w-3/4 h-2 bg-blue-400/50 rounded self-start"></motion.div>
+                           </div>
+                        </div>
+                      </motion.div>
+                      <motion.div animate={{ opacity: [0.2, 0.6, 0.2] }} transition={{ repeat: Infinity, duration: 2 }} className="absolute bg-blue-500/20 blur-2xl w-32 h-32 rounded-full"></motion.div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-3 tracking-wide">The 24/7 Receptionist</h3>
+                    <p className="text-zinc-400 leading-relaxed">
+                      Missed calls cost you money. When you're on a job site or it's after hours, your AI receptionist instantly texts back missed calls, answers common questions about your services, and keeps the lead warm until you're ready.
+                    </p>
+                  </div>
+                </motion.div>
+                
+                {/* Card 2: Qualifier */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                  className="bg-zinc-900/40 backdrop-blur-sm border border-zinc-800/60 rounded-3xl p-8 md:p-10 relative z-10 group hover:border-cyan-500/40 transition-colors shadow-xl h-full flex flex-col"
+                >
+                  <div className="relative w-full h-48 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-8 flex items-center justify-center overflow-hidden group-hover:border-cyan-500/30 transition-colors">
+                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-slate-500/5 to-transparent"></div>
+                      <div className="relative z-10 flex flex-col items-center gap-3">
+                        <motion.div animate={{ opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 2 }} className="w-24 h-2.5 bg-zinc-800 rounded-full flex overflow-hidden shadow-inner">
+                           <div className="w-1/3 bg-red-500/50"></div><div className="w-2/3 bg-cyan-400/50"></div>
+                        </motion.div>
+                        <div className="w-12 h-12 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(6,182,212,0.15)] my-1">
+                          <UserCheck className="w-6 h-6 text-cyan-400/70" />
+                        </div>
+                        <motion.div animate={{ scaleX: [1, 0.8, 1] }} transition={{ repeat: Infinity, duration: 2 }} className="w-16 h-2.5 bg-cyan-400/60 rounded-full shadow-[0_0_10px_rgba(6,182,212,0.3)]"></motion.div>
+                        <motion.div animate={{ scaleX: [1, 0.6, 1] }} transition={{ repeat: Infinity, duration: 2, delay: 0.2 }} className="w-10 h-2.5 bg-cyan-400/60 rounded-full shadow-[0_0_10px_rgba(6,182,212,0.3)]"></motion.div>
+                      </div>
+                      <motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 10, ease: "linear" }} className="absolute border border-cyan-500/10 w-48 h-48 rounded-full border-dashed"></motion.div>
+                      <motion.div animate={{ opacity: [0.1, 0.4, 0.1] }} transition={{ repeat: Infinity, duration: 3 }} className="absolute bg-cyan-500/20 blur-2xl w-32 h-32 rounded-full"></motion.div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-3 tracking-wide">The Lead Qualifier</h3>
+                    <p className="text-zinc-400 leading-relaxed">
+                      Stop wasting time driving to unqualified estimates. Your AI automation engages new leads via SMS or web chat, asks your specific qualifying questions, and filters out the tire-kickers before they ever reach your desk.
+                    </p>
+                  </div>
+                </motion.div>
+
+                {/* Card 3: Scheduler */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="bg-zinc-900/40 backdrop-blur-sm border border-zinc-800/60 rounded-3xl p-8 md:p-10 relative z-10 group hover:border-slate-400/40 transition-colors shadow-xl h-full flex flex-col"
+                >
+                  <div className="relative w-full h-48 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-8 flex items-center justify-center overflow-hidden group-hover:border-slate-500/30 transition-colors">
+                      <div className="absolute inset-0 bg-gradient-to-br from-slate-500/10 via-blue-500/5 to-transparent"></div>
+                      <div className="relative z-10 grid grid-cols-4 gap-2 p-3 border border-slate-500/30 bg-zinc-900/60 backdrop-blur-sm rounded-xl shadow-[0_0_20px_rgba(100,116,139,0.15)]">
+                         {[0,1,2,3,4,5,6,7].map(i => (
+                           <motion.div 
+                             key={i}
+                             animate={i === 2 || i === 5 || i === 7 ? { backgroundColor: ["rgba(63,63,70,0.5)", "rgba(16,185,129,0.2)", "rgba(63,63,70,0.5)"] } : {}}
+                             transition={{ repeat: Infinity, duration: 3, delay: i * 0.3 }}
+                             className={`w-8 h-8 ${i === 2 || i === 5 || i === 7 ? 'bg-zinc-800' : 'bg-zinc-800'} rounded border border-zinc-700/50 flex items-center justify-center overflow-hidden`}
+                           >
+                             {(i === 2 || i === 5 || i === 7) && (
+                               <motion.div animate={{ scale: [0, 1.2, 1] }} transition={{ repeat: Infinity, duration: 3, delay: i * 0.3 }}>
+                                 <Check className="w-4 h-4 text-green-400/80 drop-shadow-[0_0_5px_rgba(74,222,128,0.5)]" />
+                               </motion.div>
+                             )}
+                           </motion.div>
+                         ))}
+                      </div>
+                      <motion.div animate={{ scale: [0.95, 1.05, 0.95], opacity: [0.2, 0.5, 0.2] }} transition={{ repeat: Infinity, duration: 4 }} className="absolute bg-slate-500/20 blur-2xl w-40 h-40 rounded-full"></motion.div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-3 tracking-wide">The Scheduling Assistant</h3>
+                    <p className="text-zinc-400 leading-relaxed">
+                      Eliminate the endless back-and-forth of finding a time that works. The AI integrates directly with your calendar to book estimates and appointments automatically based on your real-time availability.
+                    </p>
+                  </div>
+                </motion.div>
+
+                {/* Card 4: Follow Up */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                  className="bg-zinc-900/40 backdrop-blur-sm border border-zinc-800/60 rounded-3xl p-8 md:p-10 relative z-10 group hover:border-blue-500/40 transition-colors shadow-xl h-full flex flex-col"
+                >
+                  <div className="relative w-full h-48 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-8 flex items-center justify-center overflow-hidden group-hover:border-blue-500/30 transition-colors">
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-cyan-500/5 to-transparent"></div>
+                      <div className="relative z-10 w-24 h-24 flex items-center justify-center">
+                        <motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 6, ease: "linear" }} className="absolute w-full h-full border-[3px] border-dashed border-blue-500/20 rounded-full"></motion.div>
+                        <motion.div animate={{ rotate: -360 }} transition={{ repeat: Infinity, duration: 8, ease: "linear" }} className="absolute w-16 h-16 border-[2px] border-cyan-500/20 rounded-full"></motion.div>
+                        <motion.div animate={{ scale: [0.8, 1.1, 0.8] }} transition={{ repeat: Infinity, duration: 2 }} className="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/30 flex items-center justify-center backdrop-blur-sm shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+                           <RefreshCw className="w-5 h-5 text-blue-400" />
+                        </motion.div>
+                      </div>
+                      <motion.div animate={{ opacity: [0, 1, 0], y: [10, -20] }} transition={{ repeat: Infinity, duration: 2.5 }} className="absolute right-12 top-10 w-8 h-8 bg-zinc-900 rounded-lg border border-cyan-500/30 flex items-center justify-center shadow-[0_0_10px_rgba(6,182,212,0.2)]"><Mail className="w-4 h-4 text-cyan-400/80"/></motion.div>
+                      <motion.div animate={{ opacity: [0, 1, 0], y: [10, -20] }} transition={{ repeat: Infinity, duration: 2.5, delay: 1.2 }} className="absolute left-12 bottom-10 w-8 h-8 bg-zinc-900 rounded-lg border border-blue-500/30 flex items-center justify-center shadow-[0_0_10px_rgba(59,130,246,0.2)]"><MessageSquare className="w-4 h-4 text-blue-400/80"/></motion.div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-3 tracking-wide">The Follow-Up Machine</h3>
+                    <p className="text-zinc-400 leading-relaxed">
+                      Sent a quote but haven't heard back? Finished a job and need a Google review? Your AI automation automatically follows up with customers via text or email at the perfect time, increasing your close rate and boosting your local SEO.
+                    </p>
+                  </div>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -1034,7 +1747,7 @@ export default function App() {
         <section id="compare" className="py-24">
           <div className="max-w-5xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              <h2 className="text-[1.1rem] sm:text-[1.7rem] md:text-4xl lg:text-5xl font-bold mb-6 whitespace-nowrap tracking-tight">
                 <span className="relative inline-block">
                   Why Not Just <GradientText>Hire Someone?</GradientText>
                   <motion.div 
@@ -1093,9 +1806,9 @@ export default function App() {
           
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              <h2 className="text-[1.05rem] sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-6 whitespace-nowrap tracking-tight">
                 <span className="relative inline-block">
-                  Choose Your <GradientText>System</GradientText>
+                  Get Access to <GradientText>Digital Handyman</GradientText>
                   <motion.div 
                     initial={{ width: 0 }}
                     whileInView={{ width: "100%" }}
@@ -1106,184 +1819,140 @@ export default function App() {
                 </span>
               </h2>
               <p className="text-lg text-zinc-400 leading-relaxed">
-                Start with our foundational toolkit to capture every lead, or upgrade to the full AI employee to handle conversations and close deals.
+                The complete system to capture leads, hold conversations, and close deals 24/7.
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-8 items-stretch">
-              {/* Tier 1 */}
-              <div className="bg-zinc-900/40 border border-zinc-800 rounded-3xl overflow-hidden flex flex-col shadow-xl">
-                <div className="p-8 border-b border-zinc-800/80 bg-zinc-900/80">
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center border border-zinc-700/50">
-                        <Wrench className="w-6 h-6 text-zinc-300" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white">Digital Handyman Automation Toolkit</h3>
-                        <p className="text-zinc-400 text-sm mt-1">Automated systems that capture and follow up on leads</p>
-                      </div>
-                    </div>
-                    <span className="px-3 py-1 rounded-full bg-zinc-800 text-zinc-300 text-xs font-bold uppercase tracking-wider border border-zinc-700/50">Lite</span>
-                  </div>
-                </div>
-                
-                <div className="bg-zinc-900/50 px-8 py-4 border-b border-zinc-800/50">
-                  <span className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Lead Capture & Automation</span>
-                </div>
-
-                <div className="p-8 space-y-8 flex-grow">
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-zinc-800/50 flex items-center justify-center flex-shrink-0 border border-zinc-700/30">
-                      <PhoneMissed className="w-5 h-5 text-zinc-400" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white mb-1">Missed Call Text-Back</h4>
-                      <p className="text-zinc-400 text-sm leading-relaxed">Instantly texts anyone who calls when you're busy. Turns missed calls into text conversations automatically.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-zinc-800/50 flex items-center justify-center flex-shrink-0 border border-zinc-700/30">
-                      <MessageSquare className="w-5 h-5 text-zinc-400" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white mb-1">24/7 AI Website Chat Widget</h4>
-                      <p className="text-zinc-400 text-sm leading-relaxed">Engages visitors on your site around the clock and collects their contact info.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-zinc-800/50 flex items-center justify-center flex-shrink-0 border border-zinc-700/30">
-                      <Send className="w-5 h-5 text-zinc-400" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white mb-1">Instant SMS Follow-Up</h4>
-                      <p className="text-zinc-400 text-sm leading-relaxed">Automatically texts leads the second they submit a form. Strike while the iron is hot.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-zinc-800/50 flex items-center justify-center flex-shrink-0 border border-zinc-700/30">
-                      <Calendar className="w-5 h-5 text-zinc-400" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white mb-1">Automated Scheduling</h4>
-                      <p className="text-zinc-400 text-sm leading-relaxed">AI handles back-and-forth scheduling directly onto your calendar, eliminating the need for phone tag.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-zinc-800/50 flex items-center justify-center flex-shrink-0 border border-zinc-700/30">
-                      <RefreshCw className="w-5 h-5 text-zinc-400" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white mb-1">Database Reactivation</h4>
-                      <p className="text-zinc-400 text-sm leading-relaxed">GHOST uses AI-powered SMS to re-engage dead leads and past clients, turning your existing list into booked appointments.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-zinc-800/50 flex items-center justify-center flex-shrink-0 border border-zinc-700/30">
-                      <Star className="w-5 h-5 text-zinc-400" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-white mb-1">Reputation Rocket (Auto Reviews)</h4>
-                      <p className="text-zinc-400 text-sm leading-relaxed">GHOST triggers Google review requests via SMS the moment you finish a job to drive map rankings and organic calls on autopilot.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="p-8 pt-0 mt-auto">
-                  <a 
-                    href="https://digitalhandyman.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full py-4 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-bold transition-colors border border-zinc-700/50 flex items-center justify-center gap-2 group block text-center"
-                  >
-                    Look at the Automation Toolkit
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </div>
-              </div>
-
-              {/* Tier 2 */}
+            <div className="max-w-4xl mx-auto">
+              {/* Centralized Pricing Card */}
               <div className="bg-zinc-900/80 border-2 border-cyan-500/30 rounded-3xl overflow-hidden relative shadow-[0_0_40px_-15px_rgba(6,182,212,0.2)] flex flex-col">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-cyan-400 to-slate-400"></div>
-                <div className="p-8 border-b border-zinc-800/80 bg-cyan-950/20">
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center border border-cyan-500/30">
-                        <Bot className="w-6 h-6 text-cyan-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white">Digital Handyman Pro</h3>
-                        <p className="text-cyan-200/70 text-sm mt-1">Everything in the Toolkit, plus a 24/7 AI employee that closes</p>
-                      </div>
+                <div className="p-8 border-b border-zinc-800/80 bg-cyan-950/20 text-center">
+                  <p className="text-cyan-200/70 text-base md:text-lg">Everything you need to capture leads, qualify prospects, and close deals 24/7.</p>
+                  
+                  <div className="mt-8 flex flex-col items-center justify-center">
+                    <div className="flex items-baseline gap-2">
+                       <span className="text-5xl font-black text-white">$2,500</span>
+                       <span className="text-zinc-400 text-xl font-medium">setup</span>
                     </div>
-                    <span className="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 text-xs font-bold uppercase tracking-wider">Pro</span>
+                    <div className="flex items-baseline gap-2 mt-2">
+                       <span className="text-2xl font-bold text-cyan-400">then $500</span>
+                       <span className="text-zinc-500 font-medium">/ month</span>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="bg-cyan-950/10 px-8 py-4 border-b border-zinc-800/50">
-                  <span className="text-xs font-bold text-cyan-400/70 uppercase tracking-widest">Everything in the toolkit, plus...</span>
                 </div>
 
-                <div className="p-8 space-y-8 flex-grow">
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center flex-shrink-0 border border-cyan-500/20">
-                      <Mic className="w-5 h-5 text-cyan-400" />
-                    </div>
-                    <div className="flex-grow">
-                      <div className="flex justify-between items-start mb-1">
-                        <h4 className="font-bold text-white">AI Voice Agent (Ghost)</h4>
-                        <span className="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded uppercase tracking-wider border border-cyan-500/20">Pro Only</span>
+                <div className="p-8 lg:p-12 space-y-8 flex-grow">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    {/* Column 1 */}
+                    <div className="space-y-6">
+                      <div className="flex gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-zinc-800/50 border border-zinc-700/30 flex items-center justify-center flex-shrink-0">
+                          <PhoneMissed className="w-5 h-5 text-cyan-400" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white mb-1">Missed Call Text-Back</h4>
+                          <p className="text-zinc-400 text-sm leading-relaxed">Turns missed calls into text conversations automatically.</p>
+                        </div>
                       </div>
-                      <p className="text-zinc-400 text-sm leading-relaxed">GHOST answers calls live, holds natural conversations, and handles inquiries just like a real employee. It is available every hour of every day.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center flex-shrink-0 border border-cyan-500/20">
-                      <Target className="w-5 h-5 text-cyan-400" />
-                    </div>
-                    <div className="flex-grow">
-                      <div className="flex justify-between items-start mb-1">
-                        <h4 className="font-bold text-white">Real-Time Lead Qualification</h4>
-                        <span className="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded uppercase tracking-wider border border-cyan-500/20">Pro Only</span>
+                      <div className="flex gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-zinc-800/50 border border-zinc-700/30 flex items-center justify-center flex-shrink-0">
+                          <MessageSquare className="w-5 h-5 text-cyan-400" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white mb-1">24/7 AI Website Chat</h4>
+                          <p className="text-zinc-400 text-sm leading-relaxed">Engages visitors on your site around the clock and collects info.</p>
+                        </div>
                       </div>
-                      <p className="text-zinc-400 text-sm leading-relaxed">GHOST asks the right questions, determines fit and intent, and filters out time-wasters so your team only talks to serious prospects.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center flex-shrink-0 border border-cyan-500/20">
-                      <Handshake className="w-5 h-5 text-cyan-400" />
-                    </div>
-                    <div className="flex-grow">
-                      <div className="flex justify-between items-start mb-1">
-                        <h4 className="font-bold text-white">Warm Handoff To Your Team</h4>
-                        <span className="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded uppercase tracking-wider border border-cyan-500/20">Pro Only</span>
+                      <div className="flex gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-zinc-800/50 border border-zinc-700/30 flex items-center justify-center flex-shrink-0">
+                          <Send className="w-5 h-5 text-cyan-400" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white mb-1">Instant SMS Follow-Up</h4>
+                          <p className="text-zinc-400 text-sm leading-relaxed">Automatically texts leads the second they submit a form.</p>
+                        </div>
                       </div>
-                      <p className="text-zinc-400 text-sm leading-relaxed">When GHOST qualifies a lead, it hands off a full summary of their needs, urgency, and intent so your team steps in ready to close.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center flex-shrink-0 border border-cyan-500/20">
-                      <Brain className="w-5 h-5 text-cyan-400" />
-                    </div>
-                    <div className="flex-grow">
-                      <div className="flex justify-between items-start mb-1">
-                        <h4 className="font-bold text-white">Trained On Your Business</h4>
-                        <span className="text-[10px] font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded uppercase tracking-wider border border-cyan-500/20">Pro Only</span>
+                      <div className="flex gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-zinc-800/50 border border-zinc-700/30 flex items-center justify-center flex-shrink-0">
+                          <Calendar className="w-5 h-5 text-cyan-400" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white mb-1">Automated Scheduling</h4>
+                          <p className="text-zinc-400 text-sm leading-relaxed">Handles back-and-forth scheduling directly onto your calendar.</p>
+                        </div>
                       </div>
-                      <p className="text-zinc-400 text-sm leading-relaxed">GHOST is custom-trained on your services, your pricing, and the way you communicate. It sounds like a knowledgeable member of your team instead of a robot.</p>
+                      <div className="flex gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-zinc-800/50 border border-zinc-700/30 flex items-center justify-center flex-shrink-0">
+                          <RefreshCw className="w-5 h-5 text-cyan-400" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white mb-1">Database Reactivation</h4>
+                          <p className="text-zinc-400 text-sm leading-relaxed">Uses AI SMS to reactivate dead leads into booked appointments.</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Column 2 */}
+                    <div className="space-y-6">
+                      <div className="flex gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-zinc-800/50 border border-zinc-700/30 flex items-center justify-center flex-shrink-0">
+                          <Mic className="w-5 h-5 text-cyan-400" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white mb-1">AI Voice Agent (Ghost)</h4>
+                          <p className="text-zinc-400 text-sm leading-relaxed">Answers calls live, holds natural conversations, and handles inquiries.</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-zinc-800/50 border border-zinc-700/30 flex items-center justify-center flex-shrink-0">
+                          <Target className="w-5 h-5 text-cyan-400" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white mb-1">Real-Time Lead Qualification</h4>
+                          <p className="text-zinc-400 text-sm leading-relaxed">Asks questions, determines fit, and filters out time-wasters.</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-zinc-800/50 border border-zinc-700/30 flex items-center justify-center flex-shrink-0">
+                          <Handshake className="w-5 h-5 text-cyan-400" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white mb-1">Warm Handoff To Your Team</h4>
+                          <p className="text-zinc-400 text-sm leading-relaxed">Provides a full summary of needs, urgency, and intent.</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-zinc-800/50 border border-zinc-700/30 flex items-center justify-center flex-shrink-0">
+                          <Brain className="w-5 h-5 text-cyan-400" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white mb-1">Trained On Your Business</h4>
+                          <p className="text-zinc-400 text-sm leading-relaxed">Custom-trained on your services, pricing, and communication.</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-zinc-800/50 border border-zinc-700/30 flex items-center justify-center flex-shrink-0">
+                          <Star className="w-5 h-5 text-cyan-400" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white mb-1">Auto Review Generation</h4>
+                          <p className="text-zinc-400 text-sm leading-relaxed">Triggers Google review requests via SMS after job completion.</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 
-                <div className="p-8 pt-0 mt-auto">
+                <div className="p-8 lg:p-12 pt-0 mt-auto">
                   <a 
                     href="https://api.digitalhandyman.xyz/payment-link/69c4b6c5fb727d9c905d2836"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-4 rounded-xl bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 hover:opacity-90 text-white font-bold transition-opacity shadow-lg shadow-cyan-500/25 flex items-center justify-center gap-2 group block text-center"
+                    className="w-full py-5 rounded-xl bg-gradient-to-r from-blue-500 via-cyan-500 to-slate-500 hover:opacity-90 text-white font-bold text-lg transition-opacity shadow-lg shadow-cyan-500/25 flex items-center justify-center gap-2 group block text-center"
                   >
-                    Get access to Digital Handyman Pro
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    Get Started Now
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
               </div>
@@ -1291,14 +1960,28 @@ export default function App() {
           </div>
         </section>
 
-        {/* 8. Contact Form & FOMO */}
+        {/* 8. What's Included features chart */}
+        <section className="py-24 relative border-t border-zinc-800/50 overflow-hidden bg-zinc-950/30">
+          <div className="max-w-6xl mx-auto px-6 relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Features with <GradientText>Digital Handyman Subscription</GradientText>
+              </h2>
+              <p className="text-zinc-400 text-lg">In addition to your lead nurturing automations, you get full access to our complete marketing suite.</p>
+            </div>
+            
+            <DashboardFeatureShowcase />
+          </div>
+        </section>
+
+        {/* 9. Contact Form & FOMO */}
         <section className="py-32 relative">
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight tracking-tight">
                   <span className="relative inline-block">
-                    Your Competitors Are <GradientText>Already Using AI.</GradientText>
+                    Your Competitors Are <span className="whitespace-nowrap"><GradientText>Already Using AI.</GradientText></span>
                     <motion.div 
                       initial={{ width: 0 }}
                       whileInView={{ width: "100%" }}
@@ -1470,7 +2153,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* 9. Footer */}
+        {/* 10. Footer */}
         <footer className="border-t border-zinc-800/50 pt-16 pb-8 bg-zinc-950/50 backdrop-blur-md">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
