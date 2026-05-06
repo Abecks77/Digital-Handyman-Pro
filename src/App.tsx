@@ -1102,7 +1102,7 @@ export default function App() {
                       <motion.div animate={{ scale: [1, 2.5], opacity: [0.3, 0] }} transition={{ repeat: Infinity, duration: 2, delay: 0.5 }} className="absolute w-16 h-16 rounded-full border border-cyan-500/30"></motion.div>
                     </div>
                   ),
-                  title: "2. AI Agent Calls Within 60 Seconds",
+                  title: "2. AI Agent Responds Within 60 Seconds",
                   desc: "GHOST immediately engages the caller, asking the right questions to keep the conversation moving forward."
                 },
                 {
