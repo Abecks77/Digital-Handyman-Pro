@@ -105,7 +105,7 @@ export default function ServiceAreasPage() {
                     </div>
                     <h3 className="text-xl font-bold mb-3 text-white">Bushland, TX</h3>
                     <p className="text-zinc-400 text-sm leading-relaxed">
-                      Serving the expanding Bushland community means lots of drive time. While you're on the road, our AI receptionists cover your phone lines and website, booking appointments automatically.
+                      Serving the expanding Bushland community means lots of drive time. While you're on the road, our Ai Automations cover your phone lines and website, booking appointments automatically.
                     </p>
                   </div>
                 </div>

@@ -1574,9 +1574,9 @@ export default function LandingPage() {
                       <motion.div animate={{ opacity: [0.2, 0.6, 0.2] }} transition={{ repeat: Infinity, duration: 2 }} className="absolute bg-orange-500/20 blur-2xl w-32 h-32 rounded-full"></motion.div>
                   </div>
                   <div>
-                    <h3 className="text-xl md:text-2xl font-bold text-white mb-3 tracking-wide">The 24/7 Receptionist</h3>
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-3 tracking-wide">24/7 Ai Automations</h3>
                     <p className="text-zinc-400 leading-relaxed">
-                      Missed calls cost you money. When you're on a job site or it's after hours, your AI receptionist instantly texts back missed calls, answers common questions about your services, and keeps the lead warm until you're ready.
+                      Missed calls cost you money. When you're on a job site or it's after hours, your Ai Automations instantly texts back missed calls, answers common questions about your services, and keeps the lead warm until you're ready.
                     </p>
                   </div>
                 </motion.div>

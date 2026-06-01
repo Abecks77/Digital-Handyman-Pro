@@ -345,7 +345,7 @@ export default function FeaturesPage() {
                     referrerPolicy="no-referrer"
                 />
                 <p className="text-zinc-400 text-sm leading-relaxed max-w-sm mb-6">
-                  Ascension provides AI employees and digital receptionists to home service contractors, ensuring you never miss another lead or potential customer while on the job.
+                  Ascension provides AI employees and Ai Automations to home service contractors, ensuring you never miss another lead or potential customer while on the job.
                 </p>
                 <div className="flex items-center gap-4">
                   <a href="#" className="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 transition-all">
