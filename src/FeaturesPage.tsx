@@ -379,7 +379,7 @@ export default function FeaturesPage() {
               <div>
                 <h4 className="text-white font-bold mb-6">Contact</h4>
                 <ul className="space-y-4">
-                  <li className="text-zinc-400 text-sm">support@ascensionagents.io</li>
+                  <li className="text-zinc-400 text-sm">support@ascensionghost.com</li>
                   <li className="text-zinc-400 text-sm">Based in Texas</li>
                   <li>
                     <Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-blue-400 hover:text-blue-300 text-sm font-semibold transition-colors mt-2 inline-block">
