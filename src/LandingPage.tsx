@@ -1,6 +1,7 @@
 import { ReactNode, useEffect, useRef, useState, FC, FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useInView, animate } from 'motion/react';
+import { Helmet } from 'react-helmet-async';
 import { 
   Bot, PhoneMissed, Clock, TrendingDown, DollarSign, 
   CheckCircle2, XCircle, ArrowRight, ArrowDown, Calendar, Zap, Shield, Star, Heart,
@@ -779,6 +780,11 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen text-zinc-50 font-sans selection:bg-purple-500/30 relative">
+      <Helmet>
+        <title>Ascension Agents | AI Automations in Amarillo, Canyon & Bushland, TX</title>
+        <meta name="description" content="Meet GHOST, your 24/7 AI employee that handles SMS, web chats, and missed calls in the Texas Panhandle." />
+        <link rel="canonical" href="https://www.ascensionghost.com/" />
+      </Helmet>
       
       {/* Global SaaS Background - Unified across the entire page */}
       <div className="fixed inset-0 z-0 bg-zinc-950">

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, ChevronDown, MessageSquare, Plus } from 'lucide-react';
 
 export default function FaqPage() {
@@ -117,6 +118,11 @@ export default function FaqPage() {
 
   return (
     <div className="min-h-screen text-zinc-50 font-sans selection:bg-purple-500/30 relative flex flex-col">
+      <Helmet>
+        <title>FAQ | Ascension Agents</title>
+        <meta name="description" content="Frequently Asked Questions about Ascension Agents and GHOST, the 24/7 AI employee." />
+        <link rel="canonical" href="https://www.ascensionghost.com/faq" />
+      </Helmet>
       {/* Global SaaS Background - Unified across the entire page */}
       <div className="fixed inset-0 z-0 bg-zinc-950">
         {/* Subtle Grid Pattern */}

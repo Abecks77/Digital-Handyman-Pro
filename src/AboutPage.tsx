@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Facebook, Youtube, Phone, Mail, MapPin, Check } from 'lucide-react';
 
 export default function AboutPage() {
@@ -40,6 +41,11 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-zinc-950 text-slate-50 font-sans selection:bg-purple-500/30 selection:text-purple-200 overflow-hidden flex flex-col">
+      <Helmet>
+        <title>About Us | Ascension Agents</title>
+        <meta name="description" content="Learn about Ascension Agents and how we use AI to help local service businesses in Amarillo, Canyon, and Bushland, TX." />
+        <link rel="canonical" href="https://www.ascensionghost.com/about" />
+      </Helmet>
       <div className="fixed inset-0 z-0 opacity-40">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
       </div>
