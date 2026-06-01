@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://digitalhandyman.xyz/sitemap.xml
 Sitemap: https://www.digitalhandyman.xyz/sitemap.xml
