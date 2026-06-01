@@ -23,7 +23,7 @@ const DualCTA = ({
   primaryText = "Get Your AI Employee Today!", 
   primaryIcon: PrimaryIcon = ArrowRight,
   primaryAction,
-  primaryLink = "https://api.digitalhandyman.xyz/payment-link/69c4b6c5fb727d9c905d2836"
+  primaryLink = "https://api.ascensionagents.io/payment-link/69c4b6c5fb727d9c905d2836"
 }: { 
   className?: string, 
   showDemo?: boolean,
@@ -62,7 +62,7 @@ const DualCTA = ({
       )}
       {showDemo && (
         <a 
-          href="https://calendly.com/adambeckner/digitalhandyman"
+          href="https://calendly.com/adambeckner/ascensionagents"
           target="_blank"
           rel="noopener noreferrer"
           className="px-8 py-4 rounded-full font-semibold text-zinc-300 bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 hover:bg-zinc-800 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 block"
@@ -78,7 +78,7 @@ const DualCTA = ({
 const SectionBottomCTAs = () => (
   <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
     <a 
-      href="https://calendly.com/adambeckner/digitalhandyman"
+      href="https://calendly.com/adambeckner/ascensionagents"
       target="_blank"
       rel="noopener noreferrer"
       className="relative group overflow-hidden rounded-full p-[1px] block w-full sm:w-auto"
@@ -804,7 +804,7 @@ export default function LandingPage() {
                   className="hover:opacity-80 transition-opacity cursor-pointer"
                 >
                   <img 
-                    src="https://lh3.googleusercontent.com/d/1fiqEiIUyp52Zo22koroPSYFZEne_tCjm" 
+                    src="https://lh3.googleusercontent.com/d/1ZLJZ7dsYejGIKWSos3yiZYw8NW7y45Hd" 
                     alt="Ascension Agents Logo" 
                     className="h-8 w-auto object-contain rounded-md"
                     referrerPolicy="no-referrer"
@@ -820,15 +820,15 @@ export default function LandingPage() {
 
             <div className="hidden md:flex items-center gap-1 bg-zinc-900/30 rounded-full p-1 border border-zinc-800/30">
               <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">Home</Link>
-              <a href="#features" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">Your Leaks</a>
-              <a href="#perfect-for" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">Who It's For</a>
+              <Link to="/features" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">Features</Link>
               <Link to="/service-areas" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">Service Areas</Link>
               <Link to="/about" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">About Ascension</Link>
+              <Link to="/faq" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">FAQ</Link>
             </div>
 
             <div className="flex items-center gap-3">
               <a 
-                href="https://api.digitalhandyman.xyz/payment-link/69c4b6c5fb727d9c905d2836"
+                href="https://api.ascensionagents.io/payment-link/69c4b6c5fb727d9c905d2836"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative group/btn overflow-hidden rounded-full p-[1px] block"
@@ -1728,7 +1728,7 @@ export default function LandingPage() {
             
             <div className="flex justify-center">
               <a 
-                href="https://calendly.com/adambeckner/digitalhandyman"
+                href="https://calendly.com/adambeckner/ascensionagents"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative group overflow-hidden rounded-full p-[1px] block"
@@ -1830,13 +1830,13 @@ export default function LandingPage() {
                   <p className="text-purple-200/70 text-base md:text-lg">Everything you need to capture leads, qualify prospects, and close deals 24/7.</p>
                   
                   <div className="mt-8 flex flex-col items-center justify-center">
-                    <div className="flex items-baseline gap-2">
-                       <span className="text-5xl font-black text-white">$2,500</span>
-                       <span className="text-zinc-400 text-xl font-medium">setup</span>
+                    <div className="flex items-center gap-3 mb-2 flex-wrap justify-center">
+                       <span className="text-xl font-bold text-zinc-500 line-through decoration-red-500/50 decoration-2">$2,500 setup</span>
+                       <span className="text-xs font-bold bg-red-500/20 text-red-500 px-3 py-1 rounded-full uppercase tracking-wider border border-red-500/30 animate-pulse">Limited Time: $0 Setup</span>
                     </div>
-                    <div className="flex items-baseline gap-2 mt-2">
-                       <span className="text-2xl font-bold text-purple-400">then $500</span>
-                       <span className="text-zinc-500 font-medium">/ month</span>
+                    <div className="flex items-baseline gap-2">
+                       <span className="text-5xl font-black text-white">$550</span>
+                       <span className="text-zinc-500 text-xl font-medium">/ month</span>
                     </div>
                   </div>
                 </div>
@@ -1945,7 +1945,7 @@ export default function LandingPage() {
                 
                 <div className="p-8 lg:p-12 pt-0 mt-auto">
                   <a 
-                    href="https://api.digitalhandyman.xyz/payment-link/69c4b6c5fb727d9c905d2836"
+                    href="https://api.ascensionagents.io/payment-link/69c4b6c5fb727d9c905d2836"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-5 rounded-xl bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 hover:opacity-90 text-white font-bold text-lg transition-opacity shadow-lg shadow-purple-500/25 flex items-center justify-center gap-2 group block text-center"
@@ -2018,7 +2018,7 @@ export default function LandingPage() {
                 <div className="hidden lg:block">
                   <p className="text-sm text-zinc-500 mb-4 uppercase tracking-widest font-bold">Ready to skip the line?</p>
                   <a 
-                    href="https://calendly.com/adambeckner/digitalhandyman"
+                    href="https://calendly.com/adambeckner/ascensionagents"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-8 py-4 rounded-full font-bold text-white bg-zinc-900/80 backdrop-blur-sm border border-zinc-700 hover:bg-zinc-800 transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl hover:-translate-y-1 inline-flex"
@@ -2121,7 +2121,7 @@ export default function LandingPage() {
                 <div className="mt-8 pt-8 border-t border-zinc-800/80 lg:hidden text-center">
                   <p className="text-sm text-zinc-400 mb-4 font-medium">Or skip the line and book directly</p>
                   <a 
-                    href="https://calendly.com/adambeckner/digitalhandyman"
+                    href="https://calendly.com/adambeckner/ascensionagents"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full px-8 py-4 rounded-xl font-bold text-white bg-zinc-800/80 hover:bg-zinc-700 transition-all duration-300 flex items-center justify-center gap-3 shadow-lg block"
@@ -2147,7 +2147,7 @@ export default function LandingPage() {
                     className="hover:opacity-80 transition-opacity cursor-pointer"
                   >
                     <img 
-                      src="https://lh3.googleusercontent.com/d/1fiqEiIUyp52Zo22koroPSYFZEne_tCjm" 
+                      src="https://lh3.googleusercontent.com/d/1ZLJZ7dsYejGIKWSos3yiZYw8NW7y45Hd" 
                       alt="Ascension Agents Logo" 
                       className="h-10 w-auto object-contain rounded-lg"
                       referrerPolicy="no-referrer"

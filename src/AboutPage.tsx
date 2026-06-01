@@ -56,7 +56,7 @@ export default function AboutPage() {
                   className="hover:opacity-80 transition-opacity cursor-pointer"
                 >
                   <img 
-                    src="https://lh3.googleusercontent.com/d/1fiqEiIUyp52Zo22koroPSYFZEne_tCjm" 
+                    src="https://lh3.googleusercontent.com/d/1ZLJZ7dsYejGIKWSos3yiZYw8NW7y45Hd" 
                     alt="Ascension Agents Logo" 
                     className="h-8 w-auto object-contain rounded-md"
                     referrerPolicy="no-referrer"
@@ -72,15 +72,15 @@ export default function AboutPage() {
 
             <div className="hidden md:flex items-center gap-1 bg-zinc-900/30 rounded-full p-1 border border-zinc-800/30">
               <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">Home</Link>
-              <Link to="/#features" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">Your Leaks</Link>
-              <Link to="/#perfect-for" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">Who It's For</Link>
+              <Link to="/features" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">Features</Link>
               <Link to="/service-areas" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">Service Areas</Link>
-              <Link to="/about" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">About Ascension</Link>
+              <Link to="/about" className="px-4 py-1.5 rounded-full text-xs font-semibold text-white bg-zinc-800/50 transition-all">About Ascension</Link>
+              <Link to="/faq" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">FAQ</Link>
             </div>
 
             <div className="flex items-center gap-3">
               <a 
-                href="https://api.digitalhandyman.xyz/payment-link/69c4b6c5fb727d9c905d2836"
+                href="https://api.ascensionagents.io/payment-link/69c4b6c5fb727d9c905d2836"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative group/btn overflow-hidden rounded-full p-[1px] block"
@@ -99,7 +99,7 @@ export default function AboutPage() {
         <section className="pt-40 pb-20 lg:pt-48 lg:pb-32 flex-grow">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-900/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
           <div className="max-w-7xl mx-auto px-6 relative z-10">
-            <div className="max-w-4xl mx-auto mb-16 text-center">
+            <div className="max-w-6xl mx-auto mb-16 text-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -109,7 +109,7 @@ export default function AboutPage() {
                   About <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-purple-500 to-blue-600">Ascension</span>
                 </h1>
                 <p className="text-xl text-zinc-400 mb-10 leading-relaxed">
-                  We built Ascension to help local service businesses stop losing money to missed calls and slow follow-ups. Our mission is to democratize enterprise-grade AI so you can scale without boundaries.
+                  At Ascension it has always been our goal to build high leverage, low maintenance systems to help companies run a more efficient business. Since Ai has blown up worldwide, we have been working diligently to put together products that work with you to scale your company.
                 </p>
               </motion.div>
             </div>
@@ -118,28 +118,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="max-w-4xl mx-auto"
-            >
-                <div className="bg-zinc-900/50 border border-zinc-800/80 rounded-2xl p-8 md:p-12 text-left mb-20">
-                  <h2 className="text-2xl font-bold mb-4 text-white">Our Story</h2>
-                  <p className="text-zinc-400 mb-6 leading-relaxed">
-                    It started with a simple observation: the best local service businesses provide excellent service, but often struggle with the 24/7 demands of customer communication. Missed calls meant missed revenue. We knew there had to be a better way than hiring expensive receptionists or working through the night.
-                  </p>
-                  <p className="text-zinc-400 leading-relaxed mb-6">
-                    That's why we created Ghost, an AI employee that never sleeps, never takes a day off, and seamlessly handles the front lines of your business. Ghost isn't just software; it's a fundamental shift in how local businesses operate.
-                  </p>
-                  <h2 className="text-2xl font-bold mb-4 text-white">Our Vision</h2>
-                  <p className="text-zinc-400 leading-relaxed">
-                    We envision a world where local business owners can focus purely on what they do best, leaving the repetitive lead capturing and scheduling to intelligent automation. We are committed to continuous innovation, ensuring our clients always remain one step ahead of the competition.
-                  </p>
-                </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="max-w-6xl mx-auto"
+              className="max-w-6xl mx-auto mb-20"
             >
                 {/* Contact Us Section matching the new design format */}
                 <div className="text-left">
@@ -254,6 +233,27 @@ export default function AboutPage() {
                   </div>
                 </div>
               </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="max-w-6xl mx-auto"
+            >
+                <div className="bg-zinc-900/50 border border-zinc-800/80 rounded-2xl p-8 md:p-12 text-left">
+                  <h2 className="text-2xl font-bold mb-4 text-white">Our Story</h2>
+                  <p className="text-zinc-400 mb-6 leading-relaxed">
+                    It started with a simple observation: the best local service businesses provide excellent service, but often struggle with the 24/7 demands of customer communication. Missed calls meant missed revenue. We knew there had to be a better way than hiring expensive receptionists or working through the night.
+                  </p>
+                  <p className="text-zinc-400 leading-relaxed mb-6">
+                    That's why we created Ghost, an AI employee that never sleeps, never takes a day off, and seamlessly handles the front lines of your business. Ghost isn't just software; it's a fundamental shift in how local businesses operate.
+                  </p>
+                  <h2 className="text-2xl font-bold mb-4 text-white">Our Vision</h2>
+                  <p className="text-zinc-400 leading-relaxed">
+                    We envision a world where local business owners can focus purely on what they do best, leaving the repetitive lead capturing and scheduling to intelligent automation. We are committed to continuous innovation, ensuring our clients always remain one step ahead of the competition.
+                  </p>
+                </div>
+            </motion.div>
           </div>
         </section>
 
@@ -269,7 +269,7 @@ export default function AboutPage() {
                     className="hover:opacity-80 transition-opacity cursor-pointer"
                   >
                     <img 
-                      src="https://lh3.googleusercontent.com/d/1fiqEiIUyp52Zo22koroPSYFZEne_tCjm" 
+                      src="https://lh3.googleusercontent.com/d/1ZLJZ7dsYejGIKWSos3yiZYw8NW7y45Hd" 
                       alt="Ascension Agents Logo" 
                       className="h-10 w-auto object-contain rounded-lg"
                       referrerPolicy="no-referrer"
