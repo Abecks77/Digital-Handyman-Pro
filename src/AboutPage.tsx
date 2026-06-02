@@ -44,7 +44,7 @@ export default function AboutPage() {
       <Helmet>
         <title>About Us | Ascension Agents</title>
         <meta name="description" content="Learn about Ascension Agents and how we use AI to help local service businesses in Amarillo, Canyon, and Bushland, TX." />
-        <link rel="canonical" href="https://www.ascensionghost.com/about" />
+        <link rel="canonical" href="https://ghost.ascensionagents.io/about" />
       </Helmet>
       <div className="fixed inset-0 z-0 opacity-40">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
@@ -62,7 +62,7 @@ export default function AboutPage() {
                   className="hover:opacity-80 transition-opacity cursor-pointer"
                 >
                   <img 
-                    src="https://lh3.googleusercontent.com/d/1ZLJZ7dsYejGIKWSos3yiZYw8NW7y45Hd" 
+                    src="https://lh3.googleusercontent.com/d/1fiqEiIUyp52Zo22koroPSYFZEne_tCjm" 
                     alt="Ascension Agents Logo" 
                     className="h-8 w-auto object-contain rounded-md"
                     referrerPolicy="no-referrer"
@@ -86,7 +86,7 @@ export default function AboutPage() {
 
             <div className="flex items-center gap-3">
               <a 
-                href="https://api.ascensionagents.io/payment-link/69c4b6c5fb727d9c905d2836"
+                href="https://api.ascensionagents.io/payment-link/69b860aff35c540e14832cf4"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative group/btn overflow-hidden rounded-full p-[1px] block"
@@ -275,7 +275,7 @@ export default function AboutPage() {
                     className="hover:opacity-80 transition-opacity cursor-pointer"
                   >
                     <img 
-                      src="https://lh3.googleusercontent.com/d/1ZLJZ7dsYejGIKWSos3yiZYw8NW7y45Hd" 
+                      src="https://lh3.googleusercontent.com/d/1fiqEiIUyp52Zo22koroPSYFZEne_tCjm" 
                       alt="Ascension Agents Logo" 
                       className="h-10 w-auto object-contain rounded-lg"
                       referrerPolicy="no-referrer"

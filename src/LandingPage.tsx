@@ -24,7 +24,7 @@ const DualCTA = ({
   primaryText = "Get Your AI Employee Today!", 
   primaryIcon: PrimaryIcon = ArrowRight,
   primaryAction,
-  primaryLink = "https://api.ascensionagents.io/payment-link/69c4b6c5fb727d9c905d2836"
+  primaryLink = "https://api.ascensionagents.io/payment-link/69b860aff35c540e14832cf4"
 }: { 
   className?: string, 
   showDemo?: boolean,
@@ -783,7 +783,7 @@ export default function LandingPage() {
       <Helmet>
         <title>Ascension Agents | AI Automations in Amarillo, Canyon & Bushland, TX</title>
         <meta name="description" content="Meet GHOST, your 24/7 AI employee that handles SMS, web chats, and missed calls in the Texas Panhandle." />
-        <link rel="canonical" href="https://www.ascensionghost.com/" />
+        <link rel="canonical" href="https://ghost.ascensionagents.io/" />
       </Helmet>
       
       {/* Global SaaS Background - Unified across the entire page */}
@@ -810,7 +810,7 @@ export default function LandingPage() {
                   className="hover:opacity-80 transition-opacity cursor-pointer"
                 >
                   <img 
-                    src="https://lh3.googleusercontent.com/d/1ZLJZ7dsYejGIKWSos3yiZYw8NW7y45Hd" 
+                    src="https://lh3.googleusercontent.com/d/1fiqEiIUyp52Zo22koroPSYFZEne_tCjm" 
                     alt="Ascension Agents Logo" 
                     className="h-8 w-auto object-contain rounded-md"
                     referrerPolicy="no-referrer"
@@ -834,7 +834,7 @@ export default function LandingPage() {
 
             <div className="flex items-center gap-3">
               <a 
-                href="https://api.ascensionagents.io/payment-link/69c4b6c5fb727d9c905d2836"
+                href="https://api.ascensionagents.io/payment-link/69b860aff35c540e14832cf4"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative group/btn overflow-hidden rounded-full p-[1px] block"
@@ -1951,7 +1951,7 @@ export default function LandingPage() {
                 
                 <div className="p-8 lg:p-12 pt-0 mt-auto">
                   <a 
-                    href="https://api.ascensionagents.io/payment-link/69c4b6c5fb727d9c905d2836"
+                    href="https://api.ascensionagents.io/payment-link/69b860aff35c540e14832cf4"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-5 rounded-xl bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 hover:opacity-90 text-white font-bold text-lg transition-opacity shadow-lg shadow-purple-500/25 flex items-center justify-center gap-2 group block text-center"
@@ -2153,7 +2153,7 @@ export default function LandingPage() {
                     className="hover:opacity-80 transition-opacity cursor-pointer"
                   >
                     <img 
-                      src="https://lh3.googleusercontent.com/d/1ZLJZ7dsYejGIKWSos3yiZYw8NW7y45Hd" 
+                      src="https://lh3.googleusercontent.com/d/1fiqEiIUyp52Zo22koroPSYFZEne_tCjm" 
                       alt="Ascension Agents Logo" 
                       className="h-10 w-auto object-contain rounded-lg"
                       referrerPolicy="no-referrer"

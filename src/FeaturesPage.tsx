@@ -76,7 +76,7 @@ export default function FeaturesPage() {
       <Helmet>
         <title>Features | Ascension Agents</title>
         <meta name="description" content="Explore the features of GHOST - Missed Call Text Back, AI Voice Agent, auto-booking, and more." />
-        <link rel="canonical" href="https://www.ascensionghost.com/features" />
+        <link rel="canonical" href="https://ghost.ascensionagents.io/features" />
       </Helmet>
       <div className="fixed inset-0 z-0 opacity-40">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
@@ -94,7 +94,7 @@ export default function FeaturesPage() {
                   className="hover:opacity-80 transition-opacity cursor-pointer"
                 >
                   <img 
-                    src="https://lh3.googleusercontent.com/d/1ZLJZ7dsYejGIKWSos3yiZYw8NW7y45Hd" 
+                    src="https://lh3.googleusercontent.com/d/1fiqEiIUyp52Zo22koroPSYFZEne_tCjm" 
                     alt="Ascension Agents Logo" 
                     className="h-8 w-auto object-contain rounded-md"
                     referrerPolicy="no-referrer"
@@ -118,7 +118,7 @@ export default function FeaturesPage() {
 
             <div className="flex items-center gap-3">
               <a 
-                href="https://api.ascensionagents.io/payment-link/69c4b6c5fb727d9c905d2836"
+                href="https://api.ascensionagents.io/payment-link/69b860aff35c540e14832cf4"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative group/btn overflow-hidden rounded-full p-[1px] block"
@@ -325,7 +325,7 @@ export default function FeaturesPage() {
                 
                 <div className="p-8 lg:p-12 pt-0 mt-auto">
                   <a 
-                    href="https://api.ascensionagents.io/payment-link/69c4b6c5fb727d9c905d2836"
+                    href="https://api.ascensionagents.io/payment-link/69b860aff35c540e14832cf4"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-5 rounded-xl bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 hover:opacity-90 text-white font-bold text-lg transition-opacity shadow-lg shadow-purple-500/25 flex items-center justify-center gap-2 group block text-center"
@@ -345,7 +345,7 @@ export default function FeaturesPage() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
               <div className="col-span-1 md:col-span-2">
                 <img 
-                    src="https://lh3.googleusercontent.com/d/1ZLJZ7dsYejGIKWSos3yiZYw8NW7y45Hd" 
+                    src="https://lh3.googleusercontent.com/d/1fiqEiIUyp52Zo22koroPSYFZEne_tCjm" 
                     alt="Ascension Agents Logo" 
                     className="h-10 w-auto object-contain mb-6 rounded-md opacity-80"
                     referrerPolicy="no-referrer"
@@ -371,7 +371,7 @@ export default function FeaturesPage() {
                   <li><Link to="/service-areas" className="text-zinc-400 hover:text-white text-sm transition-colors">Service Areas</Link></li>
                   <li>
                     <a 
-                      href="https://api.ascensionagents.io/payment-link/69c4b6c5fb727d9c905d2836"
+                      href="https://api.ascensionagents.io/payment-link/69b860aff35c540e14832cf4"
                       target="_blank"
                       rel="noopener noreferrer" 
                       className="text-zinc-400 hover:text-white text-sm transition-colors"
@@ -385,7 +385,7 @@ export default function FeaturesPage() {
               <div>
                 <h4 className="text-white font-bold mb-6">Contact</h4>
                 <ul className="space-y-4">
-                  <li className="text-zinc-400 text-sm">support@ascensionghost.com</li>
+                  <li className="text-zinc-400 text-sm">support@ascensionagents.io</li>
                   <li className="text-zinc-400 text-sm">Based in Texas</li>
                   <li>
                     <Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-blue-400 hover:text-blue-300 text-sm font-semibold transition-colors mt-2 inline-block">

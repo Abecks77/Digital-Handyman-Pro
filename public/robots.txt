@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ascensionghost.com/sitemap.xml
+Sitemap: https://ghost.ascensionagents.io/sitemap.xml

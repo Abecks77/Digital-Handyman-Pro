@@ -121,7 +121,7 @@ export default function FaqPage() {
       <Helmet>
         <title>FAQ | Ascension Agents</title>
         <meta name="description" content="Frequently Asked Questions about Ascension Agents and GHOST, the 24/7 AI employee." />
-        <link rel="canonical" href="https://www.ascensionghost.com/faq" />
+        <link rel="canonical" href="https://ghost.ascensionagents.io/faq" />
       </Helmet>
       {/* Global SaaS Background - Unified across the entire page */}
       <div className="fixed inset-0 z-0 bg-zinc-950">
@@ -144,7 +144,7 @@ export default function FaqPage() {
                 className="hover:opacity-80 transition-opacity cursor-pointer"
               >
                 <img 
-                  src="https://lh3.googleusercontent.com/d/1ZLJZ7dsYejGIKWSos3yiZYw8NW7y45Hd" 
+                  src="https://lh3.googleusercontent.com/d/1fiqEiIUyp52Zo22koroPSYFZEne_tCjm" 
                   alt="Ascension Agents Logo" 
                   className="h-8 w-auto object-contain rounded-md"
                   referrerPolicy="no-referrer"
@@ -162,7 +162,7 @@ export default function FaqPage() {
 
             <div className="flex items-center gap-4">
               <a 
-                href="https://api.ascensionagents.io/payment-link/69c4b6c5fb727d9c905d2836"
+                href="https://api.ascensionagents.io/payment-link/69b860aff35c540e14832cf4"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative group/btn overflow-hidden rounded-full p-[1px] block"
@@ -285,7 +285,7 @@ export default function FaqPage() {
                 className="hover:opacity-80 transition-opacity cursor-pointer"
               >
                 <img 
-                  src="https://lh3.googleusercontent.com/d/1ZLJZ7dsYejGIKWSos3yiZYw8NW7y45Hd" 
+                  src="https://lh3.googleusercontent.com/d/1fiqEiIUyp52Zo22koroPSYFZEne_tCjm" 
                   alt="Ascension Agents Logo" 
                   className="h-10 w-auto object-contain rounded-lg"
                   referrerPolicy="no-referrer"
