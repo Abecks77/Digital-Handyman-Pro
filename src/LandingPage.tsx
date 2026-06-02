@@ -667,27 +667,43 @@ const DashboardFeatureShowcase = () => {
       {/* Sidebar: Feature List */}
       <div className="flex flex-col space-y-1.5 lg:h-[600px] overflow-y-auto pr-2" style={{ scrollbarWidth: 'thin', scrollbarColor: '#3f3f46 transparent' }}>
         {features.map((feature, idx) => (
-          <button
-            key={feature.id}
-            onClick={() => setActiveIndex(idx)}
-            className={`flex items-center gap-4 w-full p-3.5 rounded-xl text-left transition-all duration-300 border ${
-              activeIndex === idx 
-                ? 'bg-purple-950/40 border-purple-500/40 shadow-[inset_0_0_20px_rgba(168,85,247,0.15)] ring-1 ring-purple-500/20' 
-                : 'bg-zinc-800/20 border-transparent hover:bg-zinc-800/60 hover:border-zinc-700 text-zinc-400 hover:text-zinc-200'
-            }`}
-          >
-            <div className={`p-2 rounded-lg transition-colors ${activeIndex === idx ? 'bg-purple-500/20 text-purple-400' : 'bg-zinc-800/80 text-zinc-400'}`}>
-               <feature.icon className="w-5 h-5 flex-shrink-0" />
-            </div>
-            <span className={`font-semibold tracking-wide text-sm ${activeIndex === idx ? 'text-white' : ''}`}>
-              {feature.title}
-            </span>
-          </button>
+          <div key={feature.id} className="flex flex-col">
+            <button
+              onClick={() => setActiveIndex(idx)}
+              className={`flex items-center gap-4 w-full p-3.5 rounded-xl text-left transition-all duration-300 border ${
+                activeIndex === idx 
+                  ? 'bg-purple-950/40 border-purple-500/40 shadow-[inset_0_0_20px_rgba(168,85,247,0.15)] ring-1 ring-purple-500/20' 
+                  : 'bg-zinc-800/20 border-transparent hover:bg-zinc-800/60 hover:border-zinc-700 text-zinc-400 hover:text-zinc-200'
+              }`}
+            >
+              <div className={`p-2 rounded-lg transition-colors ${activeIndex === idx ? 'bg-purple-500/20 text-purple-400' : 'bg-zinc-800/80 text-zinc-400'}`}>
+                 <feature.icon className="w-5 h-5 flex-shrink-0" />
+              </div>
+              <span className={`font-semibold tracking-wide text-sm ${activeIndex === idx ? 'text-white' : ''}`}>
+                {feature.title}
+              </span>
+            </button>
+
+            {/* Mobile-only accordion content */}
+            {activeIndex === idx && (
+              <div className="lg:hidden mt-2 p-6 bg-zinc-950 rounded-2xl border border-zinc-800/80 relative overflow-hidden flex flex-col shadow-inner shadow-black/50">
+                 <div className="relative z-20 mb-4">
+                    <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                    <p className="text-zinc-400 leading-relaxed text-sm">{feature.desc}</p>
+                 </div>
+                 <div className="relative z-20">
+                    {feature.visual}
+                 </div>
+                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-purple-900/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
+                 <div className="absolute top-0 right-0 w-64 h-64 bg-slate-500/5 blur-[80px] rounded-full pointer-events-none z-0"></div>
+              </div>
+            )}
+          </div>
         ))}
       </div>
 
-      {/* Main Area: Showcase Content */}
-      <div className="bg-zinc-950 rounded-2xl border border-zinc-800/80 relative overflow-hidden flex flex-col h-[500px] lg:h-[600px] shadow-inner shadow-black/50">
+      {/* Main Area: Showcase Content (Desktop Only) */}
+      <div className="hidden lg:flex bg-zinc-950 rounded-2xl border border-zinc-800/80 relative overflow-hidden flex-col h-[500px] lg:h-[600px] shadow-inner shadow-black/50">
         {/* Header desc */}
         <div className="p-8 pb-0 z-20 relative">
            <motion.div
