@@ -91,7 +91,7 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
                 className="relative group/btn overflow-hidden rounded-full p-[1px] block"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-70 group-hover/btn:opacity-100 transition-opacity duration-300"></span>
+                <span className="absolute inset-0 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-70 group-hover/btn:opacity-100 transition-opacity duration-300"></span>
                 <div className="relative bg-zinc-950 px-5 py-2 rounded-full flex items-center justify-center gap-2 transition-all duration-300 group-hover/btn:bg-transparent">
                   <span className="font-bold text-white text-xs tracking-wide">Get Started</span>
                   <ArrowRight className="w-3 h-3 text-white group-hover/btn:translate-x-1 transition-transform" />
@@ -103,7 +103,7 @@ export default function AboutPage() {
 
         {/* Hero Section */}
         <section className="pt-40 pb-20 lg:pt-48 lg:pb-32 flex-grow">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-900/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-[#0055ff]/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="max-w-6xl mx-auto mb-16 text-center">
               <motion.div
@@ -112,7 +112,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.8 }}
               >
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter mb-8 leading-[1.1] text-white">
-                  About <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-purple-500 to-blue-600">Ascension</span>
+                  About <span className="bg-clip-text text-transparent bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)]">Ascension</span>
                 </h1>
                 <p className="text-xl text-zinc-400 mb-10 leading-relaxed">
                   At Ascension it has always been our goal to build high leverage, low maintenance systems to help companies run a more efficient business. Since Ai has blown up worldwide, we have been working diligently to put together products that work with you to scale your company.
@@ -178,7 +178,7 @@ export default function AboutPage() {
                           <button 
                             type="submit"
                             disabled={isSubmitting || isSubmitted}
-                            className="w-full md:w-auto bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 text-white font-bold text-sm tracking-wide px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-70 flex items-center justify-center gap-2"
+                            className="w-full md:w-auto bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] text-white font-bold text-sm tracking-wide px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-70 flex items-center justify-center gap-2"
                           >
                             <span>{isSubmitting ? 'Sending...' : isSubmitted ? 'Message Sent!' : 'Get Your AI Employee Today!'}</span>
                             {!isSubmitting && !isSubmitted && <ArrowRight className="w-4 h-4 text-white" />}

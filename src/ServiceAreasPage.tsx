@@ -56,7 +56,7 @@ export default function ServiceAreasPage() {
                 rel="noopener noreferrer"
                 className="relative group/btn overflow-hidden rounded-full p-[1px] block"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-70 group-hover/btn:opacity-100 transition-opacity duration-300"></span>
+                <span className="absolute inset-0 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-70 group-hover/btn:opacity-100 transition-opacity duration-300"></span>
                 <div className="relative bg-zinc-950 px-5 py-2 rounded-full flex items-center justify-center gap-2 transition-all duration-300 group-hover/btn:bg-transparent">
                   <span className="font-bold text-white text-xs tracking-wide">Get Started</span>
                   <ArrowRight className="w-3 h-3 text-white group-hover/btn:translate-x-1 transition-transform" />
@@ -68,7 +68,7 @@ export default function ServiceAreasPage() {
 
         {/* Hero Section */}
         <section className="pt-40 pb-20 lg:pt-48 lg:pb-24 flex-grow">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-orange-900/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-[#eab308]/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center max-w-4xl mx-auto mb-16">
               <motion.div
@@ -78,7 +78,7 @@ export default function ServiceAreasPage() {
               >
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter mb-8 leading-[1.1] text-white">
                   Local Service Areas <br />
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-purple-500 to-blue-600">Texas Panhandle</span>
+                  <span className="bg-clip-text text-transparent bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)]">Texas Panhandle</span>
                 </h1>
                 <p className="text-xl text-zinc-400 mb-10 leading-relaxed max-w-2xl mx-auto">
                   <a href="https://ascensionagents.io" target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-400 underline transition-colors">Ascension Agents</a> powers local contractors and service businesses in Amarillo, Canyon, and Bushland. We ensure you never miss a lead, no matter where you are in the panhandle.
@@ -172,7 +172,7 @@ export default function ServiceAreasPage() {
 
         {/* CTA Section */}
         <section className="py-24 relative overflow-hidden mt-12">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-orange-900/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-[#eab308]/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
           <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -188,7 +188,7 @@ export default function ServiceAreasPage() {
                 <Link 
                   to="/about"
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="w-full sm:w-auto bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 text-white font-bold text-sm tracking-wide px-8 py-4 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] text-white font-bold text-sm tracking-wide px-8 py-4 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
                 >
                   <span>Contact Us</span>
                   <ArrowRight className="w-4 h-4" />

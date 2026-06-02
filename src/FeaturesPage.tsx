@@ -123,7 +123,7 @@ export default function FeaturesPage() {
                 rel="noopener noreferrer"
                 className="relative group/btn overflow-hidden rounded-full p-[1px] block"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-70 group-hover/btn:opacity-100 transition-opacity duration-300"></span>
+                <span className="absolute inset-0 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-70 group-hover/btn:opacity-100 transition-opacity duration-300"></span>
                 <div className="relative bg-zinc-950 px-5 py-2 rounded-full flex items-center justify-center gap-2 transition-all duration-300 group-hover/btn:bg-transparent">
                   <span className="font-bold text-white text-xs tracking-wide">Get Started</span>
                   <ArrowRight className="w-3 h-3 text-white group-hover/btn:translate-x-1 transition-transform" />
@@ -135,7 +135,7 @@ export default function FeaturesPage() {
 
         {/* Hero Section */}
         <section className="pt-40 pb-20 lg:pt-48 lg:pb-32 flex-grow">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-orange-900/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-[#eab308]/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center max-w-4xl mx-auto mb-20">
               <motion.div
@@ -144,7 +144,7 @@ export default function FeaturesPage() {
                 transition={{ duration: 0.8 }}
               >
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter mb-8 leading-[1.1] text-white">
-                  Powerful <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-purple-500 to-blue-600">automation tools</span>
+                  Powerful <span className="bg-clip-text text-transparent bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)]">automation tools</span>
                 </h1>
                 <p className="text-xl text-zinc-400 mb-10 leading-relaxed max-w-2xl mx-auto">
                   Designed specifically for the unique needs of local service businesses.
@@ -191,7 +191,7 @@ export default function FeaturesPage() {
 
         {/* CTA Section */}
         <section className="py-24 relative overflow-hidden mt-12">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-orange-900/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-[#eab308]/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
           <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -205,7 +205,7 @@ export default function FeaturesPage() {
               </p>
               {/* Centralized Pricing Card */}
               <div className="bg-zinc-900/80 border-2 border-purple-500/30 rounded-3xl overflow-hidden relative shadow-[0_0_40px_-15px_rgba(168,85,247,0.2)] flex flex-col mt-12 text-left">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 via-purple-500 to-blue-600"></div>
+                <div className="absolute top-0 left-0 w-full h-1 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)]"></div>
                 <div className="p-8 border-b border-zinc-800/80 bg-purple-950/20 text-center">
                   <p className="text-purple-200/70 text-base md:text-lg">Everything you need to capture leads, qualify prospects, and close deals 24/7.</p>
                   
@@ -328,7 +328,7 @@ export default function FeaturesPage() {
                     href="https://api.ascensionagents.io/payment-link/69b860aff35c540e14832cf4"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-5 rounded-xl bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 hover:opacity-90 text-white font-bold text-lg transition-opacity shadow-lg shadow-purple-500/25 flex items-center justify-center gap-2 group block text-center"
+                    className="w-full py-5 rounded-xl bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] hover:opacity-90 text-white font-bold text-lg transition-opacity shadow-lg shadow-purple-500/25 flex items-center justify-center gap-2 group block text-center"
                   >
                     Get Started Now
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

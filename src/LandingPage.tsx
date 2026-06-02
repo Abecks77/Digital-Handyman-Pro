@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 
 const GradientText = ({ children, className = "" }: { children: ReactNode, className?: string }) => (
-  <span className={`bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-purple-500 to-blue-600 ${className}`}>
+  <span className={`bg-clip-text text-transparent bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] ${className}`}>
     {children}
   </span>
 );
@@ -47,7 +47,7 @@ const DualCTA = ({
           onClick={primaryAction}
           className="relative group overflow-hidden rounded-full p-[1px]"
         >
-          <span className="absolute inset-0 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-70 group-hover:opacity-100 transition-opacity duration-300"></span>
+          <span className="absolute inset-0 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-70 group-hover:opacity-100 transition-opacity duration-300"></span>
           {ButtonContent}
         </button>
       ) : (
@@ -57,7 +57,7 @@ const DualCTA = ({
           rel="noopener noreferrer"
           className="relative group overflow-hidden rounded-full p-[1px] block"
         >
-          <span className="absolute inset-0 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-70 group-hover:opacity-100 transition-opacity duration-300"></span>
+          <span className="absolute inset-0 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-70 group-hover:opacity-100 transition-opacity duration-300"></span>
           {ButtonContent}
         </a>
       )}
@@ -84,7 +84,7 @@ const SectionBottomCTAs = () => (
       rel="noopener noreferrer"
       className="relative group overflow-hidden rounded-full p-[1px] block w-full sm:w-auto"
     >
-      <span className="absolute inset-0 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
+      <span className="absolute inset-0 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
       <div className="relative bg-zinc-950/80 backdrop-blur-sm px-8 py-4 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-zinc-900/50">
         <span className="font-bold text-white whitespace-nowrap">Schedule A Demo</span>
       </div>
@@ -529,7 +529,7 @@ const DashboardFeatureShowcase = () => {
              </div>
              <div className="h-20 w-full flex items-end gap-1.5">
                 {[4, 6, 5, 8, 7, 10, 12].map((h, i) => (
-                  <div key={i} className="flex-1 bg-gradient-to-t from-purple-700 to-blue-500 rounded-t-sm" style={{height: `${h * 8}%`}}></div>
+                  <div key={i} className="flex-1 bg-[linear-gradient(to_top,#a855f7,#0055ff)] rounded-t-sm" style={{height: `${h * 8}%`}}></div>
                 ))}
              </div>
            </div>
@@ -614,7 +614,7 @@ const DashboardFeatureShowcase = () => {
                  SIGNATURE HERE
               </div>
            </div>
-           <div className="absolute bottom-10 right-10 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full p-4 shadow-lg shadow-purple-500/30 z-20 hover:scale-110 transition-transform">
+           <div className="absolute bottom-10 right-10 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full p-4 shadow-lg shadow-purple-500/30 z-20 hover:scale-110 transition-transform">
               <Edit3 className="w-6 h-6 text-white" />
            </div>
         </div>
@@ -855,7 +855,7 @@ export default function LandingPage() {
                 rel="noopener noreferrer"
                 className="relative group/btn overflow-hidden rounded-full p-[1px] block"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-70 group-hover/btn:opacity-100 transition-opacity duration-300"></span>
+                <span className="absolute inset-0 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-70 group-hover/btn:opacity-100 transition-opacity duration-300"></span>
                 <div className="relative bg-zinc-950 px-5 py-2 rounded-full flex items-center justify-center gap-2 transition-all duration-300 group-hover/btn:bg-transparent">
                   <span className="font-bold text-white text-xs tracking-wide">Get Started</span>
                   <ArrowRight className="w-3 h-3 text-white group-hover/btn:translate-x-1 transition-transform" />
@@ -897,7 +897,7 @@ export default function LandingPage() {
                         initial={{ width: 0 }}
                         animate={{ width: "100%" }}
                         transition={{ delay: 1, duration: 1 }}
-                        className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-50"
+                        className="absolute -bottom-2 left-0 h-1 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-50"
                       />
                     </span>
                   </h1>
@@ -928,10 +928,10 @@ export default function LandingPage() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="relative"
               >
-                <div className="absolute inset-0 bg-gradient-to-tr from-orange-500 to-blue-600 rounded-3xl blur-3xl opacity-20 animate-pulse"></div>
+                <div className="absolute inset-0 bg-[linear-gradient(to_top_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-3xl blur-3xl opacity-20 animate-pulse"></div>
                 <div className="relative bg-zinc-900/80 backdrop-blur-xl border border-zinc-800/80 rounded-3xl p-6 shadow-2xl">
                   <div className="flex items-center gap-4 mb-6 border-b border-zinc-800/80 pb-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-500 to-blue-600 flex items-center justify-center shadow-lg shadow-purple-500/30">
+                    <div className="w-10 h-10 rounded-full bg-[linear-gradient(to_bottom_right,#eab308,#ff6b00,#a855f7,#0055ff)] flex items-center justify-center shadow-lg shadow-purple-500/30">
                       <Bot className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -952,10 +952,10 @@ export default function LandingPage() {
                       </div>
                     </motion.div>
                     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.5 }} className="flex gap-3 flex-row-reverse">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-500 to-blue-600 flex-shrink-0 flex items-center justify-center shadow-md">
+                      <div className="w-8 h-8 rounded-full bg-[linear-gradient(to_bottom_right,#eab308,#ff6b00,#a855f7,#0055ff)] flex-shrink-0 flex items-center justify-center shadow-md">
                         <Bot className="w-4 h-4 text-white" />
                       </div>
-                      <div className="bg-gradient-to-r from-orange-600 to-blue-600 rounded-2xl rounded-tr-none p-4 text-sm text-white max-w-[85%] shadow-md">
+                      <div className="bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-2xl rounded-tr-none p-4 text-sm text-white max-w-[85%] shadow-md">
                         Hi there! Yes, we offer 24/7 emergency plumbing. I can have a technician out to you within 45 minutes to stop the leak. What's your address?
                       </div>
                     </motion.div>
@@ -968,10 +968,10 @@ export default function LandingPage() {
                       </div>
                     </motion.div>
                     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 3.5 }} className="flex gap-3 flex-row-reverse">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-500 to-blue-600 flex-shrink-0 flex items-center justify-center shadow-md">
+                      <div className="w-8 h-8 rounded-full bg-[linear-gradient(to_bottom_right,#eab308,#ff6b00,#a855f7,#0055ff)] flex-shrink-0 flex items-center justify-center shadow-md">
                         <Bot className="w-4 h-4 text-white" />
                       </div>
-                      <div className="bg-gradient-to-r from-orange-600 to-blue-600 rounded-2xl rounded-tr-none p-4 text-sm text-white max-w-[85%] shadow-md">
+                      <div className="bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-2xl rounded-tr-none p-4 text-sm text-white max-w-[85%] shadow-md">
                         Our emergency dispatch fee is $99, which goes toward your repair cost. I've locked in your spot for our next available tech. They will text you when they are 10 minutes away!
                       </div>
                     </motion.div>
@@ -997,7 +997,7 @@ export default function LandingPage() {
                     whileInView={{ width: "100%" }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
-                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-50"
+                    className="absolute -bottom-1 left-0 h-1 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-50"
                   />
                 </span>
               </h2>
@@ -1005,7 +1005,7 @@ export default function LandingPage() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-12 relative">
-              <div className="hidden md:block absolute top-12 left-[20%] right-[20%] h-[2px] bg-gradient-to-r from-orange-500/0 via-purple-600/50 to-blue-600/0"></div>
+              <div className="hidden md:block absolute top-12 left-[20%] right-[20%] h-[2px] bg-[linear-gradient(to_right,rgba(234,179,8,0),rgba(255,107,0,0.5),rgba(168,85,247,0.5),rgba(0,85,255,0))]"></div>
               
               {[
                 { 
@@ -1033,7 +1033,7 @@ export default function LandingPage() {
                   className="relative z-10 flex flex-col items-center text-center"
                 >
                   <div className="w-24 h-24 rounded-full bg-zinc-900/80 backdrop-blur-sm border-2 border-purple-500/30 flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(168,85,247,0.15)]">
-                    <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-orange-400 to-blue-600">{item.step}</span>
+                    <span className="text-3xl font-bold bg-clip-text text-transparent bg-[linear-gradient(to_bottom_right,#eab308,#ff6b00,#a855f7,#0055ff)]">{item.step}</span>
                   </div>
                   <h3 className="text-xl md:text-2xl font-bold mb-4">{item.title}</h3>
                   <p className="text-zinc-400 leading-relaxed">{item.desc}</p>
@@ -1057,7 +1057,7 @@ export default function LandingPage() {
 
         {/* 2.5 The GHOST Lead Flow */}
         <section id="lead-flow" className="py-24 bg-zinc-900/30 border-y border-zinc-800/50 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-900/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#eab308]/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center tracking-tight leading-tight">
@@ -1068,7 +1068,7 @@ export default function LandingPage() {
                     whileInView={{ width: "100%" }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
-                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-50"
+                    className="absolute -bottom-1 left-0 h-1 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-50"
                   />
                 </span>
               </h2>
@@ -1080,7 +1080,7 @@ export default function LandingPage() {
             {/* 4-Step Process Grid */}
             <div className="grid md:grid-cols-4 gap-6 mb-16 relative">
               {/* Connecting line for desktop */}
-              <div className="hidden md:block absolute top-[88px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-orange-500/20 via-purple-600/40 to-blue-600/20 z-0"></div>
+              <div className="hidden md:block absolute top-[88px] left-[10%] right-[10%] h-[2px] bg-[linear-gradient(to_right,rgba(234,179,8,0.2),rgba(255,107,0,0.4),rgba(168,85,247,0.4),rgba(0,85,255,0.2))] z-0"></div>
               
               {[
                 {
@@ -1152,13 +1152,13 @@ export default function LandingPage() {
                 {
                   visual: (
                     <div className="relative w-full h-32 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-6 flex items-center justify-center overflow-hidden group-hover:border-orange-500/30 transition-colors">
-                      <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/10 to-transparent"></div>
+                      <div className="absolute inset-0 bg-[linear-gradient(to_top_right,rgba(234,179,8,0.1),transparent)]"></div>
                       <motion.div 
                         animate={{ y: [20, 0, 0, 20], opacity: [0, 1, 1, 0] }} 
                         transition={{ repeat: Infinity, duration: 4, delay: 0.5 }} 
                         className="bg-zinc-800/90 backdrop-blur-sm p-3 rounded-lg border-orange-500/50 w-3/4 relative shadow-[0_0_15px_rgba(59,130,246,0.2)]"
                       >
-                        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-blue-600 text-[8px] font-bold px-2 py-0.5 rounded-full text-white shadow-lg flex items-center gap-1">
+                        <div className="absolute -top-2 -right-2 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] text-[8px] font-bold px-2 py-0.5 rounded-full text-white shadow-lg flex items-center gap-1">
                           <Flame className="w-2 h-2" /> HOT LEAD
                         </div>
                         <div className="flex items-center gap-3 mb-2">
@@ -1215,7 +1215,7 @@ export default function LandingPage() {
                     whileInView={{ width: "100%" }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
-                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-50"
+                    className="absolute -bottom-1 left-0 h-1 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-50"
                   />
                 </span>
               </h2>
@@ -1226,13 +1226,13 @@ export default function LandingPage() {
                 {
                   visual: (
                     <div className="relative w-full h-40 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-8 flex items-center justify-center overflow-hidden group-hover:border-orange-500/30 transition-colors">
-                      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-purple-600/5 to-transparent"></div>
+                      <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,rgba(234,179,8,0.1),rgba(168,85,247,0.05),transparent)]"></div>
                       <motion.div 
                         animate={{ rotate: 360 }} 
                         transition={{ repeat: Infinity, duration: 4, ease: "linear" }} 
                         className="w-20 h-20 rounded-full border-4 border-orange-500/20 border-t-slate-500 flex items-center justify-center relative z-10 shadow-[0_0_30px_rgba(100,116,139,0.2)]"
                       >
-                        <div className="w-1.5 h-8 bg-gradient-to-b from-slate-400 to-blue-400 rounded-full origin-bottom -translate-y-4"></div>
+                        <div className="w-1.5 h-8 bg-[linear-gradient(to_bottom,rgb(148,163,184),#0055ff)] rounded-full origin-bottom -translate-y-4"></div>
                       </motion.div>
                       {/* Speed lines */}
                       <motion.div animate={{ x: [-100, 200], opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }} className="absolute h-0.5 w-16 bg-orange-400/50 rounded-full top-1/3 left-0"></motion.div>
@@ -1246,7 +1246,7 @@ export default function LandingPage() {
                 {
                   visual: (
                     <div className="relative w-full h-40 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-8 flex items-center justify-center overflow-hidden group-hover:border-purple-500/30 transition-colors">
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-blue-600/5 to-transparent"></div>
+                      <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,rgba(168,85,247,0.1),rgba(0,85,255,0.05),transparent)]"></div>
                       <motion.div 
                         animate={{ scale: [0.95, 1.05, 0.95] }} 
                         transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }} 
@@ -1273,7 +1273,7 @@ export default function LandingPage() {
                 {
                   visual: (
                     <div className="relative w-full h-40 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-8 flex items-center justify-center overflow-hidden group-hover:border-slate-500/30 transition-colors">
-                      <div className="absolute inset-0 bg-gradient-to-br from-slate-500/10 via-blue-500/5 to-transparent"></div>
+                      <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,rgba(100,116,139,0.1),rgba(0,85,255,0.05),transparent)]"></div>
                       <div className="flex gap-3 relative z-10">
                         {[0, 1, 2].map((i) => (
                           <motion.div 
@@ -1322,7 +1322,7 @@ export default function LandingPage() {
 
         {/* 2.7 Now vs With Ghost */}
         <section className="py-24 bg-zinc-900/30 border-y border-zinc-800/50 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-900/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#eab308]/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-[1.3rem] sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center tracking-tight leading-tight whitespace-nowrap">
@@ -1333,7 +1333,7 @@ export default function LandingPage() {
                     whileInView={{ width: "100%" }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
-                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-50"
+                    className="absolute -bottom-1 left-0 h-1 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-50"
                   />
                 </span>
               </h2>
@@ -1347,7 +1347,7 @@ export default function LandingPage() {
                   transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
                   className="w-16 h-16 rounded-full bg-orange-500/20 border border-orange-400/50 flex items-center justify-center backdrop-blur-md shadow-[0_0_30px_rgba(100,116,139,0.3)] overflow-hidden relative"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/20 to-blue-600/20"></div>
+                  <div className="absolute inset-0 bg-[linear-gradient(to_top_right,rgba(234,179,8,0.2),rgba(255,107,0,0.2),rgba(168,85,247,0.2),rgba(0,85,255,0.2))]"></div>
                   <ArrowRight className="w-8 h-8 text-orange-400 relative z-10" />
                 </motion.div>
               </div>
@@ -1416,8 +1416,8 @@ export default function LandingPage() {
                 viewport={{ once: true }}
                 className="bg-orange-950/20 border border-orange-500/30 rounded-3xl p-8 md:p-12 relative overflow-hidden group shadow-[0_0_50px_rgba(59,130,246,0.1)]"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-600/10 via-purple-700/5 to-transparent pointer-events-none"></div>
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent shadow-[0_0_20px_rgba(96,165,250,0.8)]"></div>
+                <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,rgba(234,179,8,0.1),rgba(168,85,247,0.05),transparent)] pointer-events-none"></div>
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-[linear-gradient(to_right,transparent,#0055ff,transparent)] shadow-[0_0_20px_rgba(96,165,250,0.8)]"></div>
                 
                 <h3 className="text-2xl md:text-3xl font-bold text-center mb-12 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">With Ghost</h3>
                 
@@ -1426,7 +1426,7 @@ export default function LandingPage() {
                     <div className="w-24 h-24 rounded-2xl bg-orange-900/30 border border-orange-500/50 flex items-center justify-center mb-6 relative overflow-hidden group-hover:border-slate-500/50 transition-colors">
                       <Bot className="w-12 h-12 text-orange-400 relative z-10 group-hover:text-slate-400 transition-colors" />
                       <motion.div animate={{ scale: [1, 1.5], opacity: [0.5, 0] }} transition={{ repeat: Infinity, duration: 1.5 }} className="absolute inset-0 border-2 border-orange-400/50 rounded-2xl"></motion.div>
-                      <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="absolute inset-0 bg-[linear-gradient(to_top_right,rgba(234,179,8,0.1),rgba(255,107,0,0.1),rgba(168,85,247,0.1),rgba(0,85,255,0.1))] opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </div>
                     <h4 className="font-bold text-orange-100 tracking-wider group-hover:text-slate-200 transition-colors">AI Answers</h4>
                   </div>
@@ -1444,7 +1444,7 @@ export default function LandingPage() {
                   <div className="flex flex-col items-center text-center">
                     <div className="w-24 h-24 rounded-2xl bg-orange-900/30 border border-orange-500/50 flex items-center justify-center mb-6 relative group-hover:border-orange-400/50 transition-colors">
                       <BrainCircuit className="w-12 h-12 text-orange-400 group-hover:text-orange-300 transition-colors" />
-                      <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, duration: 2 }} className="absolute -top-3 -right-3 bg-gradient-to-r from-orange-500 to-blue-500 rounded-full p-1.5 shadow-lg">
+                      <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, duration: 2 }} className="absolute -top-3 -right-3 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full p-1.5 shadow-lg">
                         <Check className="w-4 h-4 text-white" />
                       </motion.div>
                     </div>
@@ -1511,7 +1511,7 @@ export default function LandingPage() {
                     whileInView={{ width: "100%" }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
-                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-50"
+                    className="absolute -bottom-1 left-0 h-1 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-50"
                   />
                 </span>
               </h2>
@@ -1583,7 +1583,7 @@ export default function LandingPage() {
                   className="bg-zinc-900/40 backdrop-blur-sm border border-zinc-800/60 rounded-3xl p-8 md:p-10 relative z-10 group hover:border-orange-500/40 transition-colors shadow-xl h-full flex flex-col"
                 >
                   <div className="relative w-full h-48 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-8 flex items-center justify-center overflow-hidden group-hover:border-orange-500/30 transition-colors">
-                      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-purple-600/5 to-transparent"></div>
+                      <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,rgba(234,179,8,0.1),rgba(168,85,247,0.05),transparent)]"></div>
                       <motion.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, duration: 3 }} className="relative z-10 flex gap-4">
                         <div className="w-16 h-24 rounded-xl border border-orange-500/30 bg-zinc-950 flex flex-col items-center justify-center shadow-[0_0_20px_rgba(59,130,246,0.2)] overflow-hidden">
                            <div className="w-10 h-16 bg-orange-900/20 rounded overflow-hidden p-1 flex flex-col gap-1.5 justify-center">
@@ -1612,7 +1612,7 @@ export default function LandingPage() {
                   className="bg-zinc-900/40 backdrop-blur-sm border border-zinc-800/60 rounded-3xl p-8 md:p-10 relative z-10 group hover:border-purple-500/40 transition-colors shadow-xl h-full flex flex-col"
                 >
                   <div className="relative w-full h-48 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-8 flex items-center justify-center overflow-hidden group-hover:border-purple-500/30 transition-colors">
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-blue-600/5 to-transparent"></div>
+                      <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,rgba(168,85,247,0.1),rgba(0,85,255,0.05),transparent)]"></div>
                       <div className="relative z-10 flex flex-col items-center gap-3">
                         <motion.div animate={{ opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 2 }} className="w-24 h-2.5 bg-zinc-800 rounded-full flex overflow-hidden shadow-inner">
                            <div className="w-1/3 bg-red-500/50"></div><div className="w-2/3 bg-purple-400/50"></div>
@@ -1643,7 +1643,7 @@ export default function LandingPage() {
                   className="bg-zinc-900/40 backdrop-blur-sm border border-zinc-800/60 rounded-3xl p-8 md:p-10 relative z-10 group hover:border-slate-400/40 transition-colors shadow-xl h-full flex flex-col"
                 >
                   <div className="relative w-full h-48 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-8 flex items-center justify-center overflow-hidden group-hover:border-slate-500/30 transition-colors">
-                      <div className="absolute inset-0 bg-gradient-to-br from-slate-500/10 via-blue-500/5 to-transparent"></div>
+                      <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,rgba(100,116,139,0.1),rgba(0,85,255,0.05),transparent)]"></div>
                       <div className="relative z-10 grid grid-cols-4 gap-2 p-3 border border-slate-500/30 bg-zinc-900/60 backdrop-blur-sm rounded-xl shadow-[0_0_20px_rgba(100,116,139,0.15)]">
                          {[0,1,2,3,4,5,6,7].map(i => (
                            <motion.div 
@@ -1679,7 +1679,7 @@ export default function LandingPage() {
                   className="bg-zinc-900/40 backdrop-blur-sm border border-zinc-800/60 rounded-3xl p-8 md:p-10 relative z-10 group hover:border-orange-500/40 transition-colors shadow-xl h-full flex flex-col"
                 >
                   <div className="relative w-full h-48 bg-zinc-950/50 rounded-xl border border-zinc-800/50 mb-8 flex items-center justify-center overflow-hidden group-hover:border-orange-500/30 transition-colors">
-                      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-purple-600/5 to-transparent"></div>
+                      <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,rgba(234,179,8,0.1),rgba(168,85,247,0.05),transparent)]"></div>
                       <div className="relative z-10 w-24 h-24 flex items-center justify-center">
                         <motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 6, ease: "linear" }} className="absolute w-full h-full border-[3px] border-dashed border-orange-500/20 rounded-full"></motion.div>
                         <motion.div animate={{ rotate: -360 }} transition={{ repeat: Infinity, duration: 8, ease: "linear" }} className="absolute w-16 h-16 border-[2px] border-purple-500/20 rounded-full"></motion.div>
@@ -1714,7 +1714,7 @@ export default function LandingPage() {
                     whileInView={{ width: "100%" }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
-                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-50"
+                    className="absolute -bottom-1 left-0 h-1 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-50"
                   />
                 </span>
               </h2>
@@ -1740,7 +1740,7 @@ export default function LandingPage() {
                   transition={{ delay: i * 0.05 }}
                   className="bg-zinc-900/60 backdrop-blur-md border border-zinc-800/80 rounded-2xl p-5 flex items-center gap-4 hover:bg-zinc-800/80 hover:border-slate-500/30 transition-all duration-300 group shadow-lg"
                 >
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-500/10 to-blue-600/10 flex items-center justify-center flex-shrink-0 group-hover:from-orange-500/20 group-hover:to-blue-600/20 transition-all">
+                  <div className="w-8 h-8 rounded-full bg-[linear-gradient(to_bottom_right,rgba(234,179,8,0.1),rgba(255,107,0,0.1),rgba(168,85,247,0.1),rgba(0,85,255,0.1))] flex items-center justify-center flex-shrink-0 group-hover:bg-[linear-gradient(to_bottom_right,rgba(234,179,8,0.2),rgba(255,107,0,0.2),rgba(168,85,247,0.2),rgba(0,85,255,0.2))] transition-all">
                     <CheckCircle2 className="w-5 h-5 text-slate-400 group-hover:text-slate-300 transition-colors" />
                   </div>
                   <span className="font-bold text-zinc-100 uppercase tracking-wide text-sm">{industry}</span>
@@ -1755,7 +1755,7 @@ export default function LandingPage() {
                 rel="noopener noreferrer"
                 className="relative group overflow-hidden rounded-full p-[1px] block"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <span className="absolute inset-0 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
                 <div className="relative bg-zinc-950/80 backdrop-blur-sm px-10 py-5 rounded-full flex items-center justify-center gap-2 transition-all duration-300 group-hover:bg-transparent">
                   <span className="font-bold text-white uppercase tracking-widest text-sm">Schedule a call to get started</span>
                 </div>
@@ -1776,7 +1776,7 @@ export default function LandingPage() {
                     whileInView={{ width: "100%" }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
-                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-50"
+                    className="absolute -bottom-1 left-0 h-1 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-50"
                   />
                 </span>
               </h2>
@@ -1788,7 +1788,7 @@ export default function LandingPage() {
             <div className="bg-zinc-900/40 backdrop-blur-sm border border-zinc-800/80 rounded-3xl overflow-hidden shadow-2xl">
               <div className="grid grid-cols-3 border-b border-zinc-800/80 bg-zinc-900/80">
                 <div className="p-5 md:p-8 font-semibold text-zinc-400 text-sm md:text-lg">Feature</div>
-                <div className="p-5 md:p-8 font-bold text-white border-l border-zinc-800/80 bg-gradient-to-b from-orange-500/10 to-transparent text-sm md:text-lg flex items-center gap-2">
+                <div className="p-5 md:p-8 font-bold text-white border-l border-zinc-800/80 bg-[linear-gradient(to_bottom,rgba(234,179,8,0.1),transparent)] text-sm md:text-lg flex items-center gap-2">
                   <Bot className="w-5 h-5 text-orange-400 hidden sm:block" /> GHOST AI
                 </div>
                 <div className="p-5 md:p-8 font-semibold text-zinc-400 border-l border-zinc-800/80 text-sm md:text-lg">Human Hire</div>
@@ -1835,7 +1835,7 @@ export default function LandingPage() {
                     whileInView={{ width: "100%" }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 1 }}
-                    className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-50"
+                    className="absolute -bottom-1 left-0 h-1 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-50"
                   />
                 </span>
               </h2>
@@ -1847,7 +1847,7 @@ export default function LandingPage() {
             <div className="max-w-4xl mx-auto">
               {/* Centralized Pricing Card */}
               <div className="bg-zinc-900/80 border-2 border-purple-500/30 rounded-3xl overflow-hidden relative shadow-[0_0_40px_-15px_rgba(168,85,247,0.2)] flex flex-col">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 via-purple-500 to-blue-600"></div>
+                <div className="absolute top-0 left-0 w-full h-1 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)]"></div>
                 <div className="p-8 border-b border-zinc-800/80 bg-purple-950/20 text-center">
                   <p className="text-purple-200/70 text-base md:text-lg">Everything you need to capture leads, qualify prospects, and close deals 24/7.</p>
                   
@@ -1970,7 +1970,7 @@ export default function LandingPage() {
                     href="https://api.ascensionagents.io/payment-link/69b860aff35c540e14832cf4"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-5 rounded-xl bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 hover:opacity-90 text-white font-bold text-lg transition-opacity shadow-lg shadow-purple-500/25 flex items-center justify-center gap-2 group block text-center"
+                    className="w-full py-5 rounded-xl bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] hover:opacity-90 text-white font-bold text-lg transition-opacity shadow-lg shadow-purple-500/25 flex items-center justify-center gap-2 group block text-center"
                   >
                     Get Started Now
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -2008,7 +2008,7 @@ export default function LandingPage() {
                       whileInView={{ width: "100%" }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.5, duration: 1 }}
-                      className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-50"
+                      className="absolute -bottom-1 left-0 h-1 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-50"
                     />
                   </span>
                 </h2>
@@ -2060,7 +2060,7 @@ export default function LandingPage() {
                       whileInView={{ width: "100%" }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.5, duration: 1 }}
-                      className="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 rounded-full opacity-50"
+                      className="absolute -bottom-1 left-0 h-1 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-50"
                     />
                   </span>
                 </h3>
@@ -2132,7 +2132,7 @@ export default function LandingPage() {
                   <button 
                     type="submit"
                     disabled={isSubmitting || isSubmitted}
-                    className="w-full md:w-auto bg-gradient-to-r from-orange-500 via-purple-600 to-blue-600 text-white font-bold text-sm tracking-wide px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-70 flex items-center justify-center gap-2"
+                    className="w-full md:w-auto bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] text-white font-bold text-sm tracking-wide px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-70 flex items-center justify-center gap-2"
                   >
                     <span>{isSubmitting ? 'Sending...' : isSubmitted ? 'Message Sent!' : 'Get Your AI Employee Today!'}</span>
                     {!isSubmitting && !isSubmitted && <ArrowRight className="w-4 h-4 text-white" />}
