@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, ChevronDown, MessageSquare, Plus } from 'lucide-react';
+import Navigation from './components/Navigation';
 
 export default function FaqPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -134,48 +135,7 @@ export default function FaqPage() {
       </div>
 
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 bg-zinc-950/80 backdrop-blur-md border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-12">
-              <Link 
-                to="/" 
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="hover:opacity-80 transition-opacity cursor-pointer"
-              >
-                <img 
-                  src="https://lh3.googleusercontent.com/d/1fiqEiIUyp52Zo22koroPSYFZEne_tCjm" 
-                  alt="Ascension Agents Logo" 
-                  className="h-8 w-auto object-contain rounded-md"
-                  referrerPolicy="no-referrer"
-                />
-              </Link>
-            </div>
-
-            <div className="hidden md:flex items-center gap-1 bg-zinc-900/30 rounded-full p-1 border border-zinc-800/30">
-              <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">Home</Link>
-              <Link to="/features" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">Features</Link>
-              <Link to="/service-areas" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">Service Areas</Link>
-              <Link to="/about" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">About Ascension</Link>
-              <Link to="/faq" className="px-4 py-1.5 rounded-full text-xs font-semibold text-white bg-zinc-800/50 transition-all">FAQ</Link>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <a 
-                href="https://api.ascensionagents.io/payment-link/69b860aff35c540e14832cf4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative group/btn overflow-hidden rounded-full p-[1px] block"
-              >
-                <span className="absolute inset-0 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-70 group-hover/btn:opacity-100 transition-opacity duration-300"></span>
-                <div className="relative bg-zinc-950 px-5 py-2 rounded-full flex items-center justify-center gap-2 transition-all duration-300 group-hover/btn:bg-transparent">
-                  <span className="font-bold text-white text-xs tracking-wide">Get Started</span>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Navigation />
 
       <main className="relative z-10 pt-40 pb-20 lg:pt-48 lg:pb-32 flex-grow flex flex-col min-h-screen">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-[#eab308]/10 via-zinc-950/0 to-zinc-950/0 pointer-events-none"></div>

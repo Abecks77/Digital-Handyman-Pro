@@ -3,6 +3,8 @@ import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Facebook, Youtube, MapPin, PhoneCall, MessageSquare, ClipboardCheck, Calendar } from 'lucide-react';
 
+import Navigation from './components/Navigation';
+
 export default function ServiceAreasPage() {
   return (
     <div className="min-h-screen bg-zinc-950 text-slate-50 font-sans selection:bg-purple-500/30 selection:text-purple-200 overflow-hidden flex flex-col">
@@ -17,54 +19,7 @@ export default function ServiceAreasPage() {
 
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Header - Reused from LandingPage */}
-        <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl">
-          <div className="bg-zinc-950/40 backdrop-blur-md border border-zinc-800/50 rounded-full px-4 py-2.5 flex items-center justify-between shadow-2xl shadow-purple-500/10 group transition-all duration-500 hover:border-zinc-700/50 hover:bg-zinc-950/60">
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-3 pl-2">
-                <Link 
-                  to="/"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="hover:opacity-80 transition-opacity cursor-pointer"
-                >
-                  <img 
-                    src="https://lh3.googleusercontent.com/d/1fiqEiIUyp52Zo22koroPSYFZEne_tCjm" 
-                    alt="Ascension Agents Logo" 
-                    className="h-8 w-auto object-contain rounded-md"
-                    referrerPolicy="no-referrer"
-                  />
-                </Link>
-                <div className="h-4 w-[1px] bg-zinc-800 hidden sm:block"></div>
-                <div className="hidden sm:flex items-center gap-2 px-2 py-1 rounded-full bg-zinc-900/50 border border-zinc-800/50">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                  <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">GHOST: ACTIVE</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="hidden md:flex items-center gap-1 bg-zinc-900/30 rounded-full p-1 border border-zinc-800/30">
-              <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">Home</Link>
-              <Link to="/features" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">Features</Link>
-              <Link to="/service-areas" className="px-4 py-1.5 rounded-full text-xs font-semibold text-white bg-zinc-800/50 transition-all">Service Areas</Link>
-              <Link to="/about" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">About Ascension</Link>
-              <Link to="/faq" className="px-4 py-1.5 rounded-full text-xs font-semibold text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all">FAQ</Link>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <a 
-                href="https://api.ascensionagents.io/payment-link/69b860aff35c540e14832cf4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative group/btn overflow-hidden rounded-full p-[1px] block"
-              >
-                <span className="absolute inset-0 bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] rounded-full opacity-70 group-hover/btn:opacity-100 transition-opacity duration-300"></span>
-                <div className="relative bg-zinc-950 px-5 py-2 rounded-full flex items-center justify-center gap-2 transition-all duration-300 group-hover/btn:bg-transparent">
-                  <span className="font-bold text-white text-xs tracking-wide">Get Started</span>
-                  <ArrowRight className="w-3 h-3 text-white group-hover/btn:translate-x-1 transition-transform" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </nav>
+        <Navigation />
 
         {/* Hero Section */}
         <section className="pt-40 pb-20 lg:pt-48 lg:pb-24 flex-grow">
