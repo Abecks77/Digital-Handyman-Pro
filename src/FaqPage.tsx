@@ -76,7 +76,7 @@ export default function FaqPage() {
       items: [
         {
           q: "How much does Ascension cost?",
-          a: "We offer a transparent, flat-rate pricing model: a $2,500 one-time setup fee, followed by a monthly subscription of $500/month."
+          a: "We offer a transparent, flat-rate pricing model: a $2,500 one-time setup fee, followed by a monthly subscription of $300/month."
         },
         {
           q: "Are there any long-term contracts or cancellation fees?",

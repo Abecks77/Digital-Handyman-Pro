@@ -163,14 +163,20 @@ export default function FeaturesPage() {
                 <div className="p-8 border-b border-zinc-800/80 bg-purple-950/20 text-center">
                   <p className="text-purple-200/70 text-base md:text-lg">Everything you need to capture leads, qualify prospects, and close deals 24/7.</p>
                   
-                  <div className="mt-8 flex flex-col items-center justify-center">
-                    <div className="flex items-center gap-3 mb-2 flex-wrap justify-center">
-                       <span className="text-xl font-bold text-zinc-500 line-through decoration-red-500/50 decoration-2">$2,500 setup</span>
-                       <span className="text-xs font-bold bg-red-500/20 text-red-500 px-3 py-1 rounded-full uppercase tracking-wider border border-red-500/30 animate-pulse">Limited Time: $0 Setup</span>
-                    </div>
-                    <div className="flex items-baseline gap-2">
-                       <span className="text-5xl font-black text-white">$550</span>
-                       <span className="text-zinc-500 text-xl font-medium">/ month</span>
+                  <div className="mt-8">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                      <div className="text-center sm:text-right">
+                        <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-1">One-Time Setup</p>
+                        <p className="text-3xl font-black text-white">$2,500</p>
+                      </div>
+                      <div className="hidden sm:block h-8 w-px bg-zinc-800"></div>
+                      <div className="text-center sm:text-left">
+                        <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-1">Monthly Subscription</p>
+                        <div className="flex items-baseline justify-center sm:justify-start gap-1">
+                          <span className="text-4xl font-black text-white">$300</span>
+                          <span className="text-zinc-500 text-base font-medium">/ month</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
