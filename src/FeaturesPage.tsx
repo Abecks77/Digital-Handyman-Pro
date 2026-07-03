@@ -285,7 +285,7 @@ export default function FeaturesPage() {
                 
                 <div className="p-8 lg:p-12 pt-0 mt-auto">
                   <a 
-                    href="https://api.ascensionagents.io/payment-link/69b860aff35c540e14832cf4"
+                    href="https://api.ascensionagents.io/payment-link/69c4b6c5fb727d9c905d2836"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-5 rounded-xl bg-[linear-gradient(to_right,#eab308,#ff6b00,#a855f7,#0055ff)] hover:opacity-90 text-white font-bold text-lg transition-opacity shadow-lg shadow-purple-500/25 flex items-center justify-center gap-2 group block text-center"
@@ -331,7 +331,7 @@ export default function FeaturesPage() {
                   <li><Link to="/service-areas" className="text-zinc-400 hover:text-white text-sm transition-colors">Service Areas</Link></li>
                   <li>
                     <a 
-                      href="https://api.ascensionagents.io/payment-link/69b860aff35c540e14832cf4"
+                      href="https://api.ascensionagents.io/payment-link/69c4b6c5fb727d9c905d2836"
                       target="_blank"
                       rel="noopener noreferrer" 
                       className="text-zinc-400 hover:text-white text-sm transition-colors"

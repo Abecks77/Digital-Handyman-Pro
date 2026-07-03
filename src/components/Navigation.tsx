@@ -61,7 +61,7 @@ export default function Navigation() {
 
         <div className="flex items-center gap-3">
           <a 
-            href="https://api.ascensionagents.io/payment-link/69b860aff35c540e14832cf4"
+            href="https://api.ascensionagents.io/payment-link/69c4b6c5fb727d9c905d2836"
             target="_blank"
             rel="noopener noreferrer"
             className="relative group/btn overflow-hidden rounded-full p-[1px] hidden md:block"
@@ -115,7 +115,7 @@ export default function Navigation() {
               <div className="h-px w-full bg-zinc-800/60 my-2"></div>
 
               <a 
-                href="https://api.ascensionagents.io/payment-link/69b860aff35c540e14832cf4"
+                href="https://api.ascensionagents.io/payment-link/69c4b6c5fb727d9c905d2836"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative group/btn overflow-hidden rounded-xl p-[1px] block w-full mt-2"
