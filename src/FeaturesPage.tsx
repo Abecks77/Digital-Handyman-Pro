@@ -173,7 +173,7 @@ export default function FeaturesPage() {
                       <div className="text-center sm:text-left">
                         <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-1">Monthly Subscription</p>
                         <div className="flex items-baseline justify-center sm:justify-start gap-1">
-                          <span className="text-4xl font-black text-white">$300</span>
+                          <span className="text-4xl font-black text-white">$550</span>
                           <span className="text-zinc-500 text-base font-medium">/ month</span>
                         </div>
                       </div>
